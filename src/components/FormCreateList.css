@@ -1,0 +1,54 @@
+/*#wholeDisplayList{*/
+/*    background-color: #9bc4ca;*/
+/*}*/
+
+#elementInFormCreateList{
+    object-position: center;
+    margin-left: 15%;
+    /*background-color: #9bc4ca;*/
+}
+
+
+
+#buttonCreateListInFormCreateList{
+    object-position: center;
+    margin-left: 15%;
+
+}
+
+#iconAndLabelBeforePhotoEquipmentInCreateList{
+    object-position: center;
+    margin-left: 15%;
+
+}
+
+#textAfterIconPhotoEquipmentInCreateList{
+    object-position: center;
+    margin-left: 10%;
+
+}
+
+#destinationInFormCreateList{
+    object-position: center;
+    margin-left: 2%;
+    color: saddlebrown;
+
+}
+
+#drone1 label{
+
+    padding-left: 3%;
+
+}
+
+#largeLuggage{
+
+    margin-righ: 6%;
+
+}
+
+#largeLuggage label{
+
+    padding-left: 0.5%;
+
+}

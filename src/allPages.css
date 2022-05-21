@@ -1,0 +1,165 @@
+#homePage{
+    padding-bottom: 400px;
+}
+
+#TitleHomePage{
+
+    margin-left: 1.5%;
+}
+
+#loginPage{
+
+    background-image: url("./photo/backgroundLoginPage5.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    opacity:0.98;
+    padding-bottom: 200px;
+
+}
+
+
+
+#CustomerCreateOrDisplayListPage{
+
+    background-image: url("./photo/backgroundUserLists.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    opacity:0.98;
+    padding-bottom: 300px;
+
+
+}
+
+
+#DisplayListFirstPage{
+
+/*background-color: #9bc4ca;*/
+    background-image: url("./photo/pexels nowe .jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /*background-size:1920px;*/
+    opacity:0.98;
+    padding-bottom: 100px;
+
+}
+
+
+
+
+
+#registerPage{
+    background-color: #9bc4ca;
+
+}
+
+
+#loginOrRegister{
+    text-align: center;
+    margin-top:1%;
+
+
+}
+
+#loginContainer{
+    padding-left: 10%;
+
+}
+
+
+
+#createCustomerListPackYourLuggage{
+    background-color: #9bc4ca;
+    padding-bottom: 20px;
+}
+
+
+#createCustomerList{
+    text-align: center;
+    margin-top:1%;
+
+
+}
+
+#loginIconAndName{
+    margin-right: 52%;
+
+}
+
+#registerIconAndName{
+    margin-right: 39%;
+
+}
+
+#payIconAndName{
+    margin-right: 59%;
+
+}
+
+
+#pay{
+    text-align: center;
+    margin-top:1%;
+
+}
+
+#PageTitle{
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    text-align: center;
+
+}
+
+#PageTitleRegister{
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    text-align: center;
+    margin-right: 50px;
+
+}
+
+#buttonSizePay{
+    width: 250px;
+}
+#buttonSizeRegister{
+    width: 250px;
+    /*box-shadow: 5px 10px;*/
+}
+
+#buttonSizeLogin{
+    width: 250px;
+}
+
+#buttonSizeCreateList{
+    width: 250px;
+}
+
+#iconRegister{
+    margin-right: 12px;
+
+}
+
+#iconLogin{
+    margin-right: 13px;
+}
+
+#iconCreateList{
+    margin-right: 18px;
+}
+
+#iconPay{
+    margin-right: 18px;
+}
+
+
+#allButtons{
+    padding-top: 5%;
+    margin-right: 25%;
+    opacity: 0.80;
+
+
+}
+
+
+.brand-logo{
+    margin-left: 1.5%;
+}

@@ -1,0 +1,103 @@
+#mainBodyToDoList{
+    object-position: center;
+    margin-left: 10%;
+    background-color: darkred;
+
+}
+
+#blockDocuments{
+    object-position: center;
+/*padding-left: 100px;*/
+    margin-left: 10%;
+}
+
+
+#documents{
+    object-position: center;
+    margin-left: 10%;
+    /*background-color: blue;*/
+
+
+}
+
+#blockEssential{
+    object-position: center;
+    /*padding-left: 100px;*/
+    margin-left: 15%;
+}
+
+
+
+#essential{
+    object-position: center;
+    margin-left: 10%;
+padding-right: 10%;
+}
+
+#camera{
+    object-position: center;
+    margin-left: 0%;
+    background-color: white;
+    padding-right: 0%;
+}
+
+
+#camcorder{
+    object-position: center;
+    margin-left: 0%;
+    background-color: white;
+    padding-right: 0%;
+    padding-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+#spain{
+    object-position: center;
+    margin-left: 10%;
+    background-color: blue;
+
+    padding-right: 10%;
+}
+
+#car{
+    object-position: center;
+    margin-left: 10%;
+    background-color: blue;
+    padding-right: 10%;
+}
+
+#car span {
+    color:black;
+}
+
+#titleElements{
+    object-position: center;
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    text-align: center;
+
+}
+
+#checkboxColor,input{
+    color: saddlebrown;
+}
+
+/*#crossLine:checked + span{*/
+/*    text-decoration: line-through;*/
+
+
+/*}*/
+
+.filled-in:checked +span{
+    text-decoration: line-through;
+
+
+}
+
+
+#toRight{
+    width: 50%;
+    float: right;
+
+}

@@ -1,0 +1,65 @@
+#checkboxMask{
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+    width:20%;
+    float: left;
+}
+
+#quantityMask{
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+    width:20%;
+    float: left;
+    /*margin-right: 10%;*/
+
+}
+
+
+#maskWeigh{
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+    width:33%;
+    float: right;
+
+}
+
+#checkboxUnderwear{
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+    width:50%;
+    float: left;
+}
+#inputQuantity{
+    width:50%;
+    float:right;
+
+}
+
+#quantityUnderwear {
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+    width: 50%;
+    float: left;
+
+}
+
+#addItemButton{
+    color: blue;
+}
+
+
+/*!* When the checkbox is checked, add a blue background *!*/
+/*.checkbox input:checked {*/
+/*    background-color: #ffffff;*/
+/*}*/
+
+.decreaseQuantity {
+    background-color: #795548;
+}
+
+.increaseQuantity {
+    background-color: #795548;
+}
+.Quantity {
+    background-color: #9bc4ca;
+}

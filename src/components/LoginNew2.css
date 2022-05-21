@@ -1,0 +1,85 @@
+#ItemsInLoginCustomer{
+    /*object-position: center;*/
+    margin: 5% 10% 10% 65%;
+
+}
+
+#formLoginPage{
+    background-color: saddlebrown;
+}
+
+
+#formInLoginCustomer{
+    object-position: center;
+    margin-left: 25%;
+    margin-top: 1%;
+    background-color: #9bc4ca;
+
+}
+
+
+#buttonInLoginNew2{
+
+    margin-left: 15%;
+    height:40px;
+    margin-bottom: -15%;
+
+}
+
+#cardModOpacity{
+    opacity: 0.80;
+    background-color: #9bc4ca;
+    border-radius: 5px;
+}
+
+#loginInput{
+    margin-top: 10%;
+
+}
+
+#isErrorEmail{
+    color: darkred;
+
+}
+
+
+
+#emailError{
+    color: darkred;
+
+}
+
+#emailErrorEmpty{
+    color: darkred;
+
+}
+
+
+
+#isError{
+    color: darkred;
+
+}
+
+#passwordError{
+    color: darkred;
+
+}
+
+#passwordErrorEmpty{
+    color: darkred;
+
+}
+
+
+
+
+
+#smallerText{
+
+    font-size: 5px;
+}
+#smallerPassText{
+
+    font-size: 5px;
+}

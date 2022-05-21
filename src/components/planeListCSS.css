@@ -1,0 +1,29 @@
+#iconPlane{
+    /*text-align: right;*/
+    /*margin-left: 15%;*/
+    width:32%;
+    float: left;
+
+}
+
+#titlePlane{
+    /*object-position: center;*/
+    /*margin-left: 15%;*/
+
+    width:32%;
+    float: right;
+    /*object-position: center;*/
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    /*text-align: center;*/
+
+}
+
+
+/*#titleElementsPlane{*/
+/*    object-position: center;*/
+/*    color: saddlebrown;*/
+/*    font-size: calc(15px + 2vmin);*/
+/*    text-align: center;*/
+
+/*}*/

@@ -1,0 +1,52 @@
+/*#mainBodyToDoList{*/
+/*    object-position: center;*/
+/*    margin-left: 25%;*/
+
+/*}*/
+
+#listOfItemsInToDoListComponent{
+    object-position: center;
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    text-align: center;
+    background-color: darkgray;
+    border-radius: 25px;
+
+}
+
+
+#buttonAddItemInToDoListComponentTrip{
+    object-position: center;
+    color: saddlebrown;
+    font-size: calc(15px + 2vmin);
+    text-align: center;
+
+}
+/*#checkboxColor,input{*/
+/*    color: saddlebrown;*/
+/*}*/
+
+/*!*#crossLine:checked + span{*!*/
+/*!*    text-decoration: line-through;*!*/
+
+
+/*!*}*!*/
+
+/*.filled-in:checked +span{*/
+/*    text-decoration: line-through;*/
+
+
+/*}*/
+
+
+
+
+#allListsInToDoListComponentsTrip{
+    background-color: beige;
+}
+
+#titleListToDoListID{
+    object-position: center;
+    margin-left: 10%;
+    width: 80%;
+}

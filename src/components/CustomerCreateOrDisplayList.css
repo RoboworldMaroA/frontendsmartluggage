@@ -1,0 +1,53 @@
+#allButtonsCustomer{
+    padding-top: 5%;
+    margin-right: 5%;
+    opacity: 0.9;
+
+}
+
+#buttonSizeCreateList{
+    width: 250px;
+    background-color: #9bc4ca;
+
+}
+
+/*#createCustomerList{*/
+/*    text-align: center;*/
+/*    margin-top:1%;*/
+
+/*}*/
+
+/*#iconCreateList{*/
+/*    margin-right: 18px;*/
+/*}*/
+
+
+
+/*display list*/
+
+
+
+
+#buttonSizeDisplayList{
+    width: 250px;
+    background-color: #9bc4ca;
+}
+
+#DisplayList{
+    text-align: center;
+    margin-top:1%;
+}
+
+
+
+#iconDisplayList{
+    margin-right: 18px;
+}
+
+
+
+#displayListIconAndName{
+    margin-right: 22%;
+
+
+}
