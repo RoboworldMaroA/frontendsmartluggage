@@ -50,7 +50,7 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
     const [spring, setSpring] = useState(false);
     const [train, setTrain] = useState(false);
     const [id, setId] = useState('');
-    const [destination, setDestination] = useState('');
+    const [destination, setDestination] = useState('Spain');
     // const [displayListState , setDisplayListState] = useState(true);
     // const [displayListState , setDisplayListState] = useState(true);
 
