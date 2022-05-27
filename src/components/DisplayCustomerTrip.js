@@ -19,7 +19,7 @@ export const DisplayCustomerTrip = ({item}) => {
     //const {value,setValue} = useContext(UserContext);
 
     const deleteCustomerTrip = async () => {
-        const resultTrip = await fetch("api/v1/trip/" + id, {
+        const resultTrip = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
             //headers: {
@@ -35,7 +35,7 @@ export const DisplayCustomerTrip = ({item}) => {
         //do something when loading
         console.log("yoyw yow do something from useeffect")
         if (!customer) {
-            fetch("http://localhost:8080/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });

@@ -58,7 +58,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
 
     // function responsible for pass data to database
     const addCustomer = async () => {
-        const result = await fetch("api/v1/customer", {
+        const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer", {
             method: "POST",
             body: JSON.stringify({
                 name,

@@ -568,7 +568,6 @@ export function DestinationPage() {
                 <ManageDestinationFunctionalComponent />
                 {/*</UserContext.Provider>*/}
 
-
             </div>
         </div>
         </body>

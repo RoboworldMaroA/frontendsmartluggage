@@ -82,7 +82,7 @@ export const ManageDestinationFunctionalComponent = () =>{
     useEffect(() => {
         //do something when loading
         console.log("signal to do something using useEffect")
-        fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
+        fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/").then((response) => response.json()).then((TripData) => {
             console.log("List of items in the trip", TripData);
             setTripData(TripData);
         });

@@ -74,7 +74,7 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
     const validateCreateList = async (event) => {
         alert("Thank you for creating list")
 
-        const result = await fetch("api/v1/trip", {
+        const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip", {
             method: "POST",
             body: JSON.stringify({
                 adminPrivileges, autumn,

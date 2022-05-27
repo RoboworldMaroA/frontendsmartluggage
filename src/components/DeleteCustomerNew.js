@@ -10,7 +10,7 @@ Final Project Software Developer
 const DeleteCustomerNew = ({item}) => {
     const [id, setId] = useState('');
     const deleteCustomer = async () => {
-        const result = await fetch("api/v1/customer/" + id, {
+        const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
             //headers: {
