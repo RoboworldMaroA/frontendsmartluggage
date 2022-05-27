@@ -882,7 +882,7 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
 
                 <div className="row">
                     <div id="ButtonCreateListInFormCreateList" className="input-field col s10">
-                        <button disabled={tripName.length === 0 || listId.length === 0 || destination.length===0}
+                        <button disabled={tripName.length === 0 || listId.length === 0}
                                 className="waves-effect waves-light btn #795548 brown " type="submit" name="action">
                             Generate List
                         </button>
