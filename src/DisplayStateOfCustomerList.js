@@ -30,6 +30,8 @@ export const DisplayStateOfCustomerList = () => {
         console.log("useEffect")
         if (!customer) {
             fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+                // This is format before deploy
+                // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });

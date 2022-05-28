@@ -502,39 +502,39 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
 
                 {/*implementation search box*/}
                 {/* Unhidden this import and autocomplete for Google search*/}
-                {/*<div className="row">*/}
-                {/*    /!*<i className="material-icons prefix">target</i>*!/*/}
-                {/*    <div className="input-field col s10">*/}
-                {/*        <i className="material-icons prefix">target</i>*/}
-                {/*        <label><p id="destinationInFormCreateList"> </p></label>*/}
-                {/*        <p>*/}
-                {/*        <PlacesAutocomplete value={destination} onChange={handleChange2} onSelect={handleSelect}>*/}
-                {/*            {({getInputProps, suggestions, getSuggestionItemProps, loading}) => (*/}
-                {/*                <div>*/}
-                {/*                    <input   {...getInputProps({*/}
-                {/*                        placeholder: 'Search Places ...',*/}
-                {/*                        // className: 'location-search-input',*/}
-                {/*                    })}*/}
-                {/*                    />*/}
-                {/*                    <div>*/}
-                {/*                        {loading && <div>Loading...</div>}*/}
-                {/*                        {suggestions.map((suggestion) => {*/}
-                {/*                            const style = suggestion.active ?*/}
-                {/*                                {backgroundColor: "#FFFFFF", cursor: "pointer "} :*/}
-                {/*                                {backgroundColor: "#9bc4ca", cursor: "pointer "}*/}
-                {/*                            return (*/}
-                {/*                                <div*/}
-                {/*                                    {...getSuggestionItemProps(suggestion, {style})}>*/}
-                {/*                                    {suggestion.description}*/}
-                {/*                                </div>*/}
-                {/*                            );*/}
-                {/*                        })}*/}
-                {/*                    </div>*/}
-                {/*                </div>)}*/}
-                {/*        </PlacesAutocomplete>*/}
-                {/*        </p>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                <div className="row">
+                    {/*<i className="material-icons prefix">target</i>*/}
+                    <div className="input-field col s10">
+                        <i className="material-icons prefix">target</i>
+                        <label><p id="destinationInFormCreateList"> </p></label>
+                        <p>
+                        <PlacesAutocomplete value={destination} onChange={handleChange2} onSelect={handleSelect}>
+                            {({getInputProps, suggestions, getSuggestionItemProps, loading}) => (
+                                <div>
+                                    <input   {...getInputProps({
+                                        placeholder: 'Search Places ...',
+                                        // className: 'location-search-input',
+                                    })}
+                                    />
+                                    <div>
+                                        {loading && <div>Loading...</div>}
+                                        {suggestions.map((suggestion) => {
+                                            const style = suggestion.active ?
+                                                {backgroundColor: "#FFFFFF", cursor: "pointer "} :
+                                                {backgroundColor: "#9bc4ca", cursor: "pointer "}
+                                            return (
+                                                <div
+                                                    {...getSuggestionItemProps(suggestion, {style})}>
+                                                    {suggestion.description}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>)}
+                        </PlacesAutocomplete>
+                        </p>
+                    </div>
+                </div>
 
 
                 {/*<div className="row">*/}
