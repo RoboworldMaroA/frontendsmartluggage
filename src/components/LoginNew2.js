@@ -150,7 +150,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
             console.log("data user name in if statement: "+userName)
              // console.log("user body in verify all fields"+ this.result.value.status);//not working
-            // event.preventDefault();
+            event.preventDefault();
 
         window.alert("Thank You for registration. !")
         navigate("/createOrDisplayList");
