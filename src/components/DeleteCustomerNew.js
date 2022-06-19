@@ -10,7 +10,9 @@ Final Project Software Developer
 const DeleteCustomerNew = ({item}) => {
     const [id, setId] = useState('');
     const deleteCustomer = async () => {
-        const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer/" + id, {
+        // const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer/" + id, {
+        //     const result = await fetch("deleteUsers/" + id, {
+                const result = await fetch("https://backendsmartluggage.herokuapp.com/deleteUsers/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
             //headers: {
@@ -32,14 +34,14 @@ const DeleteCustomerNew = ({item}) => {
                             <div className="card-content white-text">
                                 <span className="card-title">
                                     <p>It is a detail a customer with ID: {item.id}</p>
-                                    Name: {item.name}
+                                    Name: {item.userName}
                                     <p> Surname: {item.surname}  </p>
-                                    <p> Email: {item.email} </p>
-                                    <p> Phone Number: {item.phoneNumber} </p>
-                                    <p> Date of birth: {item.dob} </p>
-                                    <p> Sex: {item.sex} </p>
-                                    <p>Age: {item.age}</p>
-                                        Password: {item.customerPassword}    </span>
+                                    <p> Email: {item.userEmail} </p>
+                                    <p> Phone Number: {item.userPhoneNumber} </p>
+                                    <p> Date of birth: {item.userDob} </p>
+                                    <p> Sex: {item.userSex} </p>
+                                    <p>Age: {item.userAge}</p>
+                                        Password: {item.password}    </span>
                             </div>
                             <div className="card-action">
                                 <p> If you want delete user input user id and then press delete button </p>

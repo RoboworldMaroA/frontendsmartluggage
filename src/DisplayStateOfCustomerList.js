@@ -25,11 +25,28 @@ export const DisplayStateOfCustomerList = () => {
 
     const [showTripButton, setShowTripButton] = useState([{isSelected: false}]);
 
+
+    //Old Deploy version
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("useEffect")
+    //     if (!customer) {
+    //         fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             // This is format before deploy
+    //             // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             console.log("List of items in the customer", dataCustomer);
+    //             setCustomer(dataCustomer);
+    //         });
+    //     }
+    // }, ['customer']);
+
+
+    //New Deploy Version
     useEffect(() => {
         //do something when loading
         console.log("useEffect")
         if (!customer) {
-            fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://backendsmartluggage.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
                 // This is format before deploy
                 // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 console.log("List of items in the customer", dataCustomer);
@@ -39,6 +56,22 @@ export const DisplayStateOfCustomerList = () => {
     }, ['customer']);
 
 
+    //Development Version
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("useEffect")
+    //     if (!customer) {
+    //         fetch("displayUsers").then((response) => response.json()).then((dataCustomer) => {
+    //             // This is format before deploy
+    //             // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             console.log("List of items in the customer", dataCustomer);
+    //             setCustomer(dataCustomer);
+    //         });
+    //     }
+    // }, ['customer']);
+
+
+    //Keep hidden
     // useEffect(() => {
     //     //do something when loading
     //     console.log("yoyw yow do something from useeffect")
@@ -49,14 +82,26 @@ export const DisplayStateOfCustomerList = () => {
     // }, ["hI"]);
 
 
+    //Old Deploy version
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("yoyw yow do something from useeffect")
+    //     fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
+    //         console.log("List of items in the trip", dataTrip);
+    //         setTrip(dataTrip);
+    //     });
+    // }, ["trip"]);
+
+
     useEffect(() => {
         //do something when loading
-        console.log("yoyw yow do something from useeffect")
-        fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
+        console.log("test response from useeffect")
+        fetch("api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
             console.log("List of items in the trip", dataTrip);
             setTrip(dataTrip);
         });
     }, ["trip"]);
+
 
 
     function handlePickList(index) {

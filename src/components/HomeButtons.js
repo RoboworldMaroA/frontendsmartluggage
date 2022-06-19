@@ -21,7 +21,7 @@ const HomeButtons=({})=>{
         // Description of the list
         <div id="allButtons" className="container-fluid" >
 
-                                <div clasName="row" id="loginOrRegister">
+                                <div className="row" id="loginOrRegister">
                                    <Link to="Register">
                                     <button  id="buttonSizeRegister" className="btn waves-effect waves-light #5d4037 brown darken-1">
                                         <div id="registerIconAndName"> <i id="iconRegister" className="medium material-icons">account_box</i>  Register</div>

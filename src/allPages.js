@@ -46,15 +46,17 @@ export function Home() {
                         <li><Link to="DisplayList"> My Travel List</Link></li>
                         <li>  <Link to="/help"> Help</Link></li>
                         <li><Link to="LoginAdminPage"> Administrator</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
 
 
             <ul className="sidenav" id="mobile-demo">
-                <li><Link to="DisplayList"> My List</Link></li>
+                <li><Link to="DisplayList"> My Travel List</Link></li>
                 <li>  <Link to="/help"> Help</Link></li>
                 <li><Link to="LoginAdminPage"> Administrator</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
             <div className="row">
@@ -101,6 +103,7 @@ export function LoginPage() {
                         <li><Link to="../">Home</Link></li>
                         <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                         <li>  <Link to="../Help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -110,6 +113,7 @@ export function LoginPage() {
                 <li><Link to="../">Home</Link></li>
                 <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                 <li>  <Link to="../Help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 
@@ -151,6 +155,7 @@ export function RegisterPage() {
                     <ul className="right hide-on-med-and-down">
                         <li> <Link to="../"> Home</Link></li>
                         <li>  <Link to="../help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -158,6 +163,7 @@ export function RegisterPage() {
             <ul className="sidenav" id="mobile-demo">
                 <li> <Link to="../"> Home</Link></li>
                 <li>  <Link to="../help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 
@@ -203,6 +209,7 @@ export function CustomerCreateOrDisplay() {
                         <li> <Link to="../"> Home</Link></li>
                         <li>  <Link to="../Pay"> Pay</Link></li>
                         <li>  <Link to="../Help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -211,6 +218,7 @@ export function CustomerCreateOrDisplay() {
                 <li> <Link to="../"> Home</Link></li>
                 <li>  <Link to="../Pay"> Pay</Link></li>
                 <li>  <Link to="../Help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
             <div className="row">
@@ -242,6 +250,7 @@ export function CustomerPickListsToDisplay() {
                         <li> <Link to="../"> Home</Link></li>
                         <li>  <Link to="../Pay"> Pay</Link></li>
                         <li>  <Link to="../Help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -250,6 +259,7 @@ export function CustomerPickListsToDisplay() {
                 <li> <Link to="../"> Home</Link></li>
                 <li>  <Link to="../Pay"> Pay</Link></li>
                 <li>  <Link to="../Help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
             <div className="row">
@@ -287,6 +297,7 @@ export function CreateCustomerList() {
                         <li>  <Link to="../DisplayList"> Display Trips</Link></li>
                         <li>  <Link to="../Pay"> Pay</Link></li>
                         <li>  <Link to="../Help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -296,6 +307,7 @@ export function CreateCustomerList() {
                 <li>  <Link to="../DisplayList"> Display Trips</Link></li>
                 <li>  <Link to="../Pay"> Pay</Link></li>
                 <li>  <Link to="../Help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
             <div className="container">
@@ -334,6 +346,7 @@ export function DisplayTravelerList() {
                         <li>  <a href="https://www.accuweather.com/"> Weather</a></li>
                         <li>  <Link to="../Pay"> Pay</Link></li>
                         <li>  <Link to="../help"> Help</Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -344,6 +357,7 @@ export function DisplayTravelerList() {
                 <li>  <a href="https://www.accuweather.com/"> Weather</a></li>
                 <li>  <Link to="../Pay"> Pay</Link></li>
                 <li>  <Link to="../help"> Help</Link></li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
             <div className="container">
@@ -400,6 +414,7 @@ export function PayPage() {
                 <li><Link to="../Register">Register</Link></li>
                 <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                 <li><Link to="../CreateCustomerList"> Pack Your Luggage  </Link> </li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 
@@ -437,6 +452,7 @@ export function LoginAdminPage() {
                         <li> <Link to="../"> Home</Link></li>
                         <li><Link to="../destination">Manage Destination</Link></li>
                         <li><Link to="../help"> Help  </Link> </li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -445,6 +461,7 @@ export function LoginAdminPage() {
                 <li> <Link to="../"> Home</Link></li>
                 <li><Link to="../destination">Manage Destination</Link></li>
                 <li><Link to="../help"> Help  </Link> </li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 
@@ -487,6 +504,7 @@ export function HelpPage() {
                         <li>  <Link to="../CreateCustomerList"> Pack You Luggage</Link></li>
                         <li> <Link to="../DisplayList"> My Travel List</Link></li>
                         <li><Link to="../LoginAdminPage"> Administrator </Link></li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                         {/*<li>  <Link to="../help"> Help</Link></li>*/}
                     </ul>
                 </div>
@@ -498,6 +516,7 @@ export function HelpPage() {
                 <li><Link to="../Register">Register</Link></li>
                 <li><Link to="../LoginAdminPage"> Administrator Account </Link></li>
                 <li><Link to="../CreateCustomerList"> Create List  </Link> </li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 
@@ -539,6 +558,7 @@ export function DestinationPage() {
                         {/*<li><Link to="../destination">Manage Destination</Link></li>*/}
                         <li><Link to="../LoginAdminPage"> Display Users </Link></li>
                         <li><Link to="../help"> Help  </Link> </li>
+                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -548,6 +568,7 @@ export function DestinationPage() {
                 {/*<li><Link to="../destination">Manage Destination</Link></li>*/}
                 <li><Link to="../LoginAdminPage"> Display Users </Link></li>
                 <li><Link to="../help"> Help  </Link> </li>
+                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
             </ul>
 
 

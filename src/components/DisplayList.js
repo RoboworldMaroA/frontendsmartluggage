@@ -62,6 +62,7 @@ export default class DisplayList extends Component {
 
     componentDidMount() {
         fetch('https://backendsmartluggage.herokuapp.com/api/v1/customer/').then
+        // fetch('api/v1/customer/').then
         (response => response.json()).then(data => this.setState({contacts: data}));
 
 
@@ -83,6 +84,7 @@ export default class DisplayList extends Component {
 
     componentDidMount() {
         fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip/').then
+        // fetch('api/v1/trip/').then
         (response => response.json()).then(TripData => this.setState({tripData: TripData}));
     }
 

@@ -22,6 +22,7 @@ Final Project Software Developer
         //change fetch to customer database not a student
         const validateAdmin = async () => {
             const result = await fetch('https://backendsmartluggage.herokuapp.com/api/v1/customer', {
+            // const result = await fetch('api/v1/customer', {
                 method: "POST",
                 body: JSON.stringify({name, surname,email, phoneNumber, dob,sex, customerPassword, customerPasswordAgain}),
                 headers: {

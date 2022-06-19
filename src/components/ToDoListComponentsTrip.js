@@ -44,7 +44,7 @@ export const ToDoListComponentsTrip = (props) => {
         setToDoListTrip({...toDoListTrip, camera: !toDoListTrip.camera});
     }
 
-    //grab data from database on the begining of the loading page and update everytime is change something on the list.
+    //grab data from database on the beginning of the loading page and update everytime is change something on the list.
     useEffect(() => {
         console.log("item was updated ireland value is:", toDoListTrip.ireland, updateIrelandStatus());
     }, [toDoListTrip]);

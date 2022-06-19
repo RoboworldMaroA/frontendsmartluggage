@@ -16,10 +16,20 @@ export default class Trip extends Component {
         };
     }
 
+
+    // Deploy Version
     componentDidMount(){
         fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip').then(response => response.json()).
         then(data => this.setState({contacts: data}));
     }
+
+
+    //Development Version
+    // componentDidMount(){
+    //     fetch('api/v1/trip').then(response => response.json()).
+    //     then(data => this.setState({contacts: data}));
+    // }
+
 
     render(){
         return(

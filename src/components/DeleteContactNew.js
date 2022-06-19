@@ -13,6 +13,7 @@ const DeleteContactNew = ({item}) => {
 
     const deleteStudent = async () => {
         const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/student/" + id, {
+            // const result = await fetch("api/v1/student/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
             //headers: {
