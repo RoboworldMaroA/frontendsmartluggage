@@ -46,7 +46,8 @@ export function Home() {
                         <li><Link to="DisplayList"> My Travel List</Link></li>
                         <li>  <Link to="/help"> Help</Link></li>
                         <li><Link to="LoginAdminPage"> Administrator</Link></li>
-                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
+                        {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
+                        <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -56,7 +57,8 @@ export function Home() {
                 <li><Link to="DisplayList"> My Travel List</Link></li>
                 <li>  <Link to="/help"> Help</Link></li>
                 <li><Link to="LoginAdminPage"> Administrator</Link></li>
-                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
+                {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
+                <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
             </ul>
 
             <div className="row">
@@ -558,7 +560,8 @@ export function DestinationPage() {
                         {/*<li><Link to="../destination">Manage Destination</Link></li>*/}
                         <li><Link to="../LoginAdminPage"> Display Users </Link></li>
                         <li><Link to="../help"> Help  </Link> </li>
-                        <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
+                        {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
+                        <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -568,7 +571,8 @@ export function DestinationPage() {
                 {/*<li><Link to="../destination">Manage Destination</Link></li>*/}
                 <li><Link to="../LoginAdminPage"> Display Users </Link></li>
                 <li><Link to="../help"> Help  </Link> </li>
-                <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
+                {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
+                <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
             </ul>
 
 
