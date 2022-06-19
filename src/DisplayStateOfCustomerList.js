@@ -27,26 +27,11 @@ export const DisplayStateOfCustomerList = () => {
 
 
     //Old Deploy version
-    // useEffect(() => {
-    //     //do something when loading
-    //     console.log("useEffect")
-    //     if (!customer) {
-    //         fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
-    //             // This is format before deploy
-    //             // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
-    //             console.log("List of items in the customer", dataCustomer);
-    //             setCustomer(dataCustomer);
-    //         });
-    //     }
-    // }, ['customer']);
-
-
-    //New Deploy Version
     useEffect(() => {
         //do something when loading
         console.log("useEffect")
         if (!customer) {
-            fetch("https://backendsmartluggage.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 // This is format before deploy
                 // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 console.log("List of items in the customer", dataCustomer);
@@ -54,6 +39,21 @@ export const DisplayStateOfCustomerList = () => {
             });
         }
     }, ['customer']);
+
+
+    //New Deploy Version
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("useEffect")
+    //     if (!customer) {
+    //         fetch("https://backendsmartluggage.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
+    //             // This is format before deploy
+    //             // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             console.log("List of items in the customer", dataCustomer);
+    //             setCustomer(dataCustomer);
+    //         });
+    //     }
+    // }, ['customer']);
 
 
     //Development Version
