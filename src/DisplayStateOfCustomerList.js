@@ -83,24 +83,24 @@ export const DisplayStateOfCustomerList = () => {
 
 
     //Old Deploy version
-    // useEffect(() => {
-    //     //do something when loading
-    //     console.log("yoyw yow do something from useeffect")
-    //     fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
-    //         console.log("List of items in the trip", dataTrip);
-    //         setTrip(dataTrip);
-    //     });
-    // }, ["trip"]);
-
-
     useEffect(() => {
         //do something when loading
-        console.log("test response from useeffect")
-        fetch("api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
+        console.log("yoyw yow do something from useeffect")
+        fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
             console.log("List of items in the trip", dataTrip);
             setTrip(dataTrip);
         });
     }, ["trip"]);
+
+
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("test response from useeffect")
+    //     fetch("api/v1/trip/").then((response) => response.json()).then((dataTrip) => {
+    //         console.log("List of items in the trip", dataTrip);
+    //         setTrip(dataTrip);
+    //     });
+    // }, ["trip"]);
 
 
 
