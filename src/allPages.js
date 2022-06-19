@@ -43,7 +43,7 @@ export function Home() {
                     <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i
                         className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
-                        <li><Link to="DisplayList"> My Travel List</Link></li>
+                        <li><Link to="displayList"> My Travel List</Link></li>
                         <li>  <Link to="/help"> Help</Link></li>
                         <li><Link to="LoginAdminPage"> Administrator</Link></li>
                         {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
@@ -54,7 +54,7 @@ export function Home() {
 
 
             <ul className="sidenav" id="mobile-demo">
-                <li><Link to="DisplayList"> My Travel List</Link></li>
+                <li><Link to="displayList"> My Travel List</Link></li>
                 <li>  <Link to="/help"> Help</Link></li>
                 <li><Link to="LoginAdminPage"> Administrator</Link></li>
                 {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
@@ -296,7 +296,7 @@ export function CreateCustomerList() {
                         className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
                         <li> <Link to="../"> Home</Link></li>
-                        <li>  <Link to="../DisplayList"> Display Trips</Link></li>
+                        <li>  <Link to="../displayList"> Display Trips</Link></li>
                         <li>  <Link to="../Pay"> Pay</Link></li>
                         <li>  <Link to="../Help"> Help</Link></li>
                         <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
@@ -306,7 +306,7 @@ export function CreateCustomerList() {
 
             <ul className="sidenav" id="mobile-demo">
                 <li> <Link to="../"> Home</Link></li>
-                <li>  <Link to="../DisplayList"> Display Trips</Link></li>
+                <li>  <Link to="../displayList"> Display Trips</Link></li>
                 <li>  <Link to="../Pay"> Pay</Link></li>
                 <li>  <Link to="../Help"> Help</Link></li>
                 <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
@@ -402,6 +402,7 @@ export function PayPage() {
                         className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
                         <li> <Link to="../"> Home</Link></li>
+                        <li> <Link to="../displayList"> My Travel List</Link></li>
                         <li>  <Link to="../Register"> Register</Link></li>
                         <li>  <Link to="../CreateCustomerList"> Pack Your Luggage</Link></li>
                         <li><Link to="../LoginAdminPage"> Administrator</Link></li>
@@ -412,7 +413,7 @@ export function PayPage() {
 
             <ul className="sidenav" id="mobile-demo">
                 <li> <Link to="../"> Home</Link></li>
-                <li> <Link to="../DisplayList"> My Travel List</Link></li>
+                <li> <Link to="../displayList"> My Travel List</Link></li>
                 <li><Link to="../Register">Register</Link></li>
                 <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                 <li><Link to="../CreateCustomerList"> Pack Your Luggage  </Link> </li>
@@ -504,7 +505,7 @@ export function HelpPage() {
                         <li> <Link to="../"> Home</Link></li>
                         <li>  <Link to="../Register"> Register</Link></li>
                         <li>  <Link to="../CreateCustomerList"> Pack You Luggage</Link></li>
-                        <li> <Link to="../DisplayList"> My Travel List</Link></li>
+                        <li> <Link to="../displayList"> My Travel List</Link></li>
                         <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                         <li>  <a href="http://localhost:8080/logout"> Logout</a></li>
                         {/*<li>  <Link to="../help"> Help</Link></li>*/}
@@ -514,7 +515,7 @@ export function HelpPage() {
 
             <ul className="sidenav" id="mobile-demo">
                 <li> <Link to="../"> Home</Link></li>
-                <li> <Link to="../DisplayList"> My Travel List</Link></li>
+                <li> <Link to="../displayList"> My Travel List</Link></li>
                 <li><Link to="../Register">Register</Link></li>
                 <li><Link to="../LoginAdminPage"> Administrator Account </Link></li>
                 <li><Link to="../CreateCustomerList"> Create List  </Link> </li>
