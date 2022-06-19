@@ -47,7 +47,7 @@ export function Home() {
                         <li>  <Link to="/help"> Help</Link></li>
                         <li><Link to="LoginAdminPage"> Administrator</Link></li>
                         {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
-                        <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
+                        <li>  <a href="https://backendsmartluggage.herokuapp.com/logout"> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -58,7 +58,7 @@ export function Home() {
                 <li>  <Link to="/help"> Help</Link></li>
                 <li><Link to="LoginAdminPage"> Administrator</Link></li>
                 {/*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*/}
-                <li>  <a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>
+                <li>  <a href="https://backendsmartluggage.herokuapp.com/logout"> Logout</a></li>
             </ul>
 
             <div className="row">
