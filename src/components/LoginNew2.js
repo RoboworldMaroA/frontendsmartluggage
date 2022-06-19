@@ -97,8 +97,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
 
             // fetch("login", {
-            // fetch("https://backendsmartluggage.herokuapp.com/login", {
-                fetch("https://backendsmartluggage.herokuapp.com/displayUsers", {
+            fetch("login", {
             method: "POST",
             body: JSON.stringify({userName,password,active,roles,userAddress,userDob,userEmail,userPhoneNumber, userSurname}),
             headers: {
