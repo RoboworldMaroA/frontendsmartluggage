@@ -19,7 +19,7 @@ export const DisplayCustomerTrip = ({item}) => {
     //const {value,setValue} = useContext(UserContext);
 
     const deleteCustomerTrip = async () => {
-        const resultTrip = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip" + id, {
+        const resultTrip = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip/" + id, {
         // const resultTrip = await fetch("api/v1/trip/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
