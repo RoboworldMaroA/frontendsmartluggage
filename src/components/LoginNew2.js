@@ -1,4 +1,3 @@
-
 import React, {useContext, useEffect, useState} from 'react';
 import Register from "./Register";
 import {useNavigate} from "react-router-dom";
@@ -78,7 +77,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     // const {value, setValue} = useContext(UserContext);
 
 
-
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
@@ -94,23 +92,30 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     // fetch user data, for Testing Purposes
     const loginUser = async () => {
         const result = await
-
-
             // fetch("login", {
             fetch("https://backendsmartluggage.herokuapp.com/login", {
-            method: "POST",
-            body: JSON.stringify({userName,password,active,roles,userAddress,userDob,userEmail,userPhoneNumber, userSurname}),
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
+                method: "POST",
+                body: JSON.stringify({
+                    userName,
+                    password,
+                    active,
+                    roles,
+                    userAddress,
+                    userDob,
+                    userEmail,
+                    userPhoneNumber,
+                    userSurname
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
         ;
 
         const userBody = await result.json();
-        console.log("This is user body from loginUser"+userBody);
+        console.log("This is user body from loginUser" + userBody);
         // navigate("/createOrDisplayList");
         setUser(userBody).catch(error => console.log("Display error" + error));
-
 
         // if (result.status===500){
         //     console.log("IT is w=something wrong")
@@ -118,14 +123,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // console.log("All good")
         // navigate("/createOrDisplayList");
     }
-
-
-
-
-
-
-
-
 
     // const validatePassword=(event)=>{
     //     const pass =event.target.value;
@@ -147,15 +144,14 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     const verifyAllFields = (event) => {
 
+        console.log("data user name in if statement: " + userName)
+        // console.log("user body in verify all fields"+ this.result.value.status);//not working
+        event.preventDefault();
 
-            console.log("data user name in if statement: "+userName)
-             // console.log("user body in verify all fields"+ this.result.value.status);//not working
-            event.preventDefault();
-
-        window.alert("Thank You for registration. !")
+        window.alert("Thank You.!")
         navigate("/createOrDisplayList");
 
-            return loginUser();
+        return loginUser();
 
         // if (!passwordError) {
         //
@@ -318,18 +314,15 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     return (
 
 
-        <div id="ItemsInLoginCustomer">
+        <div id="ItemsInLoginCustomer" >
             {/*<form className="col s12" onSubmit={() => validateCustomer()}>*/}
 
-            <div className="col s8 m3">
-
-                <div id="cardModOpacity" className="card ">
-
+            <div className="row">
+                <div className="col s12 m8 l4">
+                <div id="cardModOpacity" className="card">
                     {/*<form id="formInLoginCustomer" onSubmit={verifyAllFields}>*/}
                     <form id="formInLoginCustomer" onSubmit={verifyAllFields}>
-
                         <div className="row">
-
                             <div id="loginInput" className="input-field col s8">
                                 {/*<input placeholder="" value={userEmail} type="email"*/}
                                 {/*       onChange={(event => verifyEmail(event))}*/}
@@ -338,8 +331,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                                 <input placeholder="" value={userName} type="text"
                                        onChange={(event => verifyName(event))}
                                        className="validate"/>
-
-
                                 <label htmlFor="name"> Name</label>
                                 {/*<p>Email (Email from database){adminUser.email}.  User nAme that is writing{userEmail}</p>*/}
                                 {/*<p>Is error login :{isErrorEmail}</p>*/}
@@ -349,7 +340,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                                 {/*<p id="smallerText">{adminUser.email}</p>*/}
                                 {/*<p>{userName}</p>*/}
                                 <p id="isErrorEmail">{isErrorEmail}</p>
-
                                 <p id="emailErrorEmpty">{emailErrorEmpty}</p>
                                 <p id="emailError">{emailError}</p>
                                 {/*<p id="emailError"> Email: {userEmail}</p>*/}
@@ -357,18 +347,14 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                             </div>
                         </div>
 
-
                         <div className="row">
                             <div className="input-field col s8">
                                 {/*<input placeholder="" value={userPassword} type="password"*/}
                                 {/*       onChange={(event => verifyName(event))}*/}
                                 {/*       className="validate"/>*/}
-
-
                                 <input placeholder="" value={password} type="password"
                                        onChange={(event => verifyPass(event))}
                                        className="validate"/>
-
                                 <label htmlFor="name"> Password</label>
                                 {/*    <p>Name (Name from database){adminUser.password}.  Username that is writing{userPassword}</p>*/}
                                 {/*<p>Is error password :{isError}</p>*/}
@@ -383,7 +369,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                                 {/*<p id="emailError">Password: {userPassword}</p>*/}
                             </div>
 
-
                             {/*<p>*/}
                             {/*    <input*/}
                             {/*        type="text"*/}
@@ -396,14 +381,12 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                             {/*<pre>*/}
                             {/*  {JSON.stringify(searchedArray, null, '    ')}*/}
                             {/* </pre>*/}
-
-
                         </div>
-
 
                         <div className="row">
                             {/*<Link to="../CreateCustomerList">*/}
-                            <button disabled={password.length===0||userName.length===0} id="buttonInLoginNew2" className="waves-effect waves-light btn #795548 brown "
+                            <button disabled={password.length === 0 || userName.length === 0} id="buttonInLoginNew2"
+                                    className="waves-effect waves-light btn #795548 brown "
                                     type="submit" name="action">
                                 Login
                             </button>
@@ -424,9 +407,9 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                 <br/>
                 <br/>
                 <br/>
-                < br/>
                 <br/>
-
+                <br/>
+                </div>
             </div>
         </div>
 
@@ -434,17 +417,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 }
 
 export default LoginNew2;
-
-
-
-
-
-
-
-
-
-
-
 
 
 // import React, {useContext, useEffect, useState} from 'react';

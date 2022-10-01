@@ -25,7 +25,7 @@ Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
-export const DisplayListFunctionalComponent = (props) =>{
+export const DisplayListFunctionalComponent = (props) => {
 
     const [tripData, setTripData] = useState([]);
     const [displayTripDetail, setDisplayTripDetail] = useState(false);
@@ -108,20 +108,19 @@ export const DisplayListFunctionalComponent = (props) =>{
     }, ["hI trip"]);
 
 
-   // const calculateLastTripId=()=>{
-   //     tripData.map(
-   //         (TripData)=> {
-   //             return(
-   //                 <div> {TripData.id} </div>
-   //             );
-   //         }
-   //     )
-   //
-   //
-   //     // console.log("I am looking for last Id", lastId);
-   //
-   // }
-
+    // const calculateLastTripId=()=>{
+    //     tripData.map(
+    //         (TripData)=> {
+    //             return(
+    //                 <div> {TripData.id} </div>
+    //             );
+    //         }
+    //     )
+    //
+    //
+    //     // console.log("I am looking for last Id", lastId);
+    //
+    // }
 
 
     //this method display or not the Trip Detail
@@ -158,222 +157,192 @@ export const DisplayListFunctionalComponent = (props) =>{
     }
 
 
-        return (
-            // First DIV
-            <div id="allElementInDisplayListFunctionalComponent">
+    return (
+        // First DIV
+        <div id="allElementInDisplayListFunctionalComponent">
 
-                {/*<div>*/}
-
-
-                {/*    tripData.map((TripData)=> {*/}
-                {/*        return(<div >*/}
-                {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
-                {/*        </div>*/}
-
-                {/*        );*/}
-                {/*};*/}
-                {/*</div>*/}
+            {/*<div>*/}
 
 
+            {/*    tripData.map((TripData)=> {*/}
+            {/*        return(<div >*/}
+            {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
+            {/*        </div>*/}
+
+            {/*        );*/}
+            {/*};*/}
+            {/*</div>*/}
 
 
-                {/*    {this.state.tripData.map((TripData)=> {*/}
-                {/*        return(<div >*/}
-                {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
-                {/*        </div>*/}
+            {/*    {this.state.tripData.map((TripData)=> {*/}
+            {/*        return(<div >*/}
+            {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
+            {/*        </div>*/}
 
-                {/*        )*/}
+            {/*        )*/}
 
-                {/*    })}*/}
-                {/*</div>*/}
-
-
-                {/*Filter function to diplay only trip data from one cutomer*/}
-                {/*<div className="row">*/}
-                {/*    {tripData.filter((TripData)=>TripData.id===1)*/}
-                {/*        .map((TripData)=> TripData.ireland)}*/}
-
-                {/*</div>*/}
-
-                {/*<div className="row">*/}
-                {/*    {trip && trip.filter((TripData) => TripData.id===2).*/}
-                {/*    map((TripData) => {return (*/}
-                {/*        <div key={TripData.id} >*/}
-
-                {/*            <h1> From Trip   {TripData.departureDay} {TripData.ireland.toString()}  </h1>*/}
-                {/*        </div>*/}
-                {/*    )})*/}
-
-                {/*    }*/}
-
-                {/*</div>*/}
+            {/*    })}*/}
+            {/*</div>*/}
 
 
+            {/*Filter function to diplay only trip data from one cutomer*/}
+            {/*<div className="row">*/}
+            {/*    {tripData.filter((TripData)=>TripData.id===1)*/}
+            {/*        .map((TripData)=> TripData.ireland)}*/}
+
+            {/*</div>*/}
+
+            {/*<div className="row">*/}
+            {/*    {trip && trip.filter((TripData) => TripData.id===2).*/}
+            {/*    map((TripData) => {return (*/}
+            {/*        <div key={TripData.id} >*/}
+
+            {/*            <h1> From Trip   {TripData.departureDay} {TripData.ireland.toString()}  </h1>*/}
+            {/*        </div>*/}
+            {/*    )})*/}
+
+            {/*    }*/}
+
+            {/*</div>*/}
 
 
+            {/*<div className="row">*/}
+            {/*    {this.state.contacts.filter((data)=>data.id===1)*/}
+            {/*        .map((data)=> data.name)}*/}
 
-                {/*<div className="row">*/}
-                {/*    {this.state.contacts.filter((data)=>data.id===1)*/}
-                {/*        .map((data)=> data.name)}*/}
+            {/*</div>*/}
 
-                {/*</div>*/}
+            {/*<p> Status of the list from database </p>*/}
+            <div id="positionDisplayStateOfCustomerList">
+                <DisplayStateOfCustomerList/>
+            </div>
+
+            {/*IN THIS LINE IS VISIBLE VALUE FROM THE ANOTHER COMPONENT THAT YOU CAN SHARE*/}
+            {/*<div className="row"> <h2>Element from useContext {value}</h2></div>*/}
+
+            {/*<div> Trip ID {tripId.length}</div>*/}
+
+            <div id="fourButtonsToDisplayListDetail" className="row">
 
 
+                {/*#################FIRST BUTTON#######################*/}
+                <div className="col s12 m6 l3">
+                    <button className="waves-effect waves-light btn #795548 brown "
+                            onClick={() => changeStatus()}> Details Trip 1
+                    </button>
+                    {/*<div>*/}
+                    {/*    {displayTripDetail*/}
+                    {/*        ? tripData.map((TripData) => {*/}
+                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
+                    {/*        }):"... press to see more detail about a trips"}*/}
+                    {/*    /!*end*!/*/}
+                    {/*</div>*/}
+                    {/*<div className="row">*/}
+                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
+                    {/*</div>*/}
 
-
-
-                {/*<p> Status of the list from database </p>*/}
-                <div id="positionDisplayStateOfCustomerList">
-                        <DisplayStateOfCustomerList/>
                 </div>
-
-                {/*IN THIS LINE IS VISIBLE VALUE FROM THE ANOTHER COMPONENT THAT YOU CAN SHARE*/}
-                {/*<div className="row"> <h2>Element from useContext {value}</h2></div>*/}
-
-                {/*<div> Trip ID {tripId.length}</div>*/}
-
-
-
-
-
-                <div id= "fourButtonsToDisplayListDetail" className="row">
-
-
-                    {/*#################FIRST BUTTON#######################*/}
-                    <div className="col s12 m6 l3">
-                <button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Details Trip 1 </button>
-                 {/*<div>*/}
-                 {/*    {displayTripDetail*/}
-                 {/*        ? tripData.map((TripData) => {*/}
-                 {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                 {/*        }):"... press to see more detail about a trips"}*/}
-                 {/*    /!*end*!/*/}
-                 {/*</div>*/}
-                {/*<div className="row">*/}
-                {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                {/*</div>*/}
-
-                    </div>
                 <div>
                     {displayTripDetail
-                        ? tripData.filter((TripData) => TripData.id===loggedCustomerId).map((TripData) => {
-                            return (
-                                <>
-                                <DisplayCustomerTrip key={TripData.id} item={TripData}/>
-
-
-                                </>
-
-                                );
-                        }):""}
-                    {/*end*/}
-                </div>
-
-
-
-
-                    {/*#################  2 BUTTON#######################*/}
-                        <div className="col s12 m6 l3">
-                <button  className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus2()} > Details Trip 2  </button>
-                {/*<div>*/}
-                {/*    {displayTripDetail*/}
-                {/*        ? tripData.map((TripData) => {*/}
-                {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                {/*        }):"... press to see more detail about a trips"}*/}
-                {/*    /!*end*!/*/}
-                {/*</div>*/}
-                {/*<div className="row">*/}
-                {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                {/*</div>*/}
-
-
-                        </div>
-                <div>
-                    {displayTripDetail2
-                        ? tripData.filter((TripData) => TripData.id===2).map((TripData) => {
+                        ? tripData.filter((TripData) => TripData.id === loggedCustomerId).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
-
-
                                 </>
-
                             );
-                        }):""}
+                        }) : ""}
                     {/*end*/}
                 </div>
 
 
+                {/*#################  2 BUTTON#######################*/}
+                <div className="col s12 m6 l3">
+                    <button className="waves-effect waves-light btn #795548 brown "
+                            onClick={() => changeStatus2()}> Details Trip 2
+                    </button>
+                    {/*<div>*/}
+                    {/*    {displayTripDetail*/}
+                    {/*        ? tripData.map((TripData) => {*/}
+                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
+                    {/*        }):"... press to see more detail about a trips"}*/}
+                    {/*    /!*end*!/*/}
+                    {/*</div>*/}
+                    {/*<div className="row">*/}
+                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
+                    {/*</div>*/}
+                </div>
+
+                <div>
+                    {displayTripDetail2
+                        ? tripData.filter((TripData) => TripData.id === 2).map((TripData) => {
+                            return (
+                                <>
+                                    <DisplayCustomerTrip key={TripData.id} item={TripData}/>
+                                </>
+                            );
+                        }) : ""}
+                    {/*end*/}
+                </div>
 
 
-                    {/*################# 3 BUTTON#######################*/}
-                            <div className="col s12 m6 l3">
-                <button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus3()} >  Details Trip 3 </button>
-                {/*<div>*/}
-                {/*    {displayTripDetail*/}
-                {/*        ? tripData.map((TripData) => {*/}
-                {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                {/*        }):"... press to see more detail about a trips"}*/}
-                {/*    /!*end*!/*/}
-                {/*</div>*/}
-                {/*<div className="row">*/}
-                {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                {/*</div>*/}
-
-                            </div>
+                {/*################# 3 BUTTON#######################*/}
+                <div className="col s12 m6 l3">
+                    <button className="waves-effect waves-light btn #795548 brown "
+                            onClick={() => changeStatus3()}> Details Trip 3
+                    </button>
+                    {/*<div>*/}
+                    {/*    {displayTripDetail*/}
+                    {/*        ? tripData.map((TripData) => {*/}
+                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
+                    {/*        }):"... press to see more detail about a trips"}*/}
+                    {/*    /!*end*!/*/}
+                    {/*</div>*/}
+                    {/*<div className="row">*/}
+                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
+                    {/*</div>*/}
+                </div>
 
                 <div>
                     {displayTripDetail3
-                        ? tripData.filter((TripData) => TripData.id===3).map((TripData) => {
+                        ? tripData.filter((TripData) => TripData.id === 3).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
-
-
                                 </>
-
                             );
-                        }):""}
+                        }) : ""}
                     {/*end*/}
                 </div>
 
 
+                {/*################# 4 BUTTON#######################*/}
+                <div className="col s12 m6 l3">
 
-                    {/*################# 4 BUTTON#######################*/}
-                                <div className="col s12 m6 l3">
-
-                <button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus4()} >  Details Trip 4 </button>
-                {/*<div>*/}
-                {/*    {displayTripDetail*/}
-                {/*        ? tripData.map((TripData) => {*/}
-                {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                {/*        }):"... press to see more detail about a trips"}*/}
-                {/*    /!*end*!/*/}
-                {/*</div>*/}
-                {/*<div className="row">*/}
-                {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                {/*</div>*/}
-                                </div>
-                <div >
+                    <button className="waves-effect waves-light btn #795548 brown "
+                            onClick={() => changeStatus4()}> Details Trip 4
+                    </button>
+                    {/*<div>*/}
+                    {/*    {displayTripDetail*/}
+                    {/*        ? tripData.map((TripData) => {*/}
+                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
+                    {/*        }):"... press to see more detail about a trips"}*/}
+                    {/*    /!*end*!/*/}
+                    {/*</div>*/}
+                    {/*<div className="row">*/}
+                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
+                    {/*</div>*/}
+                </div>
+                <div>
                     {displayTripDetail4
-                        ? tripData.filter((TripData) => TripData.id===4).map((TripData) => {
+                        ? tripData.filter((TripData) => TripData.id === 4).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
-
-
                                 </>
-
                             );
-                        }):""}
+                        }) : ""}
                     {/*end*/}
                 </div>
-
-
-
-
-
-
 
 
                 {/*<div className="row">*/}
@@ -391,11 +360,9 @@ export const DisplayListFunctionalComponent = (props) =>{
                 {/*    /!*end*!/*/}
                 {/*</div>*/}
 
-                </div>
+            </div>
 
 
-
-
-            </div>);
+        </div>);
 }/* end class Contact*/
 export default DisplayListFunctionalComponent;

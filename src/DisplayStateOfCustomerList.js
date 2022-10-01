@@ -119,42 +119,31 @@ export const DisplayStateOfCustomerList = () => {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         console.log("State trip List", displayLuggage);
         setDisplayLuggage(!displayLuggage);
-
-
     }
 
 
     const [displayLuggage2, setDisplayLuggage2] = useState(null);
-
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage2() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         console.log("State trip List", displayLuggage2);
         setDisplayLuggage2(!displayLuggage2);
-
-
     }
 
     const [displayLuggage3, setDisplayLuggage3] = useState(null);
-
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage3() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         console.log("State trip List", displayLuggage3);
         setDisplayLuggage3(!displayLuggage3);
-
-
     }
 
     const [displayLuggage4, setDisplayLuggage4] = useState(null);
-
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage4() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         console.log("State trip List", displayLuggage4);
         setDisplayLuggage4(!displayLuggage4);
-
-
     }
 
 

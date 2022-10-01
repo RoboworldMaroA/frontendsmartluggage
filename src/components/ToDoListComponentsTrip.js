@@ -160,13 +160,10 @@ export const ToDoListComponentsTrip = (props) => {
             calculateTotalEquipments();
             calculateTotalWeightEquipments();
         }
-
         newItems[index].quantity--;
         setItemsEquipments(newItems);
         calculateTotalEquipments();
         calculateTotalWeightEquipments();
-
-
     }
 
 
@@ -189,12 +186,9 @@ export const ToDoListComponentsTrip = (props) => {
         if (index > -1) {
             newItems.splice(index, 1);
             setItemsEquipments(newItems);
-
         }
-
         calculateTotalEquipments();
         calculateTotalWeightEquipments();
-
     }
 
 
@@ -204,10 +198,8 @@ export const ToDoListComponentsTrip = (props) => {
         const totalItemWeightEquipments = itemsEquipments.reduce((total, itemsEquipments) => {
             return total + itemsEquipments.weight * itemsEquipments.quantity;
         }, 0);
-
         setTotalItemWeightEquipments(totalItemWeightEquipments);
     };
-
 
     const validateInputNewItemEquipments = (event) => {
         const newItem = event.target.value;
@@ -226,14 +218,6 @@ export const ToDoListComponentsTrip = (props) => {
     }
 
     // ************ END ELECTRONIC EQUIPMENTS LIST  ***************
-
-
-
-
-
-
-
-
 
 
 
@@ -260,12 +244,6 @@ export const ToDoListComponentsTrip = (props) => {
         {itemName: 'Maps', quantity: 0, isSelected: false, weight: 0.2},
         {itemName: 'Umbrella', quantity: 0, isSelected: false, weight: 0.5},
         {itemName: 'Earplugs', quantity: 0, isSelected: false, weight: 0.01},
-        // {itemName: 'Drone Equipment', quantity: 1, isSelected: false, weight: 0.3},
-        // {itemName: 'Camcorder', quantity: 1, isSelected: false, weight: 0.3},
-        // {itemName: 'Camcorder Equipment', quantity: 1, isSelected: false, weight: 0.3},
-        // {itemName: 'Additional Battery', quantity: 1, isSelected: false, weight: 0.3},
-
-
     ]);
 
 

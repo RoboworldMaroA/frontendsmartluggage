@@ -1,4 +1,4 @@
-import React, {useState}from "react";
+import React, {useState} from "react";
 import {Link, NavLink} from "react-router-dom"
 import './allPages.css';
 import M from "materialize-css";
@@ -26,49 +26,17 @@ Final Project Software Developer
 */
 
 
-
 /* Display Home page */
 export function Home() {
 
     return (
-
-
-
         <div id="homePage" className="container-fluid"
              style={{
                  backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no', // backgroundSize:'950px',
                  backgroundSize: "cover", opacity: 0.98,
              }}
         >
-
-
-            {/*<nav>*/}
-            {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-            {/*        <a id="TitleHomePage" href="/" className="brand-logo">SmartLuggage</a>*/}
-            {/*        <a href="#" data-target="mobile-links" className="sidenav-trigger"><i*/}
-            {/*            className="material-icons">menu</i></a>*/}
-            {/*        <ul className="right hide-on-med-and-down">*/}
-            {/*            <li><NavLink to="/displayList"> My Travel List</NavLink></li>*/}
-            {/*            <li><Link to="/help"> Help</Link></li>*/}
-            {/*            <li><a href="/help">First Sidebar Link test help</a></li>*/}
-            {/*            <li><Link to="LoginAdminPage"> Administrator</Link></li>*/}
-            {/*            /!*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*!/*/}
-            {/*            <li><a href="https://backendsmartluggage.herokuapp.com/logout"> Logout</a></li>*/}
-            {/*        </ul>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
-            {/*<ul className="sidenav" id="mobile-links">*/}
-            {/*    <li><Link to="frontendsmartluggage/displayList"> My Travel List</Link></li>*/}
-            {/*    <li><a href="www.wp.pl">not navigate why</a></li>*/}
-            {/*    <li><Link to="../help"> Help</Link></li>*/}
-            {/*    <li><a href="../help">First Sidebar Link test help</a></li>*/}
-            {/*    <li><Link to="../LoginAdminPage"> Administrator</Link></li>*/}
-            {/*    /!*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*!/*/}
-            {/*    <li><a href="https://backendsmartluggage.herokuapp.com/logout"> Logout</a></li>*/}
-            {/*</ul>*/}
-
-             <NavbarHome/>
+            <NavbarHome/>
 
             <div className="row">
                 <HomeButtons/>
@@ -76,7 +44,6 @@ export function Home() {
             <br/>
             <br/>
             <br/>
-
         </div>
 
     );
@@ -87,20 +54,16 @@ export function Home() {
 export function LoginPage() {
     const [value, setValue] = useState("");
     return (<body>
-    <div id="loginPage"
-        // style={{ backgroundImage: `url(${backgroundLogin})`,
-        //     backgroundRepeat: 'repeat-no',
-        //     backgroundSize:"cover",
-        //     opacity:0.96,
-        // }}
-         className="container-fluid">
+    <div id="loginPage" className="container-fluid">
+
+
+
         <nav>
             <div className="nav-wrapper #5d4037 brown darken-2">
                 <a href="/" className="brand-logo">SmartLuggage </a>
                 <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i
                     className="material-icons">menu</i></a>
                 <ul className="right hide-on-med-and-down">
-
                     <li><Link to="../">Home</Link></li>
                     <li><Link to="../LoginAdminPage"> Administrator </Link></li>
                     <li><Link to="../Help"> Help</Link></li>
@@ -127,6 +90,9 @@ export function LoginPage() {
 
         </div>
         <br/>
+
+
+
     </div>
     </body>);
 

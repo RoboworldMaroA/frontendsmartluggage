@@ -1,6 +1,12 @@
 #ItemsInLoginCustomer{
     /*object-position: center;*/
-    margin: 5% 10% 10% 65%;
+    margin: 5% 10% 10% 0%;
+
+}
+
+#ItemsInLoginCustomerMobile{
+    /*object-position: center;*/
+    margin: 5% 10% 10% 0%;
 
 }
 
