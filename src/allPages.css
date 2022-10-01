@@ -9,7 +9,7 @@
 
 #loginPage{
 
-    background-image: url("./photo/backgroundLoginPage5.jpg");
+    background-image: url("./photo/backgroundLoginPage5small.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     opacity:0.98;
@@ -21,7 +21,7 @@
 
 #CustomerCreateOrDisplayListPage{
 
-    background-image: url("./photo/backgroundUserLists.jpg");
+    background-image: url("./photo/backgroundUserListsSmall.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     opacity:0.98;
@@ -34,7 +34,7 @@
 #DisplayListFirstPage{
 
 /*background-color: #9bc4ca;*/
-    background-image: url("./photo/pexels nowe .jpg");
+    background-image: url("./photo/pexelsNoweSmall.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     /*background-size:1920px;*/
