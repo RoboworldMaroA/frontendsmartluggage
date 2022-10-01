@@ -23,13 +23,13 @@ import Login from "./components/Login";
 // import {UserContext} from "./UserContext";
 /*
 SmartLuggage Application
-Marek Augustyn
-12 May 2022
-Final Project Software Developer
+Update 30 September 2022
 */
 
 
-function App() {
+function App(){
+
+
     return (
         <div>
             <Routes>

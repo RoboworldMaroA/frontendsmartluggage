@@ -60,6 +60,14 @@
 
 }
 
+
+#myLuggage{
+    text-align: center;
+    margin-top:1%;
+
+
+}
+
 #loginContainer{
     padding-left: 10%;
 
@@ -90,13 +98,30 @@
 
 }
 
+
+#myLuggageIconAndName{
+    margin-right: 45%;
+
+}
+
 #payIconAndName{
     margin-right: 59%;
 
 }
 
+#adminIconAndName{
+    margin-right: 50%;
+
+}
+
 
 #pay{
+    text-align: center;
+    margin-top:1%;
+
+}
+
+#adminButton{
     text-align: center;
     margin-top:1%;
 
@@ -117,6 +142,11 @@
 
 }
 
+#buttonSizeAdmin{
+    width: 250px;
+}
+
+
 #buttonSizePay{
     width: 250px;
 }
@@ -133,6 +163,11 @@
     width: 250px;
 }
 
+
+#buttonSizeMyLuggage{
+    width: 250px;
+}
+
 #iconRegister{
     margin-right: 12px;
 
@@ -146,9 +181,19 @@
     margin-right: 18px;
 }
 
+
+#iconMyLuggage{
+    margin-right: 13px;
+}
+
 #iconPay{
     margin-right: 18px;
 }
+
+#iconAdmin{
+    margin-right: 13px;
+}
+
 
 
 #allButtons{
