@@ -188,7 +188,7 @@ const EssentialList = ({props}) => {
             <div className="col m10 s10">
                 <div className="card">
                     <div className="card-image">
-                        <img src={require("../photo/backgroundEssential5.jpg")}/>
+                        <img src={require("../photo/backgroundEssential5small.jpg")}/>
                         <span className="card-title">ESSENTIALS</span>
                     </div>
                     <div className="card-content">

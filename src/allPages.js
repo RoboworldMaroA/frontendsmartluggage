@@ -11,7 +11,7 @@ import LoginNew2 from "./components/LoginNew2";
 import DisplayListFunctionalComponent from "./components/DisplayListFuctionalComponent";
 import Help from "./components/Help";
 import ManageDestinationFunctionalComponent from "./components/ManageDestinationFuctionalComponent";
-import backgroundHome from "./photo/backgroundHomePage3.jpg";
+import backgroundHome from "./photo/backgroundHomePage3small.jpg";
 import HomeButtons from "./components/HomeButtons";
 import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayList";
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
@@ -32,7 +32,7 @@ export function Home() {
     return (
         <div id="homePage" className="container-fluid"
              style={{
-                 backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no', // backgroundSize:'950px',
+                 backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no',
                  backgroundSize: "cover", opacity: 0.98,
              }}
         >

@@ -763,7 +763,7 @@ export const ToDoListComponentsTrip = (props) => {
                     <div className="col m10 s10">
                         <div className="card">
                             <div className="card-image">
-                                <img src={require("../photo/backgroundElectronicEquipments3.jpg")}/>
+                                <img src={require("../photo/backgroundElectronicEquipments3small.jpg")}/>
                                 <span className="card-title">ELECTRONIC EQUIPMENT</span>
                             </div>
                             <div className="card-content">
@@ -916,7 +916,7 @@ export const ToDoListComponentsTrip = (props) => {
                     <div className="col m10 s10">
                         <div className="card">
                             <div className="card-image">
-                                <img src={require("../photo/backgroundAccessories3.jpg")}/>
+                                <img src={require("../photo/backgroundAccessories3small.jpg")}/>
                                 <span className="card-title">ACCESSORIES</span>
                             </div>
                             <div className="card-content">
@@ -1057,7 +1057,7 @@ export const ToDoListComponentsTrip = (props) => {
                         <div className="col m10 s10">
                             <div className="card">
                                 <div className="card-image">
-                                    <img src={require("../photo/backgroundClothes3.jpg")}/>
+                                    <img src={require("../photo/backgroundClothes3small.jpg")}/>
                                     <span className="card-title">CLOTHES</span>
                                 </div>
                                 <div className="card-content">
@@ -1205,7 +1205,7 @@ export const ToDoListComponentsTrip = (props) => {
                         <div className="col m10 s10">
                             <div className="card">
                                 <div className="card-image">
-                                    <img src={require("../photo/backgroundCosmetics1.jpg")}/>
+                                    <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
                                     <span className="card-title">COSMETICS AND FIRST AID</span>
                                 </div>
                                 <div className="card-content">
