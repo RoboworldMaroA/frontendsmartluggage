@@ -12,16 +12,12 @@ Final Project Software Developer
 */
 const TrekkingListAccessories=({})=>{
 
-
-
     //
     // const [checked2, setChecked2] = useState(false);
     //
     // function toggle(){
     //     setChecked2(checked2=> !checked2)
     // }
-
-
 
     const [checked2, setChecked2] = useState(false);
     const [maskWeight, setMaskWeight] = useState(0.02);
@@ -35,10 +31,10 @@ const TrekkingListAccessories=({})=>{
     const [items, setItems] = useState([
         {itemName: 'Backpack', quantity: 1, isSelected: false, weight: 0.1},
         {itemName: 'Sleeping Bag', quantity: 1, isSelected: false, weight: 0.12},
-        {itemName: 'Bottle of Water', quantity: 1, isSelected: false, weight: 0.12},
+        {itemName: 'Water', quantity: 1, isSelected: false, weight: 0.12},
         {itemName: 'Flashlight', quantity: 1, isSelected: false, weight: 0.12},
-        {itemName: 'Fire Starter Kit ', quantity: 1, isSelected: false, weight: 0.12},
-        {itemName: 'Mosquito Repellent Lotion', quantity: 1, isSelected: false, weight: 0.12},
+        {itemName: 'Fire Starter', quantity: 1, isSelected: false, weight: 0.12},
+        // {itemName: 'Mosquito Repellent Lotion', quantity: 1, isSelected: false, weight: 0.12},
 
     ]);
 
@@ -163,7 +159,7 @@ const TrekkingListAccessories=({})=>{
 
         <>
             <form id="camera" action="#">
-                <div className='main-container'>
+                <div className='row'>
                     <div className='item-list'>
                         {items.map((item, index) => (
                             <div className={"checkBox"}>

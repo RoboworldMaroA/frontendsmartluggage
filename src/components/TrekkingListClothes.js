@@ -23,16 +23,16 @@ const TrekkingListClothes=({})=>{
 
     const [items, setItems] = useState([
         {itemName: 'Hiking Shoes', quantity: 1, isSelected: false, weight: 0.1},
-        {itemName: 'Trekking Trousers', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Short Sleeve Shirt', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Trousers', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Shirt', quantity: 1, isSelected: false, weight: 0.02},
         // {itemName: 'Flashlight', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Long Sleeve Shirt  ', quantity: 1, isSelected: false, weight: 0.02},
+        // {itemName: 'Long Sleeve Shirt  ', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Jacket', quantity: 0, isSelected: false, weight: 0.02},
         {itemName: 'Rain Jacket', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Windbreaker', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Base Layer Top', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Pair Shorts/Skirt ', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Pair Rain Pants ', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Base Layer', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Shorts', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Rain Pants', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Hat', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Sunglasses', quantity: 1, isSelected: false, weight: 0.02},
 
@@ -190,7 +190,7 @@ const TrekkingListClothes=({})=>{
 
         <>
             <form id="camera" action="#">
-                <div className='main-container'>
+                <div className='row'>
                     <div className='item-list'>
                         {items.map((item, index) => (
                             <div className={"checkBox"}>

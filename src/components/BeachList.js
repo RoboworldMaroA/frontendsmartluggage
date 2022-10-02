@@ -14,10 +14,10 @@ const BeachList=({})=>{
     const [inputValue, setInputValue] = useState('');
 
     const [items, setItems] = useState([
-        {itemName: 'Bikini/Swimming suit', quantity: 1, isSelected: false, weight: 0.03},
-        {itemName: 'Beach Towel', quantity: 0, isSelected: false, weight: 0.03},
+        {itemName: 'Bikini', quantity: 1, isSelected: false, weight: 0.03},
+        {itemName: 'Towel', quantity: 0, isSelected: false, weight: 0.03},
         {itemName: 'Sandals', quantity: 1, isSelected: false, weight: 0.03},
-        {itemName: 'Bluetooth Speaker ', quantity: 0, isSelected: false, weight: 0.1},
+        // {itemName: 'Bluetooth Speaker ', quantity: 0, isSelected: false, weight: 0.1},
         {itemName: 'Hat', quantity: 1, isSelected: false, weight: 0.02},
 
     ]);
@@ -139,7 +139,7 @@ const BeachList=({})=>{
     return(
         <>
             <form id="camera" action="#">
-                <div className='main-container'>
+                <div className='row'>
                     <div className='item-list'>
                         {items.map((item, index) => (
                             <div className={"checkBox"}>

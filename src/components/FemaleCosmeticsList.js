@@ -24,19 +24,22 @@ const FemaleCosmeticsList=({})=>{
     const [inputValue, setInputValue] = useState('');
 
     const [items, setItems] = useState([
-        {itemName: 'Foundation/Cream BB', quantity: 1, isSelected: false, weight: 0.21},
+        {itemName: 'Foundation', quantity: 1, isSelected: false, weight: 0.21},
+        {itemName: 'Cream BB', quantity: 1, isSelected: false, weight: 0.21},
         {itemName: 'Bronzer', quantity: 1, isSelected: false, weight: 0.15},
-        {itemName: 'Make-up removing products', quantity: 1, isSelected: false, weight: 0.32},
+        // {itemName: 'Make-up removing products', quantity: 1, isSelected: false, weight: 0.32},
         {itemName: 'Cotton Pads', quantity: 1, isSelected: false, weight: 0.32},
-        {itemName: 'Eye concealer', quantity: 1, isSelected: false, weight: 0.02},
+        // {itemName: 'Eye concealer', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Highlighter', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Mascara', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Lipstick/Lip-Gloss/Lip Pencil', quantity: 1, isSelected: false, weight: 0.02},
+        // {itemName: 'Lipstick/Lip-Gloss/Lip Pencil', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Lipstick', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Face Powder', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Eye Shadows', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Eyebrow pencil/ Gel', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Make-up Brushes/ Accessories', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Eye Pencil/ Eyeliner', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Gel', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Eyebrow pencil', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Brushes', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Eyeliner', quantity: 1, isSelected: false, weight: 0.02},
         // {itemName: 'Vaccination Certificate COVID-19 ', quantity: 1, isSelected: false, weight: 0.02},
 
     ]);
@@ -162,7 +165,7 @@ const FemaleCosmeticsList=({})=>{
 
         <>
             <form id="camera" action="#">
-                <div className='main-container'>
+                <div className='row'>
                     <div className='item-list'>
                         {items.map((item, index) => (
                             <div className={"checkBox"}>

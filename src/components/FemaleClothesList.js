@@ -28,13 +28,6 @@ const FemaleClothesList=({})=>{
         {itemName: 'Bra', quantity: 1, isSelected: false, weight: 0.15},
         {itemName: 'Skirt', quantity: 1, isSelected: false, weight: 0.32},
         {itemName: 'Leggings', quantity: 1, isSelected: false, weight: 0.32},
-        // {itemName: 'Camera Bag', quantity: 1, isSelected: false, weight: 0.02},
-        // {itemName: 'House Key', quantity: 1, isSelected: false, weight: 0.02},
-        // {itemName: 'Cash', quantity: 1, isSelected: false, weight: 0.02},
-        // {itemName: 'Travel Insurance', quantity: 1, isSelected: false, weight: 0.02},
-        // {itemName: 'Hotel booking confirmation', quantity: 1, isSelected: false, weight: 0.02},
-        // {itemName: 'Vaccination Certificate COVID-19 ', quantity: 1, isSelected: false, weight: 0.02},
-
     ]);
 
 
@@ -188,7 +181,7 @@ const FemaleClothesList=({})=>{
 
         <>
             <form id="camera" action="#">
-                <div className='main-container'>
+                <div className='row'>
                     <div className='item-list'>
                         {items.map((item, index) => (
                             <div className={"checkBox"}>

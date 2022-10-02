@@ -31,7 +31,8 @@ const TabletEquipmentsList=({})=>{
     const [inputValue, setInputValue] = useState('');
 
     const [items, setItems] = useState([
-        {itemName: 'Tablet + Charger', quantity: 1, isSelected: false, weight: 0.3},
+        {itemName: 'Tablet', quantity: 1, isSelected: false, weight: 0.3},
+        {itemName: 'Charger', quantity: 1, isSelected: false, weight: 0.3},
 
     ]);
 
@@ -61,35 +62,19 @@ const TabletEquipmentsList=({})=>{
 
     )
 
-
-
-
-
-
-
-
-
-
-
-
     // function to add a new item
     const handleAddItemButton = () => {
-
         const newItem = {
             itemName: inputValue,
             quantity: 1,
             isSelected: false,
             weight: 0.1,
-
         };
-
         const newItems = [...items, newItem];
         setItems(newItems);
         setInputValue('');
         calculateTotal();
         calculateTotalWeight();
-
-
     };
 
 
@@ -100,9 +85,7 @@ const TabletEquipmentsList=({})=>{
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
         // event.preventDefault();
-
     }
 
     const handleDecreaseQuantity = (index) => {
@@ -114,27 +97,20 @@ const TabletEquipmentsList=({})=>{
             calculateTotal();
             calculateTotalWeight();
         }
-
         newItems[index].quantity--;
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
-
     }
 
 
     const [totalItemCount, setTotalItemCount] = useState(6);
-
     const calculateTotal = () => {
         const totalItemCount = items.reduce((total, item) => {
             return total + item.quantity;
         }, 0);
-
         setTotalItemCount(totalItemCount);
     };
-
-
     const handleRemoveItem = (index) => {
         // alert("button decrease was clicked ")
         const newItems = [...items];
@@ -143,17 +119,13 @@ const TabletEquipmentsList=({})=>{
         if (index > -1) {
             newItems.splice(index, 1);
             setItems(newItems);
-
         }
-
         calculateTotal();
         calculateTotalWeight();
-
     }
 
 
     const [totalItemWeight, setTotalItemWeight] = useState(1);
-
     const calculateTotalWeight = () => {
         const totalItemWeight = items.reduce((total, item) => {
             return total + item.weight * item.quantity;
@@ -183,10 +155,9 @@ const TabletEquipmentsList=({})=>{
 
 
     return(
-
         <>
         <form id="camera" action="#">
-        <div className='main-container'>
+        <div className='row'>
             <div className='item-list'>
                 {items.map((item, index) => (
                     <div className={"checkBox"}>

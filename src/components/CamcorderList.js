@@ -153,7 +153,7 @@ const CamcorderList=({})=>{
     return(
         <>
             <form id="camcorder" action="#">
-        <div className='main-container'>
+        <div className='row'>
             <div className='item-list'>
                 {items.map((item, index) => (
                     <div className={"checkBox"}>

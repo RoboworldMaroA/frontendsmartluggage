@@ -18,7 +18,7 @@ const CamcorderEquipmentsList=({})=>{
     const [inputValue, setInputValue] = useState('');
     const [items, setItems] = useState([
         {itemName: 'Camcorder', quantity: 1, isSelected: false, weight: 0.1},
-        {itemName: 'Cam Battery', quantity: 1, isSelected: false, weight: 0.1},
+        {itemName: 'Battery', quantity: 1, isSelected: false, weight: 0.1},
     ]);
 
 
@@ -140,7 +140,7 @@ const CamcorderEquipmentsList=({})=>{
     return(
         <>
             <form id="camcorder" action="#">
-        <div className='main-container'>
+        <div className='row'>
             <div className='item-list'>
                 {items.map((item, index) => (
                     <div className={"checkBox"}>

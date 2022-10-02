@@ -80,10 +80,9 @@ export const ToDoListComponentsTrip = (props) => {
 
     const [itemsEquipments, setItemsEquipments] = useState([
         {itemName: 'Phone', quantity: 1, isSelected: false, weight: 0.35},
-        {itemName: 'Phone Charger', quantity: 1, isSelected: false, weight: 0.1},
+        {itemName: 'Charger', quantity: 1, isSelected: false, weight: 0.1},
         {itemName: 'Earphones', quantity: 0, isSelected: false, weight: 0.05},
         {itemName: 'Power-bank', quantity: 1, isSelected: false, weight: 0.1},
-
 
     ]);
 
@@ -221,8 +220,8 @@ export const ToDoListComponentsTrip = (props) => {
     // const [items, setItems] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [items, setItems] = useState([
-        {itemName: 'Travel Pillow', quantity: 0, isSelected: false, weight: 0.4},
-        {itemName: 'Luggage Tag', quantity: 0, isSelected: false, weight: 0.03},
+        {itemName: 'Pillow', quantity: 0, isSelected: false, weight: 0.4},
+        // {itemName: 'Luggage Tag', quantity: 0, isSelected: false, weight: 0.03},
         {itemName: 'Backpack', quantity: 0, isSelected: false, weight: 0.5},
         {itemName: 'Book', quantity: 0, isSelected: false, weight: 0.3},
         {itemName: 'eBook', quantity: 0, isSelected: false, weight: 0.3},
@@ -483,9 +482,9 @@ export const ToDoListComponentsTrip = (props) => {
         {itemName: 'Toothbrush', quantity: 1, isSelected: false, weight: 0.03},
         {itemName: 'ToothPaste', quantity: 1, isSelected: false, weight: 0.15},
         {itemName: 'Perfumes', quantity: 1, isSelected: false, weight: 0.15},
-        {itemName: 'Antiperspirant', quantity: 0, isSelected: false, weight: 0.1},
+        // {itemName: 'Antiperspirant', quantity: 0, isSelected: false, weight: 0.1},
         {itemName: 'Nail File', quantity: 0, isSelected: false, weight: 0.03},
-        {itemName: 'Dental Floss', quantity: 0, isSelected: false, weight: 0.02},
+        // {itemName: 'Dental Floss', quantity: 0, isSelected: false, weight: 0.02},
         {itemName: 'Lipstick', quantity: 0, isSelected: false, weight: 0.02},
         {itemName: 'Contacts', quantity: 0, isSelected: false, weight: 0.05},
         {itemName: 'Glasses', quantity: 0, isSelected: false, weight: 0.05},
@@ -498,11 +497,9 @@ export const ToDoListComponentsTrip = (props) => {
 
     //grab data from local storage
     useEffect(() => {
-
             const dataCosmetics = window.localStorage.getItem('COSMETICS_DATA');
             // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItemsCosmetics(JSON.parse(dataCosmetics));
-
             // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
             // if ( data !== null ) setItems(JSON.parse(data));
             // setSelected(JSON.parse(data2));
@@ -510,20 +507,16 @@ export const ToDoListComponentsTrip = (props) => {
         }, []
     )
 
-
     //save data to local storage
     useEffect(() => {
             console.log(itemsCosmetics);
             window.localStorage.setItem('COSMETICS_DATA', JSON.stringify(itemsCosmetics));
-
         }, [itemsCosmetics]
         // },[passportQty]
-
     )
 
     // function to add a new item
     const handleAddItemButtonCosmetics = () => {
-
         const newItem = {
             itemName: inputValueCosmetics,
             quantity: 1,
@@ -777,7 +770,7 @@ export const ToDoListComponentsTrip = (props) => {
             <div className={"accessories"}>
 
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s10">
+                    <div className="col m10 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundAccessories3small.jpg")}/>
@@ -786,7 +779,7 @@ export const ToDoListComponentsTrip = (props) => {
                             <div className="card-content">
 
                                 <form id="documents" action="#">
-                                    <div className='main-container'>
+                                    <div className='row'>
 
                                         <div>
                                             {toDoListTrip.camera ?
@@ -911,7 +904,7 @@ export const ToDoListComponentsTrip = (props) => {
             {/*  #######################  Clothes List  ################################*/}
             <div className={"clothes"}>
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s10">
+                    <div className="col m10 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundClothes3small.jpg")}/>
