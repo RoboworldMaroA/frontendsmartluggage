@@ -38,7 +38,7 @@ const CamcorderEquipmentsList=({})=>{
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('CAMCORDER_EQUIPMENTS_DATA', JSON.stringify(items));
         }, [items]
         // },[passportQty]

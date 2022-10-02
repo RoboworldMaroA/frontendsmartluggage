@@ -101,7 +101,7 @@ export const DisplayListFunctionalComponent = (props) => {
         console.log("signal to do something using useEffect")
         fetch("https://backendsmartluggage.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
-            console.log("List of items in the trip", TripData);
+            // console.log("List of items in the trip", TripData);
             setTripData(TripData);
             // calculateLastTripId();
         });

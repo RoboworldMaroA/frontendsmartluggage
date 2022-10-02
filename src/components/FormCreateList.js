@@ -132,11 +132,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setIrelandState(irelandState => !irelandState);
         if (!irelandState) {
             setIreland("1");
-            console.log(ireland);//test only
+            // console.log(ireland);//test only
         }
         if (irelandState) {
             setIreland("0");
-            console.log(ireland);//test only
+            // console.log(ireland);//test only
         }
 
 
@@ -150,11 +150,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setSpainState(spainState => !spainState);
         if (!spainState) {
             setSpain(true);
-            console.log(spain);//test only
+            // console.log(spain);//test only
         }
         if (spainState) {
             setSpain(false);
-            console.log(spain);//test only
+            // console.log(spain);//test only
         }
     }
 
@@ -166,11 +166,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setPolandState(polandState => !polandState);
         if (!polandState) {
             setPoland(true);
-            console.log(poland);//test only
+            // console.log(poland);//test only
         }
         if (polandState) {
             setPoland(false);
-            console.log(poland);//test only
+            // console.log(poland);//test only
         }
     }
 
@@ -182,11 +182,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setCameraState(cameraState => !cameraState);
         if (!cameraState) {
             setCamera(true);
-            console.log("Camera: "+ camera);//test only
+            // console.log("Camera: "+ camera);//test only
         }
         if (cameraState) {
             setCamera(false);
-            console.log("Camera: "+ camera);//test only
+            // console.log("Camera: "+ camera);//test only
         }
     }
 
@@ -198,11 +198,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setCamcorderState(camcorderState => !camcorderState);
         if (!camcorderState) {
             setCamcorder(true);
-            console.log("Camcorder: "+camcorder);//test only
+            // console.log("Camcorder: "+camcorder);//test only
         }
         if (camcorderState) {
             setCamcorder(false);
-            console.log("Camcorder: "+ camcorder);//test only
+            // console.log("Camcorder: "+ camcorder);//test only
         }
     }
 
@@ -214,11 +214,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setDroneState(droneState => !droneState);
         if (!droneState) {
             setDrone(true);
-            console.log(drone);//test only
+            // console.log(drone);//test only
         }
         if (droneState) {
             setDrone(false);
-            console.log(drone);//test only
+            // console.log(drone);//test only
         }
     }
 
@@ -230,11 +230,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setTabletState(tabletState => !tabletState);
         if (!tabletState) {
             setTablet(true);
-            console.log(tablet);//test only
+            // console.log(tablet);//test only
         }
         if (tabletState) {
             setTablet(false);
-            console.log(tablet);//test only
+            // console.log(tablet);//test only
         }
     }
 
@@ -245,11 +245,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setLaptopState(laptopState => !laptopState);
         if (!laptopState) {
             setLaptop(true);
-            console.log(laptop);//test only
+            // console.log(laptop);//test only
         }
         if (laptopState) {
             setLaptop(false);
-            console.log(laptop);//test only
+            // console.log(laptop);//test only
         }
     }
 
@@ -261,11 +261,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setLargeLuggageState(largeLuggageState => !largeLuggageState);
         if (!largeLuggageState) {
             setLargeLuggage(true);
-            console.log(largeLuggage);//test only
+            // console.log(largeLuggage);//test only
         }
         if (largeLuggageState) {
             setLargeLuggage(false);
-            console.log(largeLuggage);//test only
+            // console.log(largeLuggage);//test only
         }
     }
 
@@ -277,11 +277,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setMediumLuggageState(mediumLuggageState => !mediumLuggageState);
         if (!mediumLuggageState) {
             setMediumLuggage(true);
-            console.log(mediumLuggage);//test only
+            // console.log(mediumLuggage);//test only
         }
         if (mediumLuggageState) {
             setMediumLuggage(false);
-            console.log(mediumLuggage);//test only
+            // console.log(mediumLuggage);//test only
         }
     }
 
@@ -293,11 +293,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setSmallLuggageState(smallLuggageState => !smallLuggageState);
         if (!smallLuggageState) {
             setSmallLuggage(true);
-            console.log(smallLuggage);//test only
+            // console.log(smallLuggage);//test only
         }
         if (smallLuggageState) {
             setSmallLuggage(false);
-            console.log(smallLuggage);//test only
+            // console.log(smallLuggage);//test only
         }
     }
 
@@ -309,11 +309,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setSunbathingState(sunbathingState => !sunbathingState);
         if (!sunbathingState) {
             setBeachListStatus(true);
-            console.log(beachListStatus);//test only
+            // console.log(beachListStatus);//test only
         }
         if (sunbathingState) {
             setBeachListStatus(false);
-            console.log(beachListStatus);//test only
+            // console.log(beachListStatus);//test only
         }
     }
 
@@ -325,11 +325,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setSkiState(skiState => !skiState);
         if (!skiState) {
             setSki(true);
-            console.log(ski);//test only
+            // console.log(ski);//test only
         }
         if (skiState) {
             setSki(false);
-            console.log(ski);//test only
+            // console.log(ski);//test only
         }
     }
 
@@ -341,11 +341,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setTrekkingState(trekkingState => !trekkingState);
         if (!trekkingState) {
             setTrekking(true);
-            console.log(trekking);//test only
+            // console.log(trekking);//test only
         }
         if (trekkingState) {
             setTrekking(false);
-            console.log(trekking);//test only
+            // console.log(trekking);//test only
         }
     }
 
@@ -357,11 +357,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setPlaneState(planeState => !planeState);
         if (!planeState) {
             setPlane(true);
-            console.log(plane);//test only
+            // console.log(plane);//test only
         }
         if (planeState) {
             setPlane(false);
-            console.log(plane);//test only
+            // console.log(plane);//test only
         }
     }
 
@@ -372,11 +372,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setBusState(busState => !busState);
         if (!busState) {
             setBus(true);
-            console.log(bus);//test only
+            // console.log(bus);//test only
         }
         if (busState) {
             setBus(false);
-            console.log(bus);//test only
+            // console.log(bus);//test only
         }
     }
 
@@ -386,11 +386,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setTrainState(trainState => !trainState);
         if (!trainState) {
             setTrain(true);
-            console.log(train);//test only
+            // console.log(train);//test only
         }
         if (trainState) {
             setTrain(false);
-            console.log(train);//test only
+            // console.log(train);//test only
         }
     }
 
@@ -399,11 +399,11 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
         setCarState(carState => !carState);
         if (!carState) {
             setCar(true);
-            console.log(car);//test only
+            // console.log(car);//test only
         }
         if (carState) {
             setCar(false);
-            console.log(car);//test only
+            // console.log(car);//test only
         }
     }
 
@@ -420,7 +420,7 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
 
     const validateSex = (event) => {
         const sx = event.target.value;
-        console.log(sx)
+        // console.log(sx)
         setSex(sx);
         const male = "male";
         const female = "female"

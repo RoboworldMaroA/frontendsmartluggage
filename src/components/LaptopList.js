@@ -40,7 +40,7 @@ const LaptopList = ({}) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('LAPTOP_DATA', JSON.stringify(items));
 
         }, [items]

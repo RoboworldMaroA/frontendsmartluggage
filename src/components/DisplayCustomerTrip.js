@@ -34,12 +34,12 @@ export const DisplayCustomerTrip = ({item}) => {
 
     useEffect(() => {
         //do something when loading
-        console.log("yoyw yow do something from useeffect")
+        // console.log("yoyw yow do something from useeffect")
         if (!customer) {
             // fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
             //     fetch("displayUsers").then((response) => response.json()).then((dataCustomer) => {
             fetch("https://backendsmartluggage.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
-                console.log("List of items in the customer", dataCustomer);
+                // console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });
         }

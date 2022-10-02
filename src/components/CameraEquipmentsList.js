@@ -43,7 +43,7 @@ const CameraEquipmentsList = ({}) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('CAMERA_EQUIPMENTS_DATA', JSON.stringify(items));
 
         }, [items]

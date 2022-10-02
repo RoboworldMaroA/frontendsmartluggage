@@ -21,7 +21,7 @@ const ToDoListComponents = (props) => {
 
 
     useEffect(() => {
-        console.log("item was updated state is:", toDoList.documentsList);
+        // console.log("item was updated state is:", toDoList.documentsList);
     }, [toDoList]);
 
 

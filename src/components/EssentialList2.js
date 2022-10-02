@@ -52,7 +52,7 @@ const EssentialList = ({props}) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('ESSENTIAL_DATA', JSON.stringify(items));
         }, [items]
         // },[passportQty]

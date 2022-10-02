@@ -144,7 +144,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     const verifyAllFields = (event) => {
 
-        console.log("data user name in if statement: " + userName)
+        // console.log("data user name in if statement: " + userName)
         // console.log("user body in verify all fields"+ this.result.value.status);//not working
         event.preventDefault();
 

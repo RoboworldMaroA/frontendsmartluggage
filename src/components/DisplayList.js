@@ -91,7 +91,7 @@ export default class DisplayList extends Component {
     //this method diplay or not the Trip Detail
     changeStatus() {
         //here will be logic what lit to display, depend what customer choose in the form FormCrteteList
-        console.log("State trip List", this.state.displayTripDetail)
+        // console.log("State trip List", this.state.displayTripDetail)
         this.setState(
             {
                 displayTripDetail: !this.state.displayTripDetail

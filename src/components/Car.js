@@ -46,7 +46,7 @@ const Car = ({}) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('CAR_DATA', JSON.stringify(items));
 
         }, [items]

@@ -31,7 +31,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
     // const {value, setValue} = useContext(UserContext);
 
 
-
     //variable USER
     const navigateRegister = useNavigate();
     const [userName, setUserName] = useState('');
@@ -52,7 +51,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
 
     const [roles, setRoles] = useState("ROLE_USER");
     const [active, setActive] = useState(true);
-
 
 
     //fetch customer data, for Testing Purposes
@@ -133,10 +131,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
     //
 
 
-
-
-
-
     //Fetch data from USER Development Version
     const addCustomer = async () => {
         const result = await fetch("https://backendsmartluggage.herokuapp.com/addUser", {
@@ -163,8 +157,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
         const body = await result.json().catch(err => console.log(err.response));
         setInfo(body).catch(err => console.log(err.response));
     }
-
-
 
 
     //Fetch data from USER Development Version
@@ -195,10 +187,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
     // }
 
 
-
-
-
-
     //USER validattion
     const validatePassword = (event) => {
         const pass = event.target.value;
@@ -222,8 +210,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
         setUserEmail(em);
         // setValue(em);
     }
-
-
 
 
     return (
@@ -323,8 +309,6 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
         //         </div>
         //     </form>
         // </div>
-
-
 
 
         // USER

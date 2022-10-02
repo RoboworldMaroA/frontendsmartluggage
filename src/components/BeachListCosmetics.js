@@ -44,7 +44,7 @@ const BeachListCosmetics=({})=>{
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('BEACH_COSMETICS_DATA', JSON.stringify(items));
 
         }, [items]

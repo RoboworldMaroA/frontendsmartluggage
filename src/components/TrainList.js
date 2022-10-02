@@ -1,5 +1,4 @@
-
-import React, {useState}  from 'react';
+import React, {useState} from 'react';
 import {type} from "@testing-library/user-event/dist/type";
 import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
@@ -11,65 +10,64 @@ Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
-const TrainList=({})=>{
+const TrainList = ({}) => {
 
     const [checked2, setChecked2] = useState(false);
 
-    function toggle(){
-        setChecked2(checked2=> !checked2)
+    function toggle() {
+        setChecked2(checked2 => !checked2)
     }
 
 
-    return(
+    return (
         //Description of the list
         <div>
 
-            <form id="mainBodyToDoList"  action="#">
+            <form id="mainBodyToDoList" action="#">
 
                 <div id="titleElements">
-                    <p >Train</p>
+                    <p>Train</p>
                 </div>
-            {/*    <p>*/}
-            {/*        <label>*/}
-            {/*            <input type="checkbox" className="filled-in" onChange={toggle} />*/}
+                {/*    <p>*/}
+                {/*        <label>*/}
+                {/*            <input type="checkbox" className="filled-in" onChange={toggle} />*/}
 
-            {/*            <span> Camera body.*/}
-            {/*    <p> {checked2 ? "checked": "not checked"}</p>*/}
-            {/*</span>*/}
+                {/*            <span> Camera body.*/}
+                {/*    <p> {checked2 ? "checked": "not checked"}</p>*/}
+                {/*</span>*/}
 
-            {/*        </label>*/}
-            {/*    </p>*/}
-
+                {/*        </label>*/}
+                {/*    </p>*/}
 
 
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Bottle of water</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Power Bank</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Phone Charger</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Food</span>
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Food</span>
                     </label>
                 </p>
@@ -83,7 +81,6 @@ const TrainList=({})=>{
                 {/*        </button>*/}
                 {/*    </Link>*/}
                 {/*</div>*/}
-
 
 
             </form>
