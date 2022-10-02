@@ -2,6 +2,13 @@
     padding-bottom: 400px;
 }
 
+
+#importantLoginInfoHomePage{
+    font-size: 15px;
+    text-align: center;
+    color: darkred;
+}
+
 #TitleHomePage{
 
     margin-left: 1.5%;

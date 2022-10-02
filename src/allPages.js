@@ -36,9 +36,13 @@ export function Home() {
                  backgroundSize: "cover", opacity: 0.98,
              }}
         >
+
+
+
             <NavbarHome/>
 
             <div className="row">
+                <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>
                 <HomeButtons/>
             </div>
             <br/>
