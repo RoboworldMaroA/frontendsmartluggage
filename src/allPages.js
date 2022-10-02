@@ -55,9 +55,6 @@ export function LoginPage() {
     const [value, setValue] = useState("");
     return (<body>
     <div id="loginPage" className="container-fluid">
-
-
-
         <nav>
             <div className="nav-wrapper #5d4037 brown darken-2">
                 <a href="/" className="brand-logo">SmartLuggage </a>
@@ -90,7 +87,6 @@ export function LoginPage() {
 
         </div>
         <br/>
-
 
 
     </div>

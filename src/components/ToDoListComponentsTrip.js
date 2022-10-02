@@ -655,7 +655,7 @@ export const ToDoListComponentsTrip = (props) => {
                                 <img src={require("../photo/backgroundElectronicEquipments3small.jpg")}/>
                                 <span className="card-title">ELECTRONIC EQUIPMENT</span>
                             </div>
-                            <div className="card-content">
+                            {/*<div className="card-content">*/}
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -690,7 +690,7 @@ export const ToDoListComponentsTrip = (props) => {
 
 
                                         {/*Clothes additional items*/}
-                                        <div className='item-list'>
+                                        {/*<div className='item-list'>*/}
                                             {itemsEquipments.map((itemEquipments, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemEquipments.isSelected ? (
@@ -746,7 +746,7 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        </div>
+                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValueEquipments}
                                                onChange={(event) => validateInputNewItemEquipments(event)}
@@ -758,7 +758,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         <div className='total'>Total Weight: {totalItemWeightEquipments} kg.</div>
                                     </div>
                                 </form>
-                            </div>
+                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -770,13 +770,13 @@ export const ToDoListComponentsTrip = (props) => {
             <div className={"accessories"}>
 
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s12">
+                    <div className="col l10 m10 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundAccessories3small.jpg")}/>
                                 <span className="card-title">ACCESSORIES</span>
                             </div>
-                            <div className="card-content">
+                            {/*<div className="card-content">*/}
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -824,7 +824,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         </div>
 
                                         {/*Accesoriess adiidtional items*/}
-                                        <div className='item-list'>
+                                        {/*<div className='item-list'>*/}
                                             {items.map((item, index) => (
                                                 <div className={"checkBox"}>
                                                     {item.isSelected ? (
@@ -880,7 +880,7 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        </div>
+                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValue}
                                                onChange={(event) => validateInputNewItem(event)}
@@ -892,7 +892,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
                                     </div>
                                 </form>
-                            </div>
+                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -910,7 +910,7 @@ export const ToDoListComponentsTrip = (props) => {
                                 <img src={require("../photo/backgroundClothes3small.jpg")}/>
                                 <span className="card-title">CLOTHES</span>
                             </div>
-                            <div className="card-content">
+                            {/*<div className="card-content">*/}
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -944,7 +944,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         {/*</div>*/}
 
                                         {/*Clothes additional items*/}
-                                        <div className='item-list'>
+                                        {/*<div className='item-list'>*/}
                                             {itemsClothes.map((itemClothes, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemClothes.isSelected ? (
@@ -1000,7 +1000,7 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        </div>
+                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValueClothes}
                                                onChange={(event) => validateInputNewItemClothes(event)}
@@ -1023,7 +1023,7 @@ export const ToDoListComponentsTrip = (props) => {
 
                                     </div>
                                 </form>
-                            </div>
+                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -1040,7 +1040,7 @@ export const ToDoListComponentsTrip = (props) => {
                                 <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
                                 <span className="card-title">COSMETICS AND FIRST AID</span>
                             </div>
-                            <div className="card-content">
+                            {/*<div className="card-content">*/}
                                 <form id="documents" action="#">
                                     <div className='row'>
                                         <div>
@@ -1057,7 +1057,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         </div>
 
                                         {/*Clothes additional items*/}
-                                        <div className='item-list'>
+                                        {/*<div className='item-list'>*/}
                                             {itemsCosmetics.map((itemCosmetics, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemCosmetics.isSelected ? (
@@ -1113,7 +1113,7 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        </div>
+                                        {/*</div>*/}
                                         <input id="addItemButton" value={inputValueCosmetics}
                                                onChange={(event) => validateInputNewItemCosmetics(event)}
                                                className='add-item-input' placeholder='add your item'/>
@@ -1124,7 +1124,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         <div className='total'>Total Weight: {totalItemWeightCosmetics} kg.</div>
                                     </div>
                                 </form>
-                            </div>
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
