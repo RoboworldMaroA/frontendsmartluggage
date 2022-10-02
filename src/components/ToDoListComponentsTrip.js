@@ -609,7 +609,7 @@ export const ToDoListComponentsTrip = (props) => {
     return (
         <div>
             <div className="row">
-                <div id="titleListToDoListID" className="col s12 m6">
+                <div id="titleListToDoListID" className="col s12 m12">
                     <p id="listOfItemsInToDoListComponent">
                         {/*Hi {props.dataCustomer.name}*/}
                         {/*{toDoListTrip.ireland === "1" ? "Ireland" : ""}*/}

@@ -154,13 +154,13 @@ const EssentialList = ({props}) => {
     return (
 
         <div id="blockEssential" className="row">
-            <div className="col m10 s12">
+            <div className="col l10 m10 s12">
                 <div className="card">
                     <div className="card-image">
                         <img src={require("../photo/backgroundEssential5small.jpg")}/>
                         <span className="card-title">ESSENTIALS</span>
                     </div>
-                    <div className="card-content">
+                    {/*<div className="card-content">*/}
 
                         <form id="documents" action="#">
                             {/*<label>*/}
@@ -183,8 +183,8 @@ const EssentialList = ({props}) => {
                             {/*</p>*/}
 
 
-                            <div className='row'>
-                                <div className='item-list'>
+                            {/*<div className='row'>*/}
+                            {/*    <div className='item-list'>*/}
                                     {items.map((item, index) => (
                                         <div className={"checkBox"}>
                                             {item.isSelected ? (
@@ -238,7 +238,7 @@ const EssentialList = ({props}) => {
                                             }
                                         </div>
                                     ))}
-                                </div>
+                                {/*</div>*/}
 
                                 <input id="addItemButton" value={inputValue}
                                        onChange={(event) => validateInputNewItem(event)}
@@ -247,9 +247,9 @@ const EssentialList = ({props}) => {
                                 <div>{errorNewItem}</div>
                                 <div className='total'>Total Items: {totalItemCount}</div>
                                 <div className='total'>Total Weight: {totalItemWeight} kg.</div>
-                            </div>
+                            {/*</div>*/}
                         </form>
-                    </div>
+                    {/*</div>*/}
                 </div>
             </div>
 
