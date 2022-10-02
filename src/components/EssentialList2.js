@@ -24,27 +24,24 @@ const EssentialList = ({props}) => {
 
     const [items, setItems] = useState([
         {itemName: 'Passport', quantity: 1, isSelected: false, weight: 0.1},
-        {itemName: 'Identity Card', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'ID', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Boarding Pass', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Payment Card', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Driving  Licence', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Pay Card', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Driving Lic', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Wallet', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'House Key', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Cash', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Travel Insurance', quantity: 0, isSelected: false, weight: 0.02},
-        {itemName: 'Hotel booking confirmation', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Vaccination Certificate COVID-19 ', quantity: 0, isSelected: false, weight: 0.02},
-
+        {itemName: 'Insurance', quantity: 0, isSelected: false, weight: 0.02},
+        {itemName: 'Hotel conf', quantity: 1, isSelected: false, weight: 0.02},
+        {itemName: 'Vaccination', quantity: 0, isSelected: false, weight: 0.02},
     ]);
 
 
     //grab data from local storage
     useEffect(() => {
-
             const data = window.localStorage.getItem('ESSENTIAL_DATA');
             // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItems(JSON.parse(data));
-
             // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
             // if ( data !== null ) setItems(JSON.parse(data));
             // setSelected(JSON.parse(data2));
@@ -57,41 +54,24 @@ const EssentialList = ({props}) => {
     useEffect(() => {
             console.log(items);
             window.localStorage.setItem('ESSENTIAL_DATA', JSON.stringify(items));
-
         }, [items]
         // },[passportQty]
-
     )
-
-
-
-
-
-
-
-
-
-
 
 
     // function to add a new item
     const handleAddItemButton = () => {
-
         const newItem = {
             itemName: inputValue,
             quantity: 1,
             isSelected: false,
             weight: 0.3,
-
         };
-
         const newItems = [...items, newItem];
         setItems(newItems);
         setInputValue('');
         calculateTotal();
         calculateTotalWeight();
-
-
     };
 
 
@@ -102,9 +82,7 @@ const EssentialList = ({props}) => {
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
         // event.preventDefault();
-
     }
 
     const handleDecreaseQuantity = (index) => {
@@ -116,23 +94,18 @@ const EssentialList = ({props}) => {
             calculateTotal();
             calculateTotalWeight();
         }
-
         newItems[index].quantity--;
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
-
     }
 
 
     const [totalItemCount, setTotalItemCount] = useState(6);
-
     const calculateTotal = () => {
         const totalItemCount = items.reduce((total, item) => {
             return total + item.quantity;
         }, 0);
-
         setTotalItemCount(totalItemCount);
     };
 
@@ -145,17 +118,13 @@ const EssentialList = ({props}) => {
         if (index > -1) {
             newItems.splice(index, 1);
             setItems(newItems);
-
         }
-
         calculateTotal();
         calculateTotalWeight();
-
     }
 
 
     const [totalItemWeight, setTotalItemWeight] = useState(1);
-
     const calculateTotalWeight = () => {
         const totalItemWeight = items.reduce((total, item) => {
             return total + item.weight * item.quantity;
@@ -185,7 +154,7 @@ const EssentialList = ({props}) => {
     return (
 
         <div id="blockEssential" className="row">
-            <div className="col m10 s10">
+            <div className="col m10 s12">
                 <div className="card">
                     <div className="card-image">
                         <img src={require("../photo/backgroundEssential5small.jpg")}/>
@@ -214,7 +183,7 @@ const EssentialList = ({props}) => {
                             {/*</p>*/}
 
 
-                            <div className='main-container'>
+                            <div className='row'>
                                 <div className='item-list'>
                                     {items.map((item, index) => (
                                         <div className={"checkBox"}>

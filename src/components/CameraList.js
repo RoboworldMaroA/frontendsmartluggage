@@ -22,9 +22,9 @@ const CameraList = ({}) => {
 
     const [items, setItems] = useState([
         {itemName: 'Lenses', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Camera Charger', quantity: 0, isSelected: false, weight: 0.12},
+        {itemName: 'Cam Charger', quantity: 0, isSelected: false, weight: 0.12},
         {itemName: 'Camera Bag', quantity: 1, isSelected: false, weight: 0.12},
-        {itemName: 'Camera Filters', quantity: 0, isSelected: false, weight: 0.12},
+        {itemName: 'Cam Filters', quantity: 0, isSelected: false, weight: 0.12},
 
     ]);
 

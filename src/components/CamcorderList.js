@@ -23,12 +23,12 @@ const CamcorderList=({})=>{
 
     const [items, setItems] = useState([
         // {itemName: 'Camcorder Body', quantity: 1, isSelected: false, weight: 0.1},
-        {itemName: 'Camcorder Lenses', quantity: 0, isSelected: false, weight: 0.02},
+        {itemName: 'Cam Lenses', quantity: 0, isSelected: false, weight: 0.02},
         // {itemName: 'Camcorder Battery', quantity: 1, isSelected: false, weight: 0.02},
         {itemName: 'Charger', quantity: 1, isSelected: false, weight: 0.02},
-        {itemName: 'Camcorder Bag', quantity: 0, isSelected: false, weight: 0.02},
+        {itemName: 'Cam Bag', quantity: 0, isSelected: false, weight: 0.02},
         {itemName: 'Tripod', quantity: 0, isSelected: false, weight: 0.02},
-        {itemName: 'Spare Memory Card', quantity: 0, isSelected: false, weight: 0.02},
+        {itemName: 'Mem Card', quantity: 0, isSelected: false, weight: 0.02},
 
 
     ]);

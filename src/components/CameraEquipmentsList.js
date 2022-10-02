@@ -21,7 +21,8 @@ const CameraEquipmentsList = ({}) => {
     const [inputValue, setInputValue] = useState('');
 
     const [items, setItems] = useState([
-        {itemName: 'Camera Body + Battery', quantity: 1, isSelected: false, weight: 0.1},
+        {itemName: 'Camera Body', quantity: 1, isSelected: false, weight: 0.1},
+        {itemName: 'Battery', quantity: 1, isSelected: false, weight: 0.1},
 
     ]);
 

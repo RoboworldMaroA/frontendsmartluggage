@@ -37,7 +37,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     // const [userData, setUserData] = useState(props.dataCustomer);
 
-    const[tripDays,setTripDays]=useState(7);
+    const [tripDays, setTripDays] = useState(7);
 
 
     const updateIsDoneTrip = () => {
@@ -48,8 +48,6 @@ export const ToDoListComponentsTrip = (props) => {
     useEffect(() => {
         console.log("item was updated ireland value is:", toDoListTrip.ireland, updateIrelandStatus());
     }, [toDoListTrip]);
-
-
 
 
     const [irelandStatus, setIrelandStatus] = useState(false);
@@ -74,8 +72,6 @@ export const ToDoListComponentsTrip = (props) => {
     }, [toDoListTrip]);
 
 
-
-
     // ******************** ELECTRONIC EQUIPMENT LIST ***************************
     const [errorNewItemEquipments, setErrorNewItemEquipments] = useState(" ");
 
@@ -86,8 +82,7 @@ export const ToDoListComponentsTrip = (props) => {
         {itemName: 'Phone', quantity: 1, isSelected: false, weight: 0.35},
         {itemName: 'Phone Charger', quantity: 1, isSelected: false, weight: 0.1},
         {itemName: 'Earphones', quantity: 0, isSelected: false, weight: 0.05},
-        {itemName: 'Powerbank', quantity: 1, isSelected: false, weight: 0.1},
-
+        {itemName: 'Power-bank', quantity: 1, isSelected: false, weight: 0.1},
 
 
     ]);
@@ -220,32 +215,22 @@ export const ToDoListComponentsTrip = (props) => {
     // ************ END ELECTRONIC EQUIPMENTS LIST  ***************
 
 
-
-
-
-
     // ************ Accessories ***************
     // const [camera, setCamera] = useState(props);
-
-
-
-
     const [errorNewItem, setErrorNewItem] = useState(" ");
-
     // const [items, setItems] = useState([]);
     const [inputValue, setInputValue] = useState('');
-
     const [items, setItems] = useState([
         {itemName: 'Travel Pillow', quantity: 0, isSelected: false, weight: 0.4},
         {itemName: 'Luggage Tag', quantity: 0, isSelected: false, weight: 0.03},
         {itemName: 'Backpack', quantity: 0, isSelected: false, weight: 0.5},
-        {itemName: 'Book/ eBook', quantity: 0, isSelected: false, weight: 0.3},
+        {itemName: 'Book', quantity: 0, isSelected: false, weight: 0.3},
+        {itemName: 'eBook', quantity: 0, isSelected: false, weight: 0.3},
         {itemName: 'Watch', quantity: 0, isSelected: false, weight: 0.2},
         {itemName: 'Maps', quantity: 0, isSelected: false, weight: 0.2},
         {itemName: 'Umbrella', quantity: 0, isSelected: false, weight: 0.5},
         {itemName: 'Earplugs', quantity: 0, isSelected: false, weight: 0.01},
     ]);
-
 
     //grab data from local storage
     useEffect(() => {
@@ -260,7 +245,6 @@ export const ToDoListComponentsTrip = (props) => {
             //     console.log('data2',data2);
         }, []
     )
-
 
     //save data to local storage
     useEffect(() => {
@@ -280,16 +264,12 @@ export const ToDoListComponentsTrip = (props) => {
             quantity: 1,
             isSelected: false,
             weight: 0.3,
-
         };
-
         const newItems = [...items, newItem];
         setItems(newItems);
         setInputValue('');
         calculateTotal();
         calculateTotalWeight();
-
-
     };
 
 
@@ -300,9 +280,7 @@ export const ToDoListComponentsTrip = (props) => {
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
         // event.preventDefault();
-
     }
 
     const handleDecreaseQuantity = (index) => {
@@ -314,13 +292,10 @@ export const ToDoListComponentsTrip = (props) => {
             calculateTotal();
             calculateTotalWeight();
         }
-
         newItems[index].quantity--;
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
-
     }
 
 
@@ -343,22 +318,16 @@ export const ToDoListComponentsTrip = (props) => {
         if (index > -1) {
             newItems.splice(index, 1);
             setItems(newItems);
-
         }
-
         calculateTotal();
         calculateTotalWeight();
-
     }
 
-
     const [totalItemWeight, setTotalItemWeight] = useState(1);
-
     const calculateTotalWeight = () => {
         const totalItemWeight = items.reduce((total, item) => {
             return total + item.weight * item.quantity;
         }, 0);
-
         setTotalItemWeight(totalItemWeight);
     };
 
@@ -378,11 +347,7 @@ export const ToDoListComponentsTrip = (props) => {
         newItems[index].isSelected = !newItems[index].isSelected;
         setItems(newItems);
     };
-
     // ************ END Accessories mod From electronic equipment  ***************
-
-
-
 
 
     // ******************** CLOTHES  ***************************
@@ -393,12 +358,12 @@ export const ToDoListComponentsTrip = (props) => {
         {itemName: 'Pants', quantity: 1, isSelected: false, weight: 0.05},
         {itemName: 'Shirt', quantity: 1, isSelected: false, weight: 0.2},
         {itemName: 'Socks', quantity: 1, isSelected: false, weight: 0.1},
-        {itemName: 'Jeans/Trousers', quantity: 0, isSelected: false, weight: 0.5},
+        {itemName: 'Jeans', quantity: 0, isSelected: false, weight: 0.5},
         {itemName: 'Pyjamas', quantity: 0, isSelected: false, weight: 0.2},
-        {itemName: 'Hoodies/Sweater', quantity: 1, isSelected: false, weight: 0.5},
+        {itemName: 'Hoodies', quantity: 1, isSelected: false, weight: 0.5},
+        {itemName: 'Sweater', quantity: 1, isSelected: false, weight: 0.5},
         {itemName: 'Jacket', quantity: 1, isSelected: false, weight: 0.8},
         {itemName: 'Shoes', quantity: 1, isSelected: false, weight: 0.3}
-
     ]);
 
     //grab data from local storage
@@ -440,13 +405,6 @@ export const ToDoListComponentsTrip = (props) => {
         setErrorNewItemClothes(" ");
     };
 
-
-
-
-
-
-
-
     // function to handle increase items
     const handleIncreaseQuantityClothes = (index) => {
         // alert("button increase was clicked ")
@@ -481,10 +439,6 @@ export const ToDoListComponentsTrip = (props) => {
     }
 
 
-
-
-
-
     // function to count the clothes
     const [totalItemCountClothes, setTotalItemCountClothes] = useState(6);
     const calculateTotalClothes = () => {
@@ -493,7 +447,6 @@ export const ToDoListComponentsTrip = (props) => {
         }, 0);
         setTotalItemCountClothes(totalItemCountClothes);
     };
-
 
 
     // function to remove item
@@ -516,41 +469,14 @@ export const ToDoListComponentsTrip = (props) => {
         }, 0);
         setTotalItemWeightClothes(totalItemWeightClothes);
     };
-
-
-
-
-
-
-
     // ************ END CLOTHES LIST  ***************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // ******************** COSMETICS AND FIRST AID  ***************************
     // const [camera, setCamera] = useState(props);
-
-
     const [errorNewItemCosmetics, setErrorNewItemCosmetics] = useState(" ");
-
     // const [items, setItems] = useState([]);
     const [inputValueCosmetics, setInputValueCosmetics] = useState('');
-
     const [itemsCosmetics, setItemsCosmetics] = useState([
         {itemName: 'Pain Killers', quantity: 1, isSelected: false, weight: 0.04},
         {itemName: 'Hand Cream', quantity: 1, isSelected: false, weight: 0.1},
@@ -560,11 +486,11 @@ export const ToDoListComponentsTrip = (props) => {
         {itemName: 'Antiperspirant', quantity: 0, isSelected: false, weight: 0.1},
         {itemName: 'Nail File', quantity: 0, isSelected: false, weight: 0.03},
         {itemName: 'Dental Floss', quantity: 0, isSelected: false, weight: 0.02},
-        {itemName: 'Lipstick/ Lip Balm', quantity: 0, isSelected: false, weight: 0.02},
-        {itemName: 'Contact Lenses', quantity: 0, isSelected: false, weight: 0.05},
+        {itemName: 'Lipstick', quantity: 0, isSelected: false, weight: 0.02},
+        {itemName: 'Contacts', quantity: 0, isSelected: false, weight: 0.05},
         {itemName: 'Glasses', quantity: 0, isSelected: false, weight: 0.05},
         {itemName: 'Shampoo', quantity: 0, isSelected: false, weight: 0.25},
-        {itemName: 'Soap/Shower Gel', quantity: 0, isSelected: false, weight: 0.25},
+        {itemName: 'Shower Gel', quantity: 0, isSelected: false, weight: 0.25},
 
 
     ]);
@@ -603,18 +529,13 @@ export const ToDoListComponentsTrip = (props) => {
             quantity: 1,
             isSelected: false,
             weight: 0.1,
-
         };
-
         const newItems = [...itemsCosmetics, newItem];
         setItemsCosmetics(newItems);
         setInputValueCosmetics('');
         calculateTotalClothes();
         calculateTotalWeightClothes();
-
-
     };
-
 
     const handleIncreaseQuantityCosmetics = (index) => {
         // alert("button increase was clicked ")
@@ -623,9 +544,7 @@ export const ToDoListComponentsTrip = (props) => {
         setItemsCosmetics(newItems);
         calculateTotalCosmetics();
         calculateTotalWeightCosmetics();
-
         // event.preventDefault();
-
     }
 
     const handleDecreaseQuantityCosmetics = (index) => {
@@ -637,23 +556,18 @@ export const ToDoListComponentsTrip = (props) => {
             calculateTotalCosmetics();
             calculateTotalWeightCosmetics();
         }
-
         newItems[index].quantity--;
         setItemsCosmetics(newItems);
         calculateTotalCosmetics();
         calculateTotalWeightCosmetics();
-
-
     }
 
 
     const [totalItemCountCosmetics, setTotalItemCountCosmetics] = useState(6);
-
     const calculateTotalCosmetics = () => {
         const totalItemCountCosmetics = itemsCosmetics.reduce((total, itemCosmetics) => {
             return total + itemCosmetics.quantity;
         }, 0);
-
         setTotalItemCountCosmetics(totalItemCountCosmetics);
     };
 
@@ -666,22 +580,17 @@ export const ToDoListComponentsTrip = (props) => {
         if (index > -1) {
             newItems.splice(index, 1);
             setItemsCosmetics(newItems);
-
         }
-
         calculateTotalCosmetics();
         calculateTotalWeightCosmetics();
-
     }
 
 
     const [totalItemWeightCosmetics, setTotalItemWeightCosmetics] = useState(1);
-
     const calculateTotalWeightCosmetics = () => {
         const totalItemWeightCosmetics = itemsCosmetics.reduce((total, itemsCosmetics) => {
             return total + itemsCosmetics.weight * itemsCosmetics.quantity;
         }, 0);
-
         setTotalItemWeightCosmetics(totalItemWeightCosmetics);
     };
 
@@ -701,33 +610,23 @@ export const ToDoListComponentsTrip = (props) => {
         newItems[index].isSelected = !newItems[index].isSelected;
         setItemsCosmetics(newItems);
     }
-
     // ************ END COSMETICS LIST  ***************
 
 
-
-
-
-
-
     return (
-
-
         <div>
             <div className="row">
-                <div id="titleListToDoListID" className="col s10 m6">
-
+                <div id="titleListToDoListID" className="col s12 m6">
                     <p id="listOfItemsInToDoListComponent">
                         {/*Hi {props.dataCustomer.name}*/}
                         {/*{toDoListTrip.ireland === "1" ? "Ireland" : ""}*/}
                         {/*{toDoListTrip.spain === true ? "Spain" : " "}*/}
                         {/*{toDoListTrip.poland === true ? "Poland" : " "}*/}
-                        {toDoListTrip.destination===0 ? toDoListTrip.description : toDoListTrip.destination}
+                        {toDoListTrip.destination === 0 ? toDoListTrip.description : toDoListTrip.destination}
                         {/*{toDoListTrip.name}<br/>*/}
                         {/*{toDoListTrip.destination}<br/>*/}
                         {/*{toDoListTrip.description}<br/>*/}
                         : {toDoListTrip.departureDay} to {toDoListTrip.returnDay}</p>
-
                 </div>
             </div>
 
@@ -738,8 +637,6 @@ export const ToDoListComponentsTrip = (props) => {
                     : null
                 }
             </div>
-
-
 
 
             {/*<div className="row">*/}
@@ -754,13 +651,12 @@ export const ToDoListComponentsTrip = (props) => {
             {/*</div>*/}
 
 
-
             {/*#########################################################################*/}
             {/*  #######################  Electronic Equipment  ################################*/}
             <div className={"electronicEquipment"}>
 
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s10">
+                    <div className="col m10 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundElectronicEquipments3small.jpg")}/>
@@ -769,8 +665,7 @@ export const ToDoListComponentsTrip = (props) => {
                             <div className="card-content">
 
                                 <form id="documents" action="#">
-                                    <div className='main-container'>
-
+                                    <div className='row'>
 
                                         <div>
                                             {toDoListTrip.camera ?
@@ -778,8 +673,6 @@ export const ToDoListComponentsTrip = (props) => {
                                                 : null
                                             }
                                         </div>
-
-
 
                                         <div>
                                             {toDoListTrip.camcorder ?
@@ -811,7 +704,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                         <>
                                                             <p>
                                                                 <label>
-                                                                    <input id="colorChecked" checked="true" type="checkbox"
+                                                                    <input id="colorChecked" checked="true"
+                                                                           type="checkbox"
                                                                            className={"filled-in"}
                                                                            onClick={() => validateCheckedEquipments(index)}/>
                                                                     <span>{itemEquipments.itemName}</span>
@@ -835,7 +729,8 @@ export const ToDoListComponentsTrip = (props) => {
 
                                                         <p>
                                                             <label>
-                                                                <input id="colorChecked" type="checkbox" className="filled-in"
+                                                                <input id="colorChecked" type="checkbox"
+                                                                       className="filled-in"
                                                                        onClick={() => validateCheckedEquipments(index)}/>
                                                                 <span>{itemEquipments.itemName}</span>
                                                                 <div id="toRight">
@@ -863,7 +758,8 @@ export const ToDoListComponentsTrip = (props) => {
                                         <input id="addItemButton" value={inputValueEquipments}
                                                onChange={(event) => validateInputNewItemEquipments(event)}
                                                className='add-item-input' placeholder='add your item'/>
-                                        <i className="material-icons prefix" onClick={() => handleAddItemButtonEquipments()}>add</i>
+                                        <i className="material-icons prefix"
+                                           onClick={() => handleAddItemButtonEquipments()}>add</i>
                                         <div>{errorNewItemEquipments}</div>
                                         <div className='total'>Total Items: {totalItemCountEquipments}</div>
                                         <div className='total'>Total Weight: {totalItemWeightEquipments} kg.</div>
@@ -875,38 +771,6 @@ export const ToDoListComponentsTrip = (props) => {
 
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             {/*#########################################################################*/}
             {/*  #######################  ACCESSORIES LIST  ################################*/}
@@ -931,7 +795,6 @@ export const ToDoListComponentsTrip = (props) => {
                                             }
                                         </div>
 
-
                                         <div>
                                             {toDoListTrip.camcorder ?
                                                 <CamcorderList/>
@@ -939,16 +802,12 @@ export const ToDoListComponentsTrip = (props) => {
                                             }
                                         </div>
 
-
                                         <div>
                                             {toDoListTrip.laptop ?
                                                 <LaptopList/>
                                                 : null
                                             }
                                         </div>
-
-
-
 
                                         <div>
                                             {toDoListTrip.car ?
@@ -964,14 +823,12 @@ export const ToDoListComponentsTrip = (props) => {
                                             }
                                         </div>
 
-
                                         <div>
                                             {toDoListTrip.trekking ?
                                                 <TrekkingListAccessories/>
                                                 : null
                                             }
                                         </div>
-
 
                                         {/*Accesoriess adiidtional items*/}
                                         <div className='item-list'>
@@ -981,7 +838,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                         <>
                                                             <p>
                                                                 <label>
-                                                                    <input id="colorChecked" checked="true" type="checkbox"
+                                                                    <input id="colorChecked" checked="true"
+                                                                           type="checkbox"
                                                                            className={"filled-in"}
                                                                            onClick={() => validateChecked(index)}/>
                                                                     <span>{item.itemName}</span>
@@ -1005,7 +863,8 @@ export const ToDoListComponentsTrip = (props) => {
 
                                                         <p>
                                                             <label>
-                                                                <input id="colorChecked" type="checkbox" className="filled-in"
+                                                                <input id="colorChecked" type="checkbox"
+                                                                       className="filled-in"
                                                                        onClick={() => validateChecked(index)}/>
                                                                 <span>{item.itemName}</span>
                                                                 <div id="toRight">
@@ -1033,7 +892,8 @@ export const ToDoListComponentsTrip = (props) => {
                                         <input id="addItemButton" value={inputValue}
                                                onChange={(event) => validateInputNewItem(event)}
                                                className='add-item-input' placeholder='add your item'/>
-                                        <i className="material-icons prefix" onClick={() => handleAddItemButtonAccessories()}>add</i>
+                                        <i className="material-icons prefix"
+                                           onClick={() => handleAddItemButtonAccessories()}>add</i>
                                         <div>{errorNewItem}</div>
                                         <div className='total'>Total Items: {totalItemCount}</div>
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
@@ -1047,88 +907,60 @@ export const ToDoListComponentsTrip = (props) => {
             </div>
 
 
+            {/*#########################################################################*/}
+            {/*  #######################  Clothes List  ################################*/}
+            <div className={"clothes"}>
+                <div id="blockEssential" className="row">
+                    <div className="col m10 s10">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={require("../photo/backgroundClothes3small.jpg")}/>
+                                <span className="card-title">CLOTHES</span>
+                            </div>
+                            <div className="card-content">
 
+                                <form id="documents" action="#">
+                                    <div className='row'>
 
-                {/*#########################################################################*/}
-                {/*  #######################  Clothes List  ################################*/}
-                <div className={"clothes"}>
+                                        <div>
+                                            {toDoListTrip.beachListStatus ?
+                                                <BeachList/>
+                                                : null
+                                            }
+                                        </div>
+                                        {/*<div>Value of sex is: {toDoListTrip.sex}</div>*/}
+                                        <div>
+                                            {toDoListTrip.sex === "female" ?
+                                                <FemaleClothesList/>
+                                                : null
+                                            }
+                                        </div>
 
-                    <div id="blockEssential" className="row">
-                        <div className="col m10 s10">
-                            <div className="card">
-                                <div className="card-image">
-                                    <img src={require("../photo/backgroundClothes3small.jpg")}/>
-                                    <span className="card-title">CLOTHES</span>
-                                </div>
-                                <div className="card-content">
+                                        <div>
+                                            {toDoListTrip.trekking ?
+                                                <TrekkingListClothes/>
+                                                : null
+                                            }
+                                        </div>
 
-                                    <form id="documents" action="#">
-                                        <div className='main-container'>
+                                        {/*<div>*/}
+                                        {/*    {toDoListTrip.car ?*/}
+                                        {/*        <Car/>*/}
+                                        {/*        : null*/}
+                                        {/*    }*/}
+                                        {/*</div>*/}
 
-                                            <div>
-                                                {toDoListTrip.beachListStatus ?
-                                                    <BeachList/>
-                                                    : null
-                                                }
-                                            </div>
-                                            {/*<div>Value of sex is: {toDoListTrip.sex}</div>*/}
-                                            <div>
-                                                {toDoListTrip.sex==="female" ?
-                                                    <FemaleClothesList/>
-                                                    : null
-                                                }
-                                            </div>
-
-
-                                            <div>
-                                                {toDoListTrip.trekking ?
-                                                    <TrekkingListClothes/>
-                                                    : null
-                                                }
-                                            </div>
-
-
-                                            {/*<div>*/}
-                                            {/*    {toDoListTrip.car ?*/}
-                                            {/*        <Car/>*/}
-                                            {/*        : null*/}
-                                            {/*    }*/}
-                                            {/*</div>*/}
-
-
-                                            {/*Clothes additional items*/}
-                                            <div className='item-list'>
-                                                {itemsClothes.map((itemClothes, index) => (
-                                                    <div className={"checkBox"}>
-                                                        {itemClothes.isSelected ? (
-                                                            <>
-                                                                <p>
-                                                                    <label>
-                                                                        <input id="colorChecked" checked="true" type="checkbox"
-                                                                               className={"filled-in"}
-                                                                               onClick={() => validateCheckedClothes(index)}/>
-                                                                        <span>{itemClothes.itemName}</span>
-                                                                        <div id="toRight">
-                                                                            <button className="decreaseQuantity"
-                                                                                    onClick={(event) => handleDecreaseQuantityClothes(index, event.preventDefault())}>-
-                                                                            </button>
-                                                                            <button className="Quantity"
-                                                                                    onClick={(event) => event.preventDefault()}> {itemClothes.quantity} </button>
-                                                                            <button className="increaseQuantity"
-                                                                                    onClick={(event) => handleIncreaseQuantityClothes(index, event.preventDefault())}>+
-                                                                            </button>
-                                                                            <button
-                                                                                onClick={(event) => handleRemoveItemClothes(index, event.preventDefault())}>Remove
-                                                                            </button>
-                                                                        </div>
-                                                                    </label>
-                                                                </p>
-                                                            </>
-                                                        ) : (
-
+                                        {/*Clothes additional items*/}
+                                        <div className='item-list'>
+                                            {itemsClothes.map((itemClothes, index) => (
+                                                <div className={"checkBox"}>
+                                                    {itemClothes.isSelected ? (
+                                                        <>
                                                             <p>
                                                                 <label>
-                                                                    <input id="colorChecked" type="checkbox" className="filled-in"
+                                                                    <input id="colorChecked" checked="true"
+                                                                           type="checkbox"
+                                                                           className={"filled-in"}
                                                                            onClick={() => validateCheckedClothes(index)}/>
                                                                     <span>{itemClothes.itemName}</span>
                                                                     <div id="toRight">
@@ -1140,126 +972,108 @@ export const ToDoListComponentsTrip = (props) => {
                                                                         <button className="increaseQuantity"
                                                                                 onClick={(event) => handleIncreaseQuantityClothes(index, event.preventDefault())}>+
                                                                         </button>
-
                                                                         <button
                                                                             onClick={(event) => handleRemoveItemClothes(index, event.preventDefault())}>Remove
                                                                         </button>
                                                                     </div>
                                                                 </label>
                                                             </p>
-                                                        )
-                                                        }
-                                                    </div>
-                                                ))}
-                                            </div>
+                                                        </>
+                                                    ) : (
 
-                                            <input id="addItemButton" value={inputValueClothes}
-                                                   onChange={(event) => validateInputNewItemClothes(event)}
-                                                   className='add-item-input' placeholder='add your item'/>
-                                            <i className="material-icons prefix" onClick={() => handleAddItemButtonClothes()}>add</i>
-                                            <div>{errorNewItemClothes}</div>
-                                            <div className='total'>Total Items: {totalItemCountClothes}</div>
-                                            <div className='total'>Total Weight: {totalItemWeightClothes} kg.</div>
+                                                        <p>
+                                                            <label>
+                                                                <input id="colorChecked" type="checkbox"
+                                                                       className="filled-in"
+                                                                       onClick={() => validateCheckedClothes(index)}/>
+                                                                <span>{itemClothes.itemName}</span>
+                                                                <div id="toRight">
+                                                                    <button className="decreaseQuantity"
+                                                                            onClick={(event) => handleDecreaseQuantityClothes(index, event.preventDefault())}>-
+                                                                    </button>
+                                                                    <button className="Quantity"
+                                                                            onClick={(event) => event.preventDefault()}> {itemClothes.quantity} </button>
+                                                                    <button className="increaseQuantity"
+                                                                            onClick={(event) => handleIncreaseQuantityClothes(index, event.preventDefault())}>+
+                                                                    </button>
 
-                                            {/*<input placeholder="" value={name} type="text"*/}
-                                            {/*       onChange={(event => setName(event.target.value))} className="validate"/>*/}
-                                            {/*<input placeholder="" value={tripDays} type="text" onChange={(event=>setTripDays(event.target.value)}*/}
-                                            {/*       className="validate"/>*/}
-
-
-
-
-
-
-
-                                            {/*<input id="addItemButton" value={tripDays}*/}
-                                            {/*       onChange={(event) => validateInputNewItemClothes(event)}*/}
-                                            {/*       type={"text"} placeholder='add more days'> Trip Days: {tripDays} </input>*/}
-
-
+                                                                    <button
+                                                                        onClick={(event) => handleRemoveItemClothes(index, event.preventDefault())}>Remove
+                                                                    </button>
+                                                                </div>
+                                                            </label>
+                                                        </p>
+                                                    )
+                                                    }
+                                                </div>
+                                            ))}
                                         </div>
-                                    </form>
-                                </div>
+
+                                        <input id="addItemButton" value={inputValueClothes}
+                                               onChange={(event) => validateInputNewItemClothes(event)}
+                                               className='add-item-input' placeholder='add your item'/>
+                                        <i className="material-icons prefix"
+                                           onClick={() => handleAddItemButtonClothes()}>add</i>
+                                        <div>{errorNewItemClothes}</div>
+                                        <div className='total'>Total Items: {totalItemCountClothes}</div>
+                                        <div className='total'>Total Weight: {totalItemWeightClothes} kg.</div>
+
+                                        {/*<input placeholder="" value={name} type="text"*/}
+                                        {/*       onChange={(event => setName(event.target.value))} className="validate"/>*/}
+                                        {/*<input placeholder="" value={tripDays} type="text" onChange={(event=>setTripDays(event.target.value)}*/}
+                                        {/*       className="validate"/>*/}
+
+                                        {/*<input id="addItemButton" value={tripDays}*/}
+                                        {/*       onChange={(event) => validateInputNewItemClothes(event)}*/}
+                                        {/*       type={"text"} placeholder='add more days'> Trip Days: {tripDays} </input>*/}
+
+
+                                    </div>
+                                </form>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
+            </div>
 
+            {/*#########################################################################*/}
+            {/*  #######################  COSMETICS and First Aid List  ################################*/}
+            <div className={"cosmetics"}>
+                <div id="blockEssential" className="row">
+                    <div className="col m10 s12">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
+                                <span className="card-title">COSMETICS AND FIRST AID</span>
+                            </div>
+                            <div className="card-content">
+                                <form id="documents" action="#">
+                                    <div className='row'>
+                                        <div>
+                                            {toDoListTrip.beachListStatus ?
+                                                <BeachListCosmetics/>
+                                                : null
+                                            }
+                                        </div>
+                                        <div>
+                                            {toDoListTrip.sex === "female" ?
+                                                <FemaleCosmeticsList/>
+                                                : null
+                                            }
+                                        </div>
 
-
-
-
-
-
-
-
-
-
-
-                {/*#########################################################################*/}
-                {/*  #######################  COSMETICS and First Aid List  ################################*/}
-                <div className={"cosmetics"}>
-
-                    <div id="blockEssential" className="row">
-                        <div className="col m10 s10">
-                            <div className="card">
-                                <div className="card-image">
-                                    <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
-                                    <span className="card-title">COSMETICS AND FIRST AID</span>
-                                </div>
-                                <div className="card-content">
-
-                                    <form id="documents" action="#">
-                                        <div className='main-container'>
-
-                                            <div>
-                                                {toDoListTrip.beachListStatus ?
-                                                    <BeachListCosmetics/>
-                                                    : null
-                                                }
-                                            </div>
-                                            <div>
-                                                {toDoListTrip.sex==="female" ?
-                                                    <FemaleCosmeticsList/>
-                                                    : null
-                                                }
-                                            </div>
-
-
-                                            {/*Clothes additional items*/}
-                                            <div className='item-list'>
-                                                {itemsCosmetics.map((itemCosmetics, index) => (
-                                                    <div className={"checkBox"}>
-                                                        {itemCosmetics.isSelected ? (
-                                                            <>
-                                                                <p>
-                                                                    <label>
-                                                                        <input id="colorChecked" checked="true" type="checkbox"
-                                                                               className={"filled-in"}
-                                                                               onClick={() => validateCheckedCosmetics(index)}/>
-                                                                        <span>{itemCosmetics.itemName}</span>
-                                                                        <div id="toRight">
-                                                                            <button className="decreaseQuantity"
-                                                                                    onClick={(event) => handleDecreaseQuantityCosmetics(index, event.preventDefault())}>-
-                                                                            </button>
-                                                                            <button className="Quantity"
-                                                                                    onClick={(event) => event.preventDefault()}> {itemCosmetics.quantity} </button>
-                                                                            <button className="increaseQuantity"
-                                                                                    onClick={(event) => handleIncreaseQuantityCosmetics(index, event.preventDefault())}>+
-                                                                            </button>
-                                                                            <button
-                                                                                onClick={(event) => handleRemoveItemCosmetics(index, event.preventDefault())}>Remove
-                                                                            </button>
-                                                                        </div>
-                                                                    </label>
-                                                                </p>
-                                                            </>
-                                                        ) : (
-
+                                        {/*Clothes additional items*/}
+                                        <div className='item-list'>
+                                            {itemsCosmetics.map((itemCosmetics, index) => (
+                                                <div className={"checkBox"}>
+                                                    {itemCosmetics.isSelected ? (
+                                                        <>
                                                             <p>
                                                                 <label>
-                                                                    <input id="colorChecked" type="checkbox" className="filled-in"
+                                                                    <input id="colorChecked" checked="true"
+                                                                           type="checkbox"
+                                                                           className={"filled-in"}
                                                                            onClick={() => validateCheckedCosmetics(index)}/>
                                                                     <span>{itemCosmetics.itemName}</span>
                                                                     <div id="toRight">
@@ -1271,35 +1085,58 @@ export const ToDoListComponentsTrip = (props) => {
                                                                         <button className="increaseQuantity"
                                                                                 onClick={(event) => handleIncreaseQuantityCosmetics(index, event.preventDefault())}>+
                                                                         </button>
-
                                                                         <button
                                                                             onClick={(event) => handleRemoveItemCosmetics(index, event.preventDefault())}>Remove
                                                                         </button>
                                                                     </div>
                                                                 </label>
                                                             </p>
-                                                        )
-                                                        }
-                                                    </div>
-                                                ))}
-                                            </div>
+                                                        </>
+                                                    ) : (
 
+                                                        <p>
+                                                            <label>
+                                                                <input id="colorChecked" type="checkbox"
+                                                                       className="filled-in"
+                                                                       onClick={() => validateCheckedCosmetics(index)}/>
+                                                                <span>{itemCosmetics.itemName}</span>
+                                                                <div id="toRight">
+                                                                    <button className="decreaseQuantity"
+                                                                            onClick={(event) => handleDecreaseQuantityCosmetics(index, event.preventDefault())}>-
+                                                                    </button>
+                                                                    <button className="Quantity"
+                                                                            onClick={(event) => event.preventDefault()}> {itemCosmetics.quantity} </button>
+                                                                    <button className="increaseQuantity"
+                                                                            onClick={(event) => handleIncreaseQuantityCosmetics(index, event.preventDefault())}>+
+                                                                    </button>
 
-
-                                            <input id="addItemButton" value={inputValueCosmetics}
-                                                   onChange={(event) => validateInputNewItemCosmetics(event)}
-                                                   className='add-item-input' placeholder='add your item'/>
-                                            <i className="material-icons prefix" onClick={() => handleAddItemButtonCosmetics()}>add</i>
-                                            <div>{errorNewItemCosmetics}</div>
-                                            <div className='total'>Total Items: {totalItemCountCosmetics}</div>
-                                            <div className='total'>Total Weight: {totalItemWeightCosmetics} kg.</div>
+                                                                    <button
+                                                                        onClick={(event) => handleRemoveItemCosmetics(index, event.preventDefault())}>Remove
+                                                                    </button>
+                                                                </div>
+                                                            </label>
+                                                        </p>
+                                                    )
+                                                    }
+                                                </div>
+                                            ))}
                                         </div>
-                                    </form>
-                                </div>
+                                        <input id="addItemButton" value={inputValueCosmetics}
+                                               onChange={(event) => validateInputNewItemCosmetics(event)}
+                                               className='add-item-input' placeholder='add your item'/>
+                                        <i className="material-icons prefix"
+                                           onClick={() => handleAddItemButtonCosmetics()}>add</i>
+                                        <div>{errorNewItemCosmetics}</div>
+                                        <div className='total'>Total Items: {totalItemCountCosmetics}</div>
+                                        <div className='total'>Total Weight: {totalItemWeightCosmetics} kg.</div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </div></div>
+                </div>
+            </div>
+        </div>
 
     );
 };

@@ -9,30 +9,25 @@ Final Project Software Developer
 */
 
 const CamcorderEquipmentsList=({})=>{
-
-
     const [checked2, setChecked2] = useState(false);
     const [maskWeight, setMaskWeight] = useState(0.02);
     const [underwearQty, setUnderwearQty] = useState(5);
     const [passportQty, setPassportQty] = useState(1);
     const [errorNewItem, setErrorNewItem] = useState("At least one character ");
-
     // const [items, setItems] = useState([]);
     const [inputValue, setInputValue] = useState('');
-
     const [items, setItems] = useState([
-        {itemName: 'Camcorder Body + Battery', quantity: 1, isSelected: false, weight: 0.1},
-
+        {itemName: 'Camcorder', quantity: 1, isSelected: false, weight: 0.1},
+        {itemName: 'Cam Battery', quantity: 1, isSelected: false, weight: 0.1},
     ]);
+
 
 
     //grab data from local storage
     useEffect(() => {
-
             const camcorderData = window.localStorage.getItem('CAMCORDER_EQUIPMENTS_DATA');
             // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItems(JSON.parse(camcorderData));
-
             // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
             // if ( data !== null ) setItems(JSON.parse(data));
             // setSelected(JSON.parse(data2));
@@ -45,24 +40,18 @@ const CamcorderEquipmentsList=({})=>{
     useEffect(() => {
             console.log(items);
             window.localStorage.setItem('CAMCORDER_EQUIPMENTS_DATA', JSON.stringify(items));
-
         }, [items]
         // },[passportQty]
-
     )
-
-
 
 
     // function to add a new item
     const handleAddItemButton = () => {
-
         const newItem = {
             itemName: inputValue,
             quantity: 1,
             isSelected: false,
             weight: 0.3,
-
         };
 
         const newItems = [...items, newItem];
@@ -70,8 +59,6 @@ const CamcorderEquipmentsList=({})=>{
         setInputValue('');
         calculateTotal();
         calculateTotalWeight();
-
-
     };
 
 
@@ -82,9 +69,7 @@ const CamcorderEquipmentsList=({})=>{
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
         // event.preventDefault();
-
     }
 
     const handleDecreaseQuantity = (index) => {
@@ -96,23 +81,18 @@ const CamcorderEquipmentsList=({})=>{
             calculateTotal();
             calculateTotalWeight();
         }
-
         newItems[index].quantity--;
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
-
     }
 
 
     const [totalItemCount, setTotalItemCount] = useState(6);
-
     const calculateTotal = () => {
         const totalItemCount = items.reduce((total, item) => {
             return total + item.quantity;
         }, 0);
-
         setTotalItemCount(totalItemCount);
     };
 
@@ -125,22 +105,17 @@ const CamcorderEquipmentsList=({})=>{
         if (index > -1) {
             newItems.splice(index, 1);
             setItems(newItems);
-
         }
-
         calculateTotal();
         calculateTotalWeight();
-
     }
 
 
     const [totalItemWeight, setTotalItemWeight] = useState(1);
-
     const calculateTotalWeight = () => {
         const totalItemWeight = items.reduce((total, item) => {
             return total + item.weight * item.quantity;
         }, 0);
-
         setTotalItemWeight(totalItemWeight);
     };
 
@@ -160,8 +135,6 @@ const CamcorderEquipmentsList=({})=>{
         newItems[index].isSelected = !newItems[index].isSelected;
         setItems(newItems);
     };
-
-
 
 
     return(
