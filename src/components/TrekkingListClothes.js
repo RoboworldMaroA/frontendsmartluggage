@@ -10,7 +10,7 @@ Marek Augustyn
 Final Project Software Developer
 */
 
-const TrekkingListClothes=({})=>{
+const TrekkingListClothes = ({}) => {
 
     const [checked2, setChecked2] = useState(false);
     const [maskWeight, setMaskWeight] = useState(0.02);
@@ -64,16 +64,6 @@ const TrekkingListClothes=({})=>{
         // },[passportQty]
 
     )
-
-
-
-
-
-
-
-
-
-
 
 
     // // function to add a new item
@@ -184,14 +174,12 @@ const TrekkingListClothes=({})=>{
     };
 
 
-
-
-    return(
+    return (
 
         <>
             <form id="camera" action="#">
-                <div className='row'>
-                    <div className='item-list'>
+                {/*<div className='row'>*/}
+                {/*    <div className='item-list'>*/}
                         {items.map((item, index) => (
                             <div className={"checkBox"}>
                                 {item.isSelected ? (
@@ -245,8 +233,8 @@ const TrekkingListClothes=({})=>{
                                 }
                             </div>
                         ))}
-                    </div>
-                </div>
+                    {/*</div>*/}
+                {/*</div>*/}
             </form>
 
 

@@ -151,8 +151,8 @@ const BeachListAccessories=({})=>{
     return(
         <>
             <form id="camera" action="#">
-                <div className='row'>
-                    <div className='item-list'>
+                {/*<div className='row'>*/}
+                {/*    <div className='item-list'>*/}
                         {items.map((item, index) => (
                             <div className={"checkBox"}>
                                 {item.isSelected ? (
@@ -206,8 +206,8 @@ const BeachListAccessories=({})=>{
                                 }
                             </div>
                         ))}
-                    </div>
-                </div>
+                    {/*</div>*/}
+                {/*</div>*/}
             </form>
 
 

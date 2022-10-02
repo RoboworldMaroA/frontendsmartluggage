@@ -10,7 +10,7 @@ Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
-const TrekkingListAccessories=({})=>{
+const TrekkingListAccessories = ({}) => {
 
     //
     // const [checked2, setChecked2] = useState(false);
@@ -63,7 +63,6 @@ const TrekkingListAccessories=({})=>{
         // },[passportQty]
 
     )
-
 
 
     const handleIncreaseQuantity = (index) => {
@@ -153,14 +152,12 @@ const TrekkingListAccessories=({})=>{
     };
 
 
-
-
-    return(
+    return (
 
         <>
             <form id="camera" action="#">
-                <div className='row'>
-                    <div className='item-list'>
+                {/*<div className='row'>*/}
+                {/*    <div className='item-list'>*/}
                         {items.map((item, index) => (
                             <div className={"checkBox"}>
                                 {item.isSelected ? (
@@ -214,8 +211,8 @@ const TrekkingListAccessories=({})=>{
                                 }
                             </div>
                         ))}
-                    </div>
-                </div>
+                    {/*</div>*/}
+                {/*</div>*/}
             </form>
 
 

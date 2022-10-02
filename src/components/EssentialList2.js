@@ -162,93 +162,93 @@ const EssentialList = ({props}) => {
                     </div>
                     {/*<div className="card-content">*/}
 
-                        <form id="documents" action="#">
-                            {/*<label>*/}
-                            {/*    <div id="toRight">*/}
-                            {/*        <button onClick={(event) => changeQuantityMinusPassport(event)}>-</button>*/}
-                            {/*        <button onClick={(event)=>event.preventDefault()}> {passportQty} </button>*/}
-                            {/*        <button onClick={(event) => changeQuantityPlusPassport(event)}>+</button>*/}
-                            {/*    </div>*/}
-                            {/*</label>*/}
-                            {/*<p>*/}
-                            {/*    <label>*/}
-                            {/*        <input id="crossLine" type="checkbox" className="filled-in"/>*/}
-                            {/*        <span>Passport</span>*/}
-                            {/*        <div id="toRight">*/}
-                            {/*            <button onClick={(event) => changeQuantityMinus(event)}>-</button>*/}
-                            {/*            <button onClick={(event)=>event.preventDefault()}> {underwearQty} </button>*/}
-                            {/*            <button onClick={(event) => changeQuantityPlus(event)}>+</button>*/}
-                            {/*        </div>*/}
-                            {/*    </label>*/}
-                            {/*</p>*/}
+                    <form id="documents" action="#">
+                        {/*<label>*/}
+                        {/*    <div id="toRight">*/}
+                        {/*        <button onClick={(event) => changeQuantityMinusPassport(event)}>-</button>*/}
+                        {/*        <button onClick={(event)=>event.preventDefault()}> {passportQty} </button>*/}
+                        {/*        <button onClick={(event) => changeQuantityPlusPassport(event)}>+</button>*/}
+                        {/*    </div>*/}
+                        {/*</label>*/}
+                        {/*<p>*/}
+                        {/*    <label>*/}
+                        {/*        <input id="crossLine" type="checkbox" className="filled-in"/>*/}
+                        {/*        <span>Passport</span>*/}
+                        {/*        <div id="toRight">*/}
+                        {/*            <button onClick={(event) => changeQuantityMinus(event)}>-</button>*/}
+                        {/*            <button onClick={(event)=>event.preventDefault()}> {underwearQty} </button>*/}
+                        {/*            <button onClick={(event) => changeQuantityPlus(event)}>+</button>*/}
+                        {/*        </div>*/}
+                        {/*    </label>*/}
+                        {/*</p>*/}
 
 
-                            {/*<div className='row'>*/}
-                            {/*    <div className='item-list'>*/}
-                                    {items.map((item, index) => (
-                                        <div className={"checkBox"}>
-                                            {item.isSelected ? (
-                                                <>
-                                                    <p>
-                                                        <label>
-                                                            <input id="colorChecked" checked="true" type="checkbox"
-                                                                   className={"filled-in"}
-                                                                   onClick={() => validateChecked(index)}/>
-                                                            <span>{item.itemName}</span>
-                                                            <div id="toRight">
-                                                                <button className="decreaseQuantity"
-                                                                        onClick={(event) => handleDecreaseQuantity(index, event.preventDefault())}>-
-                                                                </button>
-                                                                <button className="Quantity"
-                                                                        onClick={(event) => event.preventDefault()}> {item.quantity} </button>
-                                                                <button className="increaseQuantity"
-                                                                        onClick={(event) => handleIncreaseQuantity(index, event.preventDefault())}>+
-                                                                </button>
-                                                                <button
-                                                                    onClick={(event) => handleRemoveItem(index, event.preventDefault())}>Remove
-                                                                </button>
-                                                            </div>
-                                                        </label>
-                                                    </p>
-                                                </>
-                                            ) : (
+                        {/*<div className='row'>*/}
+                        {/*    <div className='item-list'>*/}
+                        {items.map((item, index) => (
+                            <div className={"checkBox"}>
+                                {item.isSelected ? (
+                                    <>
+                                        <p>
+                                            <label>
+                                                <input id="colorChecked" checked="true" type="checkbox"
+                                                       className={"filled-in"}
+                                                       onClick={() => validateChecked(index)}/>
+                                                <span>{item.itemName}</span>
+                                                <div id="toRight">
+                                                    <button className="decreaseQuantity"
+                                                            onClick={(event) => handleDecreaseQuantity(index, event.preventDefault())}>-
+                                                    </button>
+                                                    <button className="Quantity"
+                                                            onClick={(event) => event.preventDefault()}> {item.quantity} </button>
+                                                    <button className="increaseQuantity"
+                                                            onClick={(event) => handleIncreaseQuantity(index, event.preventDefault())}>+
+                                                    </button>
+                                                    <button
+                                                        onClick={(event) => handleRemoveItem(index, event.preventDefault())}>Remove
+                                                    </button>
+                                                </div>
+                                            </label>
+                                        </p>
+                                    </>
+                                ) : (
 
-                                                <p>
-                                                    <label>
-                                                        <input id="colorChecked" type="checkbox" className="filled-in"
-                                                               onClick={() => validateChecked(index)}/>
-                                                        <span>{item.itemName}</span>
-                                                        <div id="toRight">
-                                                            <button className="decreaseQuantity"
-                                                                    onClick={(event) => handleDecreaseQuantity(index, event.preventDefault())}>-
-                                                            </button>
-                                                            <button className="Quantity"
-                                                                    onClick={(event) => event.preventDefault()}> {item.quantity} </button>
-                                                            <button className="increaseQuantity"
-                                                                    onClick={(event) => handleIncreaseQuantity(index, event.preventDefault())}>+
-                                                            </button>
+                                    <p>
+                                        <label>
+                                            <input id="colorChecked" type="checkbox" className="filled-in"
+                                                   onClick={() => validateChecked(index)}/>
+                                            <span>{item.itemName}</span>
+                                            <div id="toRight">
+                                                <button className="decreaseQuantity"
+                                                        onClick={(event) => handleDecreaseQuantity(index, event.preventDefault())}>-
+                                                </button>
+                                                <button className="Quantity"
+                                                        onClick={(event) => event.preventDefault()}> {item.quantity} </button>
+                                                <button className="increaseQuantity"
+                                                        onClick={(event) => handleIncreaseQuantity(index, event.preventDefault())}>+
+                                                </button>
 
-                                                            <button
-                                                                onClick={(event) => handleRemoveItem(index, event.preventDefault())}>Remove
-                                                            </button>
-                                                        </div>
-                                                    </label>
-                                                </p>
-                                            )
-                                            }
-                                        </div>
-                                    ))}
-                                {/*</div>*/}
+                                                <button
+                                                    onClick={(event) => handleRemoveItem(index, event.preventDefault())}>Remove
+                                                </button>
+                                            </div>
+                                        </label>
+                                    </p>
+                                )
+                                }
+                            </div>
+                        ))}
+                        {/*</div>*/}
 
-                                <input id="addItemButton" value={inputValue}
-                                       onChange={(event) => validateInputNewItem(event)}
-                                       className='add-item-input' placeholder='add your item'/>
-                                <i className="material-icons prefix" onClick={() => handleAddItemButton()}>add</i>
-                                <div>{errorNewItem}</div>
-                                <div className='total'>Total Items: {totalItemCount}</div>
-                                <div className='total'>Total Weight: {totalItemWeight} kg.</div>
-                            {/*</div>*/}
-                        </form>
+                        <input id="addItemButton" value={inputValue}
+                               onChange={(event) => validateInputNewItem(event)}
+                               className='add-item-input' placeholder='add your item'/>
+                        <i className="material-icons prefix" onClick={() => handleAddItemButton()}>add</i>
+                        <div>{errorNewItem}</div>
+                        <div className='total'>Total Items: {totalItemCount}</div>
+                        <div className='total'>Total Weight: {totalItemWeight} kg.</div>
+                        {/*</div>*/}
+                    </form>
                     {/*</div>*/}
                 </div>
             </div>

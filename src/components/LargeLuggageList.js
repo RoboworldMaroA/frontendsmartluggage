@@ -10,62 +10,58 @@ Marek Augustyn
 Final Project Software Developer
 */
 
-const LargeLuggageList=({})=>{
+const LargeLuggageList = ({}) => {
 
 
     const [dimensionsLargeLuggage, setDimensionsLargeLuggage] = useState("81cms (height), 119cms (width) and 119cms (depth)");
 
     const [checked2, setChecked2] = useState(false);
 
-    function toggle(){
-        setChecked2(checked2=> !checked2)
+    function toggle() {
+        setChecked2(checked2 => !checked2)
     }
 
 
-
-
-    return(
+    return (
 
         //Description of the list
         <div>
 
-            <form id="mainBodyToDoList"  action="#">
+            <form id="mainBodyToDoList" action="#">
 
                 <div id="titleElements">
-                    <p >LARGE LUGGAGE</p>
+                    <p>LARGE LUGGAGE</p>
                 </div>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" onChange={toggle} />
+                        <input type="checkbox" className="filled-in" onChange={toggle}/>
 
                         <span> Camera body.
-                <p> {checked2 ? "checked": "not checked"}</p>
+                <p> {checked2 ? "checked" : "not checked"}</p>
             </span>
 
                     </label>
                 </p>
 
 
-
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Size luggage : {dimensionsLargeLuggage}</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Check a weight: Maximum Weight is 20 Kg </span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" className="filled-in"/>
                         <span>Luggage Quantity </span>
                     </label>
                 </p>
-
 
 
                 {/*save list button subnit shoul execute function used to saving list on the computer*/}
@@ -76,7 +72,6 @@ const LargeLuggageList=({})=>{
                 {/*        </button>*/}
                 {/*    </Link>*/}
                 {/*</div>*/}
-
 
 
             </form>

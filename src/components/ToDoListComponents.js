@@ -16,13 +16,13 @@ const ToDoListComponents = (props) => {
 
     //not updating
     function updateIsDone() {
-       setToDoList({ ... toDoList, documentsList: !toDoList.documentsList});
+        setToDoList({...toDoList, documentsList: !toDoList.documentsList});
     }
 
 
-    useEffect(()=> {
-        console.log("item was updated state is:", toDoList.documentsList );},[toDoList]);
-
+    useEffect(() => {
+        console.log("item was updated state is:", toDoList.documentsList);
+    }, [toDoList]);
 
 
     return (
@@ -63,20 +63,6 @@ const ToDoListComponents = (props) => {
                     : null
                 }
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </div>

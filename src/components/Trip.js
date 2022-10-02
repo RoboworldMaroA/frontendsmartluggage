@@ -18,9 +18,8 @@ export default class Trip extends Component {
 
 
     // Deploy Version
-    componentDidMount(){
-        fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip/').then(response => response.json()).
-        then(data => this.setState({contacts: data}));
+    componentDidMount() {
+        fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip/').then(response => response.json()).then(data => this.setState({contacts: data}));
     }
 
 
@@ -31,11 +30,11 @@ export default class Trip extends Component {
     // }
 
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <div className="row">
-                    {this.state.contacts.map((itemTrip) =>(<DisplayCustomerTrip key={itemTrip.id} item={itemTrip} /> ))}
+                    {this.state.contacts.map((itemTrip) => (<DisplayCustomerTrip key={itemTrip.id} item={itemTrip}/>))}
                 </div>
             </div>
         )
