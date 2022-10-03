@@ -19,10 +19,10 @@ const TrekkingListAccessories = ({}) => {
     //     setChecked2(checked2=> !checked2)
     // }
 
-    const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
-    const [underwearQty, setUnderwearQty] = useState(5);
-    const [passportQty, setPassportQty] = useState(1);
+    // const [checked2, setChecked2] = useState(false);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [underwearQty, setUnderwearQty] = useState(5);
+    // const [passportQty, setPassportQty] = useState(1);
     const [errorNewItem, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);

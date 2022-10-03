@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
+// import {type} from "@testing-library/user-event/dist/type";
+// import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 /*
 SmartLuggage Application
@@ -20,10 +20,10 @@ const TabletEquipmentsList = ({}) => {
     // }
 
 
-    const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
-    const [underwearQty, setUnderwearQty] = useState(5);
-    const [passportQty, setPassportQty] = useState(1);
+    // const [checked2, setChecked2] = useState(false);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [underwearQty, setUnderwearQty] = useState(5);
+    // const [passportQty, setPassportQty] = useState(1);
     const [errorNewItem, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);

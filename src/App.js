@@ -20,6 +20,7 @@ import {
 } from "./allPages";
 import CreateList from "./components/CreateList";
 import Login from "./components/Login";
+import NavbarHome from "./components/NavbarHome";
 // import {UserContext} from "./UserContext";
 /*
 SmartLuggage Application
@@ -27,12 +28,15 @@ Update 30 September 2022
 */
 
 
-function App(){
+function App() {
 
 
     return (
         <div>
+
+            <NavbarHome/>
             <Routes>
+
                 <Route path='/' element={Home()}/>
                 {/*Register*/}
                 <Route path='/Register' element={RegisterPage()}/>

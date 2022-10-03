@@ -313,9 +313,10 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
 
         // USER
         <div id="itemsInRegisterCustomer" className="row">
+
             <form className="col s12" onSubmit={(event) => verifyAllFields(event)}>
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         {isErrorFetchMethod && <div>{isErrorFetchMethod}</div>}
                         <div>{isErrorFetchMethod}</div>
                         <i className="material-icons prefix">account_circle</i>
@@ -326,7 +327,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">account_circle</i>
                         <input placeholder="" value={userSurname} type="text"
                                onChange={(event => setUserSurname(event.target.value))} className="validate"/>
@@ -335,7 +336,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">email</i>
                         <input placeholder="" value={userEmail} type="email" onChange={(event => validateEmail(event))}
                                className="validate"/>
@@ -344,7 +345,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">phone</i>
                         <input placeholder="" value={userPhoneNumber} type="tel"
                                onChange={(event => setUserPhoneNumber(event.target.value))}
@@ -354,7 +355,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">cake</i>
                         <input value={userDob} type="date" onChange={(event => setUserDob(event.target.value))}
                                className="validate"/>
@@ -363,7 +364,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">home</i>
                         <input placeholder="" value={userAddress} type="text"
                                onChange={(event => setUserAddress(event.target.value))} className="validate"/>
@@ -372,7 +373,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">password</i>
                         <input placeholder="" value={password} type="password"
                                onChange={(event => setPassword(event.target.value))}
@@ -382,7 +383,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                 </div>
 
                 <div className="row">
-                    <div className="input-field col s8">
+                    <div className="input-field col s10">
                         <i className="material-icons prefix">password</i>
                         <input placeholder="" value={customerPasswordAgain} type="password"
                                onChange={(event => validatePassword(event))}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {type} from "@testing-library/user-event/dist/type";
 import {checkNode} from "@testing-library/jest-dom/dist/utils";
-// import './toDoListCSS.css';
+import './toDoListCSS.css';
 import {Link} from "react-router-dom";
 import '../allPages.css'
 /*
@@ -17,7 +17,7 @@ const HomeButtons = ({}) => {
     return (
 
         // Description of the list
-        <div id="allButtons" className="container-fluid">
+        <div id="allButtons" className="row">
 
             <div className="col s10 offset-s2">
                 {/*Row with buttons*/}
