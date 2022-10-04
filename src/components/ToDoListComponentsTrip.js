@@ -649,7 +649,8 @@ export const ToDoListComponentsTrip = (props) => {
             <div className={"electronicEquipment"}>
 
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s12">
+                    <div className="col l10 offset-l1 m10 offset-m1 s12">
+                    {/*<div className="col m10 s12">*/}
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundElectronicEquipments3small.jpg")}/>

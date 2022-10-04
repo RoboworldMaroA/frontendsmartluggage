@@ -154,7 +154,7 @@ const EssentialList = ({props}) => {
     return (
 
         <div id="blockEssential" className="row">
-            <div className="col l10 m10 s12">
+            <div className="col l10 offset-l1 m10 offset-m1 s12">
                 <div className="card">
                     <div className="card-image">
                         <img src={require("../photo/backgroundEssential5small.jpg")}/>
