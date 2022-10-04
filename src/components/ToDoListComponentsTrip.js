@@ -771,7 +771,8 @@ export const ToDoListComponentsTrip = (props) => {
             <div className={"accessories"}>
 
                 <div id="blockEssential" className="row">
-                    <div className="col l10 m10 s12">
+                    {/*<div className="col l10 m10 s12">*/}
+                    <div className="col l10 offset-l1 m10 offset-m1 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundAccessories3small.jpg")}/>
@@ -905,7 +906,8 @@ export const ToDoListComponentsTrip = (props) => {
             {/*  #######################  Clothes List  ################################*/}
             <div className={"clothes"}>
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s12">
+                    <div className="col l10 offset-l1 m10 offset-m1 s12">
+                    {/*<div className="col m10 s12">*/}
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundClothes3small.jpg")}/>
@@ -1035,7 +1037,8 @@ export const ToDoListComponentsTrip = (props) => {
             {/*  #######################  COSMETICS and First Aid List  ################################*/}
             <div className={"cosmetics"}>
                 <div id="blockEssential" className="row">
-                    <div className="col m10 s12">
+                    {/*<div className="col m10 s12">*/}
+                    <div className="col l10 offset-l1 m10 offset-m1 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
