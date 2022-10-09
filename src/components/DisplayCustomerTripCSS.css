@@ -1,13 +1,17 @@
-#formDisplayList{
-
+#formDisplayList {
     object-position: center;
     margin-left: 15%;
     border-radius: 20px;
-
 }
 
-
-
-#spanInDisplayCustomerTrip{
+#spanInDisplayCustomerTrip {
     font-size: 12px;
+}
+
+#buttonDeleteTripInDisplayCustomerTrip button {
+    margin-left: 10%;
+}
+
+input-field col s10 m6 l6 offset-s1 placeholder {
+    margin-left: 50%;
 }

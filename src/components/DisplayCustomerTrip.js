@@ -50,10 +50,10 @@ export const DisplayCustomerTrip = ({item}) => {
         <div>
             {/*// this part display card with detail inside*/}
             <div id="formDisplayList" className="row">
-                <form className="col s12" onSubmit={() => deleteCustomerTrip()}>
+                <form className="col s12 m12 l12 offset-l1"  onSubmit={() => deleteCustomerTrip()}>
 
                     <div className="row">
-                        <div className="col s8 m6 l6">
+                        <div className="col s10 offset-s1 m8 l6">
                             <div className="card blue-grey darken-1">
                                 <div className="card-content white-text">
                                 <span id="spanInDisplayCustomerTrip" className="card-title small">
@@ -104,15 +104,16 @@ export const DisplayCustomerTrip = ({item}) => {
                         </div>
                     </div>
 
+                    {/*Input number of the trip to delete*/}
                     <div className="row">
-                        <div className="input-field col s6">
+                        <div className="input-field col s10 m6 l6 offset-s1">
                             <input placeholder="Input Trip ID" type="text"
                                    onChange={(event => setId(event.target.value))} className="validate"/>
                             {/*<label htmlFor="What Id want you delete">Id</label>*/}
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row" id="buttonDeleteTripInDisplayCustomerTrip">
                         <button className="waves-effect waves-light btn " type="submit" name="action">Delete Trip
                         </button>
 
