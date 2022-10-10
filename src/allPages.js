@@ -37,13 +37,12 @@ export function Home() {
         >
 
 
-
             {/*<NavbarHome/>*/}
 
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
-                <HomeButtons/>
+            <HomeButtons/>
 
         </div>
 
@@ -56,42 +55,15 @@ export function LoginPage() {
     const [value, setValue] = useState("");
     return (<body>
     <div id="loginPage" className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../">Home</Link></li>*/}
-        {/*            <li><Link to="../LoginAdminPage"> Administrator </Link></li>*/}
-        {/*            <li><Link to="../Help"> Help</Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-
-        {/*    <li><Link to="../">Home</Link></li>*/}
-        {/*    <li><Link to="../LoginAdminPage"> Administrator </Link></li>*/}
-        {/*    <li><Link to="../Help"> Help</Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
-
         <div id="loginContainer">
-
             {/*<UserContext.Provider value ={{value,setValue}}>*/}
             <LoginNew2/>
-
             {/*</UserContext.Provider>*/}
-
         </div>
         <br/>
-
-
     </div>
-    </body>);
+    </body>
+    );
 
 }
 
