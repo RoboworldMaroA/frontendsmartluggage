@@ -133,7 +133,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
 
     //Fetch data from USER Development Version
     const addCustomer = async () => {
-        const result = await fetch("https://backendsmartluggage.herokuapp.com/addUser", {
+        const result = await fetch("https://smartluggagebackend.herokuapp.com/addUser", {
             method: "POST",
             body: JSON.stringify({
                 userName,

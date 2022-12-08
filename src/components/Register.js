@@ -19,7 +19,7 @@ export default class Register extends Component {
     componentDidMount() {
         // fetch('https://backendsmartluggage.herokuapp.com/api/v1/customer').then(response => response.json()).
         // fetch('displayUsers').then(response => response.json()).
-        fetch('https://backendsmartluggage.herokuapp.com/displayUsers').then(response => response.json()).then(data => this.setState({contacts: data}));
+        fetch('https://smartluggagebackend.herokuapp.com/displayUsers').then(response => response.json()).then(data => this.setState({contacts: data}));
     }
 
     render() {

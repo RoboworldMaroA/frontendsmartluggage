@@ -12,7 +12,7 @@ const DeleteCustomerNew = ({item}) => {
     const deleteCustomer = async () => {
         // const result = await fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer/" + id, {
         //     const result = await fetch("deleteUsers/" + id, {
-                const result = await fetch("https://backendsmartluggage.herokuapp.com/deleteUsers/" + id, {
+                const result = await fetch("https://smartluggagebackend.herokuapp.com/deleteUsers/" + id, {
             method: "DELETE",
             //body: JSON.stringify({id}),
             //headers: {

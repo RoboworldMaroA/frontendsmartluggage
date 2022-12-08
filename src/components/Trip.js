@@ -19,7 +19,7 @@ export default class Trip extends Component {
 
     // Deploy Version
     componentDidMount() {
-        fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip/').then(response => response.json()).then(data => this.setState({contacts: data}));
+        fetch('https://smartluggagebackend.herokuapp.com/api/v1/trip/').then(response => response.json()).then(data => this.setState({contacts: data}));
     }
 
 

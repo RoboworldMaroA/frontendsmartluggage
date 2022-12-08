@@ -24,7 +24,7 @@ export default class CreateList extends Component{
         componentDidMount(){
         /*fetch('http://localhost:8080/api/v1/student').then(response => response.json()).then(data => this.setState({contacts: data}));*/
 
-            fetch('https://backendsmartluggage.herokuapp.com/api/v1/trip').then
+            fetch('https://smartluggagebackend.herokuapp.com/api/v1/trip').then
             // fetch('api/v1/trip').then
             (response => response.json()).then(data => this.setState({trips: data}));
 
