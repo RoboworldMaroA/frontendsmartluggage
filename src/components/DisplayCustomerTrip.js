@@ -38,7 +38,7 @@ export const DisplayCustomerTrip = ({item}) => {
         if (!customer) {
             // fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
             //     fetch("displayUsers").then((response) => response.json()).then((dataCustomer) => {
-            fetch("https://backendsmartluggage.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://smartluggagebackend.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
                 // console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });
