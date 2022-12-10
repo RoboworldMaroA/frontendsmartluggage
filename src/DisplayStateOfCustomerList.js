@@ -26,7 +26,7 @@ export const DisplayStateOfCustomerList = () => {
     const [showTripButton, setShowTripButton] = useState([{isSelected: false}]);
 
 
-    //Old Deploy version
+    //New Deploy version
     useEffect(() => {
         //do something when loading
         console.log("useEffect")
@@ -41,7 +41,7 @@ export const DisplayStateOfCustomerList = () => {
     }, ['customer']);
 
 
-    //New Deploy Version
+    //Old Deploy Version
     // useEffect(() => {
     //     //do something when loading
     //     console.log("useEffect")
