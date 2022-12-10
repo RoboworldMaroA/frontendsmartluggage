@@ -93,7 +93,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     const loginUser = async () => {
         const result = await
             // fetch("login", {
-            fetch("https://backendsmartluggage.herokuapp.com/login", {
+            fetch("https://smartluggagebackend.herokuapp.com/login", {
                 method: "POST",
                 body: JSON.stringify({
                     userName,
