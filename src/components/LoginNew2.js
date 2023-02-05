@@ -88,6 +88,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     const [userEmail, setUserEmail] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
     const [userSurname, setUserSurname] = useState("");
+    const [userVerifed, setUserVerifed] =useState(false);
 
     // fetch user data, for Testing Purposes
     const loginUser = async () => {
@@ -126,7 +127,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         else{
             console.log("All good")
             // navigate("/createOrDisplayList");
-            window.open("/createOrDisplayList");
+            setUserVerifed(true);
 
         }
 
@@ -156,8 +157,12 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // console.log("user body in verify all fields"+ this.result.value.status);//not working
         event.preventDefault();
 
+        if(!userVerifed){
+            window.alert("Wrong Login or Password!")
+        }
+
         window.alert("Thank You.!")
-        // navigate("/createOrDisplayList");
+        navigate("/createOrDisplayList");
 
         return loginUser();
 
