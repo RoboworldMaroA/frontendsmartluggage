@@ -125,7 +125,8 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         }
         else{
             console.log("All good")
-            navigate("/createOrDisplayList");
+            // navigate("/createOrDisplayList");
+            window.open("/createOrDisplayList");
 
         }
 
