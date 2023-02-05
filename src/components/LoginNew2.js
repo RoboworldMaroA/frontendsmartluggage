@@ -117,11 +117,18 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // navigate("/createOrDisplayList");
         setUser(userBody).catch(error => console.log("Display error" + error));
 
-        // if (result.status===500){
-        //     console.log("IT is w=something wrong")
-        // }
-        // console.log("All good")
-        // navigate("/createOrDisplayList");
+        if (!result.ok){
+            console.log("Probably wrong login or password");
+            alert("Wrong Login or Password");
+            window.open("/login");
+            throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
+        }
+        else{
+            console.log("All good")
+            navigate("/createOrDisplayList");
+
+        }
+
     }
 
     // const validatePassword=(event)=>{
@@ -149,7 +156,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         event.preventDefault();
 
         window.alert("Thank You.!")
-        navigate("/createOrDisplayList");
+        // navigate("/createOrDisplayList");
 
         return loginUser();
 
