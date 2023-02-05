@@ -157,13 +157,14 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // console.log("user body in verify all fields"+ this.result.value.status);//not working
         event.preventDefault();
 
-        if(!userVerifed){
-            window.alert("Wrong Login or Password!")
-        }
-
-        window.alert("Thank You.!")
+        if (!userVerifed) {
+            window.alert("Wrong Login or Password!");
+            navigate("/createOrDisplayList");
+            return;
+        } else {
+            window.alert("Thank You.!");
         navigate("/createOrDisplayList");
-
+        }
         return loginUser();
 
         // if (!passwordError) {
