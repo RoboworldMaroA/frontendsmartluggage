@@ -61,7 +61,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     // Login
     // const [userEmail, setUserEmail] = useState("");
-    const [userPassword, setUserPassword] = useState("");s
+    const [userPassword, setUserPassword] = useState("");
     const [isError, setIsError] = useState('');
     const [passwordErrorEmpty, setPasswordErrorEmpty] = useState("");
     const [passwordError, setPasswordError] = useState(true);
@@ -125,7 +125,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     const verifyAllFields = (event) => {
         event.preventDefault();
-            window.alert("Data is bing verified!");
+            window.alert("Data will be verified!");
         return loginUser();
 
         // if (!passwordError) {
