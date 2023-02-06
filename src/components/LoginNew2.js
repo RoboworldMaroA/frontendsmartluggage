@@ -114,39 +114,52 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         {
             console.log("display response after post")  ;
             console.log(res)  ;
+            if(!res.ok){
+                console.log("Probably wrong login or password");
+                alert("Wrong Login or Password");
+                navigate("/Login");
+
+            }
+
+            else{
+                console.log("All good")
+                navigate("/createOrDisplayList");
+
+            }
+
         })
         ;
 
-        const userBody = await result.json();
-        console.log("This is user body from loginUser");
-        console.log(userBody);
-        // navigate("/createOrDisplayList");
-        setUser(userBody).catch(error => {
-            console.log("Display error" + error)
-            // navigate("/Login");
-        });
+        // const userBody = await result.json();
+        // console.log("This is user body from loginUser");
+        // console.log(userBody);
+        // // navigate("/createOrDisplayList");
+        // setUser(userBody).catch(error => {
+        //     console.log("Display error" + error)
+        //     // navigate("/Login");
+        // });
 
-        if (!userBody.ok){
-            console.log("Probably wrong login or password");
-            alert("Wrong Login or Password");
-            console.log("Value of the user status verified or not:");
-            console.log(userVerified);
-            window.open("/login");
-            // this.localStorage.setItem('userLoginVerified',userVerified );
-            // validateStatus();
-            throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
-        }
-        else{
-            console.log("All good")
-            // navigate("/createOrDisplayList");
-            setUserVerified("Yes");
-            console.log("Value of the user status verified or not:");
-            console.log(userVerified);
-            // this.localStorage.setItem('userLoginVerified',userVerified );
-            return validateStatus();
-
-
-        }
+        // if (!userBody.ok){
+        //     console.log("Probably wrong login or password");
+        //     alert("Wrong Login or Password");
+        //     console.log("Value of the user status verified or not:");
+        //     console.log(userVerified);
+        //     window.open("/login");
+        //     // this.localStorage.setItem('userLoginVerified',userVerified );
+        //     // validateStatus();
+        //     throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
+        // }
+        // else{
+        //     console.log("All good")
+        //     // navigate("/createOrDisplayList");
+        //     setUserVerified("Yes");
+        //     console.log("Value of the user status verified or not:");
+        //     console.log(userVerified);
+        //     // this.localStorage.setItem('userLoginVerified',userVerified );
+        //     return validateStatus();
+        //
+        //
+        // }
 
     }
 
