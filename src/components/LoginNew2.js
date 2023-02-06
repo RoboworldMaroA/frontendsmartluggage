@@ -88,7 +88,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     const [userEmail, setUserEmail] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
     const [userSurname, setUserSurname] = useState("");
-    const [userVerifed, setUserVerifed] =useState(false);
+    const [userVerified, setUserVerified] =useState("No");
 
     // fetch user data, for Testing Purposes
     const loginUser = async () => {
@@ -121,13 +121,21 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         if (!result.ok){
             console.log("Probably wrong login or password");
             alert("Wrong Login or Password");
+            console.log("Value of the user status verified or not:");
+            console.log(userVerified);
             window.open("/login");
+            localStorage.setItem('userLoginVerified',userVerified );
+
             throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
         }
         else{
             console.log("All good")
-            // navigate("/createOrDisplayList");
-            setUserVerifed(true);
+            await this.navigate("/createOrDisplayList");
+            setUserVerified("Yes");
+            console.log("Value of the user status verified or not:");
+            console.log(userVerified);
+            localStorage.setItem('userLoginVerified',userVerified );
+
 
         }
 
@@ -157,14 +165,14 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // console.log("user body in verify all fields"+ this.result.value.status);//not working
         event.preventDefault();
 
-        if (!userVerifed) {
-            window.alert("Wrong Login or Password!");
-            navigate("/createOrDisplayList");
-            return;
-        } else {
-            window.alert("Thank You.!");
-        navigate("/createOrDisplayList");
-        }
+        // if (!userVerified) {
+        //     window.alert("Wrong Login or Password!");
+        //     navigate("/createOrDisplayList");
+        //     return;
+        // } else {
+            window.alert("Data is bing verified!");
+        // navigate("/createOrDisplayList");
+        // }
         return loginUser();
 
         // if (!passwordError) {
@@ -323,6 +331,13 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         //     setEmailError(false);
         // }
     }
+
+
+    function validateStatus(userVeified){
+
+
+    }
+
 
 
     return (
