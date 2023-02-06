@@ -116,7 +116,10 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         const userBody = await result.json();
         console.log("This is user body from loginUser" + userBody);
         // navigate("/createOrDisplayList");
-        setUser(userBody).catch(error => console.log("Display error" + error));
+        setUser(userBody).catch(error => {
+            console.log("Display error" + error)
+            navigate("/Login");
+        });
 
         if (!result.ok){
             console.log("Probably wrong login or password");
@@ -124,17 +127,17 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
             window.open("/login");
-            localStorage.setItem('userLoginVerified',userVerified );
+            this.localStorage.setItem('userLoginVerified',userVerified );
             validateStatus();
             throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
         }
         else{
             console.log("All good")
-            await this.navigate("/createOrDisplayList");
+            navigate("/createOrDisplayList");
             setUserVerified("Yes");
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
-            localStorage.setItem('userLoginVerified',userVerified );
+            this.localStorage.setItem('userLoginVerified',userVerified );
             validateStatus();
 
 
@@ -334,8 +337,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     }
 
 
-    const validateStatus = (event) => {
-        event.preventDefault();
+    const validateStatus = () => {
 
         if (userVerified!=="No") {
         window.alert("Wrong Login or Password!");
