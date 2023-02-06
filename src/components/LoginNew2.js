@@ -118,7 +118,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         // navigate("/createOrDisplayList");
         setUser(userBody).catch(error => {
             console.log("Display error" + error)
-            navigate("/Login");
+            // navigate("/Login");
         });
 
         if (!result.ok){
@@ -128,12 +128,12 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log(userVerified);
             window.open("/login");
             this.localStorage.setItem('userLoginVerified',userVerified );
-            validateStatus();
+            // validateStatus();
             throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
         }
         else{
             console.log("All good")
-            navigate("/createOrDisplayList");
+            // navigate("/createOrDisplayList");
             setUserVerified("Yes");
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
