@@ -127,7 +127,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
             window.open("/login");
-            this.localStorage.setItem('userLoginVerified',userVerified );
+            // this.localStorage.setItem('userLoginVerified',userVerified );
             // validateStatus();
             throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
         }
@@ -137,7 +137,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             setUserVerified("Yes");
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
-            this.localStorage.setItem('userLoginVerified',userVerified );
+            // this.localStorage.setItem('userLoginVerified',userVerified );
             return validateStatus();
 
 
