@@ -114,7 +114,8 @@ export const LoginNew2 = ({setUserData: setUser}) => {
         ;
 
         const userBody = await result.json();
-        console.log("This is user body from loginUser" + userBody);
+        console.log("This is user body from loginUser");
+        console.log(userBody);
         // navigate("/createOrDisplayList");
         setUser(userBody).catch(error => {
             console.log("Display error" + error)
