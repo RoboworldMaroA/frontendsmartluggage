@@ -125,7 +125,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log(userVerified);
             window.open("/login");
             localStorage.setItem('userLoginVerified',userVerified );
-
+            validateStatus();
             throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
         }
         else{
@@ -135,6 +135,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
             localStorage.setItem('userLoginVerified',userVerified );
+            validateStatus();
 
 
         }
@@ -333,10 +334,19 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     }
 
 
-    function validateStatus(userVeified){
+    const validateStatus = (event) => {
+        event.preventDefault();
 
+        if (userVerified!=="No") {
+        window.alert("Wrong Login or Password!");
+        navigate("/Login");
+        return;
+        } else {
+        window.alert("Data is bing verified!");
+        navigate("/createOrDisplayList");
+        }
 
-    }
+    };
 
 
 
