@@ -138,7 +138,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             console.log("Value of the user status verified or not:");
             console.log(userVerified);
             this.localStorage.setItem('userLoginVerified',userVerified );
-            validateStatus();
+            return validateStatus();
 
 
         }
@@ -339,13 +339,16 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     const validateStatus = () => {
 
-        if (userVerified!=="No") {
+        if (userVerified==="No") {
+            console.log("Value if user not verified");
+            console.log(userVerified);
         window.alert("Wrong Login or Password!");
-        navigate("/Login");
-        return;
+        return navigate("/Login");
         } else {
-        window.alert("Data is bing verified!");
-        navigate("/createOrDisplayList");
+        window.alert("Data is verified!");
+            console.log("Value if user is verified");
+            console.log(userVerified);
+        return navigate("/createOrDisplayList");
         }
 
     };
