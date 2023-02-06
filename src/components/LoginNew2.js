@@ -61,9 +61,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
 
     // Login
     // const [userEmail, setUserEmail] = useState("");
-    const [userPassword, setUserPassword] = useState("");
-
-
+    const [userPassword, setUserPassword] = useState("");s
     const [isError, setIsError] = useState('');
     const [passwordErrorEmpty, setPasswordErrorEmpty] = useState("");
     const [passwordError, setPasswordError] = useState(true);
@@ -73,9 +71,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
     const [emailErrorEmpty, setEmailErrorEmpty] = useState("");
     const [emailError, setEmailError] = useState(true);
 
-
     // const {value, setValue} = useContext(UserContext);
-
 
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -120,81 +116,16 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                 navigate("/Login");
 
             }
-
             else{
                 console.log("All good")
                 navigate("/createOrDisplayList");
-
             }
-
-        })
-        ;
-
-        // const userBody = await result.json();
-        // console.log("This is user body from loginUser");
-        // console.log(userBody);
-        // // navigate("/createOrDisplayList");
-        // setUser(userBody).catch(error => {
-        //     console.log("Display error" + error)
-        //     // navigate("/Login");
-        // });
-
-        // if (!userBody.ok){
-        //     console.log("Probably wrong login or password");
-        //     alert("Wrong Login or Password");
-        //     console.log("Value of the user status verified or not:");
-        //     console.log(userVerified);
-        //     window.open("/login");
-        //     // this.localStorage.setItem('userLoginVerified',userVerified );
-        //     // validateStatus();
-        //     throw Error(`Response status ${result.status} (${result.statusText}): ${userBody.message}`);
-        // }
-        // else{
-        //     console.log("All good")
-        //     // navigate("/createOrDisplayList");
-        //     setUserVerified("Yes");
-        //     console.log("Value of the user status verified or not:");
-        //     console.log(userVerified);
-        //     // this.localStorage.setItem('userLoginVerified',userVerified );
-        //     return validateStatus();
-        //
-        //
-        // }
-
-    }
-
-    // const validatePassword=(event)=>{
-    //     const pass =event.target.value;
-    //     setCustomerPasswordAgain(pass);
-    //     if(customerPassword!=pass) {
-    //         if(customerPassword===" "){
-    //             setPasswordErrorEmpty("CAN NOT BE EMPTY");
-    //         }
-    //         else{setIsError("password mus be the same!!!!");}
-    //     }
-    //
-    //     else{
-    //         setIsError("Password OK");
-    //         setPasswordError(false);
-    //     }
-    // }
-    //
-
+        });
+    }//end fetch login function
 
     const verifyAllFields = (event) => {
-
-        // console.log("data user name in if statement: " + userName)
-        // console.log("user body in verify all fields"+ this.result.value.status);//not working
         event.preventDefault();
-
-        // if (!userVerified) {
-        //     window.alert("Wrong Login or Password!");
-        //     navigate("/createOrDisplayList");
-        //     return;
-        // } else {
             window.alert("Data is bing verified!");
-        // navigate("/createOrDisplayList");
-        // }
         return loginUser();
 
         // if (!passwordError) {
