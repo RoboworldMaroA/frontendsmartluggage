@@ -110,7 +110,11 @@ export const LoginNew2 = ({setUserData: setUser}) => {
                 headers: {
                     "Content-Type": "application/json",
                 }
-            })
+            }).then(res=>
+        {
+            console.log("display response after post")  ;
+            console.log(res)  ;
+        })
         ;
 
         const userBody = await result.json();
