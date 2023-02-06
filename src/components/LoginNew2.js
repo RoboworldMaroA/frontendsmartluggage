@@ -121,7 +121,7 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             // navigate("/Login");
         });
 
-        if (!result.ok){
+        if (!userBody.ok){
             console.log("Probably wrong login or password");
             alert("Wrong Login or Password");
             console.log("Value of the user status verified or not:");
