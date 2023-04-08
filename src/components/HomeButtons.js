@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {type} from "@testing-library/user-event/dist/type";
 import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
@@ -12,6 +12,21 @@ Final Project Software Developer
 */
 
 const HomeButtons = ({}) => {
+
+    const [tripData, setTripData] = useState([]);
+
+    useEffect(() => {
+        //do something when loading
+        console.log("signal to do something using useEffect")
+        fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+            // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
+            // console.log("List of items in the trip", TripData);
+            setTripData(TripData);
+            // calculateLastTripId();
+        });
+    }, ["hI trip"]);
+
+
 
 
     return (
