@@ -36,7 +36,6 @@ function App() {
 
             <NavbarHome/>
             <Routes>
-
                 <Route path='/' element={Home()}/>
                 {/*Register*/}
                 <Route path='/Register' element={RegisterPage()}/>

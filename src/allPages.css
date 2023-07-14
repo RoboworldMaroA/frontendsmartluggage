@@ -72,8 +72,12 @@
 #myLuggage{
     text-align: center;
     margin-top:1%;
+}
 
 
+#myLuggageNewHomeButtons{
+    text-align: center;
+    margin-top:1%;
 }
 
 #loginContainer{
@@ -172,6 +176,8 @@
 }
 
 
+
+/*Button on HomeButtons*/
 #buttonSizeMyLuggage{
     width: 250px;
 }
@@ -216,3 +222,15 @@
 .brand-logo{
     margin-left: 1.5%;
 }
+
+
+/*New Homebuttons style*/
+
+#allButtonsNewHomeButtons{
+    padding-top: 5%;
+    margin-right: 0%;
+    opacity: 0.90;
+
+}
+
+/*     NewHomeButtons      */

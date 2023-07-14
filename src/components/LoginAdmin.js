@@ -1,16 +1,5 @@
 import React, {Component} from "react";
-import SingleContact from './SingleContact';
-import DeleteContact from "./DeleteContact";
-import DeleteContactNew from "./DeleteContactNew";
-import ToDoList from "./ToDoList"
-import RegisterCustomer from "./RegisterCustomer";
 import DeleteCustomerNew from "./DeleteCustomerNew";
-import LoginCustomer from "./LoginCustomer";
-import LoginAdminDetail from "./LoginAdminDetail";
-import * as PropTypes from "prop-types";
-import DisplayCustomerTrip from "./DisplayCustomerTrip";
-import Trip from "./Trip";
-import DisplayList from "./DisplayList";
 /* Class Contact uses for display and read a data from database, data is imported from other classes */
 
 
@@ -50,8 +39,6 @@ export default class LoginAdmin extends Component{
         this.state= {
             contacts: [],
         };
-
-
         }
 
         componentDidMount(){
@@ -60,9 +47,7 @@ export default class LoginAdmin extends Component{
             // fetch('displayUsers').then(response => response.json()).
             fetch('https://smartluggagebackend.herokuapp.com/displayUsers').then(response => response.json()).
             then(data => this.setState({contacts: data}));
-
         }
-
 
         render(){
         return(

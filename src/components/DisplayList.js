@@ -5,10 +5,6 @@ import ToDoList from "./ToDoList"
 import './FormCreateList.css';
 import 'materialize-css';
 import M from 'materialize-css';
-import DocumentsList from "./DocumentsList";
-import EssentialList from "./EssentialList";
-import essentialList from "./EssentialList";
-import BeachList from "./BeachList";
 import DisplayCustomerTrip from "./DisplayCustomerTrip";
 import displayCustomerTrip from "./DisplayCustomerTrip";
 import FormCreateList from "./FormCreateList";

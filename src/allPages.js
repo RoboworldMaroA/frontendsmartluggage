@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import {Link, NavLink} from "react-router-dom"
 import './allPages.css';
-import M from "materialize-css";
 import CreateList from "./components/CreateList";
 import Register from "./components/Register";
 import LoginAdmin from "./components/LoginAdmin";
@@ -15,13 +13,16 @@ import backgroundHome from "./photo/backgroundHomePage3small.jpg";
 import HomeButtons from "./components/HomeButtons";
 import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayList";
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
-import {Component} from "react";
-import NavbarHome from "./components/NavbarHome";
+import NewHomeButtons from "./components/NewHomeButtons";
+
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+07 July 2023
+Final Project Software Developer Home Update
+
+In this class are function that are responsible for display web pages.
+They are imported in the App.js and connected to the URL that is called in web browser.
 */
 
 
@@ -36,18 +37,13 @@ export function Home() {
              }}
         >
 
-
-            {/*<NavbarHome/>*/}
-
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
-            <HomeButtons/>
-
+            <NewHomeButtons/>
         </div>
 
     );
-
 }
 
 
@@ -71,35 +67,7 @@ export function LoginPage() {
 export function RegisterPage() {
     const [value, setValue] = useState("Hello from context");
     return (<div id="registerPage" className="container-fluid"
-        //  style={
-        // { backgroundImage: `url(${background})`,
-        // backgroundRepeat: 'repeat-no',
-        //     backgroundPositionX:-100,
-        // backgroundSize:'1250px',
-        //     opacity:0.92,
-        //
-        //
-        // }}
     >
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            <li><Link to="../help"> Help</Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    <li><Link to="../help"> Help</Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
 
         <div className="container">
             <div className="row">
@@ -126,27 +94,6 @@ export function RegisterPage() {
 export function CustomerCreateOrDisplay() {
 
     return (<div id="CustomerCreateOrDisplayListPage" className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*            <li><Link to="../Help"> Help</Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*    <li><Link to="../Help"> Help</Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
         <div className="row">
             <CustomerCreateOrDisplayList/>
         </div>
@@ -165,26 +112,6 @@ export function CustomerCreateOrDisplay() {
 export function CustomerPickListsToDisplay() {
 
     return (<div id="CustomerCreateOrDisplayListPage" className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*            <li><Link to="../Help"> Help</Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*    <li><Link to="../Help"> Help</Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
 
         <div className="row">
             <CustomerPickListToDisplay/>
@@ -204,29 +131,6 @@ export function CustomerPickListsToDisplay() {
 export function CreateCustomerList() {
 
     return (<div id="createCustomerListPackYourLuggage" className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            <li><Link to="../displayList"> Display Trips</Link></li>*/}
-        {/*            <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*            <li><Link to="../Help"> Help</Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    <li><Link to="../displayList"> Display Trips</Link></li>*/}
-        {/*    <li><Link to="../Pay"> Pay</Link></li>*/}
-        {/*    <li><Link to="../Help"> Help</Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
         <div className="container">
             <div className="row">
                 <div className="col s2"></div>
@@ -249,31 +153,6 @@ export function DisplayTravelerList() {
 
     return (<div id={"DisplayListFirstPage"}>
         <div className="container-fluid">
-            {/*<nav>*/}
-            {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-            {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-            {/*        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-            {/*            className="material-icons">menu</i></a>*/}
-            {/*        <ul className="right hide-on-med-and-down">*/}
-            {/*            <li><Link to="../"> Home</Link></li>*/}
-            {/*            <li><a href="https://www.nytimes.com/guides/travel/how-to-pack-a-suitcase"> Travel Guide</a>*/}
-            {/*            </li>*/}
-            {/*            <li><a href="https://www.accuweather.com/"> Weather</a></li>*/}
-            {/*            <li><Link to="../Pay"> Pay</Link></li>*/}
-            {/*            <li><Link to="../help"> Help</Link></li>*/}
-            {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-            {/*        </ul>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
-            {/*<ul className="sidenav" id="mobile-demo">*/}
-            {/*    <li><Link to="../"> Home</Link></li>*/}
-            {/*    <li><a href="https://www.nytimes.com/guides/travel/how-to-pack-a-suitcase"> Travel Guide</a></li>*/}
-            {/*    <li><a href="https://www.accuweather.com/"> Weather</a></li>*/}
-            {/*    <li><Link to="../Pay"> Pay</Link></li>*/}
-            {/*    <li><Link to="../help"> Help</Link></li>*/}
-            {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-            {/*</ul>*/}
 
             <div className="container">
                 <div className="row">
@@ -301,37 +180,11 @@ export function DisplayTravelerList() {
 }
 
 
-// zamiast w app w tej funkcji powinienem zaimplementowac prawdopodobnie, jaka zaleta nie jestem pewny
+// zamiast w app.js to w tej funkcji powinienem zaimplementowac prawdopodobnie, jaka zaleta nie jestem pewny
 // ponoc wszystko mialo sie wyswietlac wtedy w jednym oknie, pororbic testy
 export function PayPage() {
     return (<body>
         <div className="container-fluid">
-            {/*<nav>*/}
-            {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-            {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-            {/*        <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-            {/*            className="material-icons">menu</i></a>*/}
-            {/*        <ul className="right hide-on-med-and-down">*/}
-            {/*            <li><Link to="../"> Home</Link></li>*/}
-            {/*            <li><Link to="../displayList"> My Travel List</Link></li>*/}
-            {/*            <li><Link to="../Register"> Register</Link></li>*/}
-            {/*            <li><Link to="../CreateCustomerList"> Pack Your Luggage</Link></li>*/}
-            {/*            <li><Link to="../LoginAdminPage"> Administrator</Link></li>*/}
-            {/*            <li><Link to="../help"> Help</Link></li>*/}
-            {/*        </ul>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
-            {/*<ul className="sidenav" id="mobile-demo">*/}
-            {/*    <li><Link to="../"> Home</Link></li>*/}
-            {/*    <li><Link to="../displayList"> My Travel List</Link></li>*/}
-            {/*    <li><Link to="../Register">Register</Link></li>*/}
-            {/*    <li><Link to="../LoginAdminPage"> Administrator </Link></li>*/}
-            {/*    <li><Link to="../CreateCustomerList"> Pack Your Luggage </Link></li>*/}
-            {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-            {/*</ul>*/}
-
-
             <div className="container">
                 <div className="row">
                     <div className="col s2"></div>
@@ -356,27 +209,6 @@ export function PayPage() {
 export function LoginAdminPage() {
     return (<body>
     <div className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            <li><Link to="../destination">Manage Destination</Link></li>*/}
-        {/*            <li><Link to="../help"> Help </Link></li>*/}
-        {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    <li><Link to="../destination">Manage Destination</Link></li>*/}
-        {/*    <li><Link to="../help"> Help </Link></li>*/}
-        {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
 
         <div className="container">
             <div className="row">
@@ -400,32 +232,6 @@ export function LoginAdminPage() {
 export function HelpPage() {
     return (<body>
         <div className="container-fluid">
-            {/*<nav>*/}
-            {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-            {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-            {/*        <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-            {/*            className="material-icons">menu</i></a>*/}
-            {/*        <ul className="right hide-on-med-and-down">*/}
-            {/*            <li><Link to="../"> Home</Link></li>*/}
-            {/*            <li><Link to="../Register"> Register</Link></li>*/}
-            {/*            <li><Link to="../CreateCustomerList"> Pack You Luggage</Link></li>*/}
-            {/*            <li><Link to="../displayList"> My Travel List</Link></li>*/}
-            {/*            <li><Link to="../LoginAdminPage"> Administrator </Link></li>*/}
-            {/*            <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-            {/*            /!*<li>  <Link to="../help"> Help</Link></li>*!/*/}
-            {/*        </ul>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
-            {/*<ul className="sidenav" id="mobile-demo">*/}
-            {/*    <li><Link to="../"> Home</Link></li>*/}
-            {/*    <li><Link to="../displayList"> My Travel List</Link></li>*/}
-            {/*    <li><Link to="../Register">Register</Link></li>*/}
-            {/*    <li><Link to="../LoginAdminPage"> Administrator Account </Link></li>*/}
-            {/*    <li><Link to="../CreateCustomerList"> Create List </Link></li>*/}
-            {/*    <li><a href="http://localhost:8080/logout"> Logout</a></li>*/}
-            {/*</ul>*/}
-
 
             <div className="container">
                 <div className="row">
@@ -454,32 +260,6 @@ export function DestinationPage() {
     const [value, setValue] = useState(1);
     return (<body>
     <div className="container-fluid">
-        {/*<nav>*/}
-        {/*    <div className="nav-wrapper #5d4037 brown darken-2">*/}
-        {/*        <a href="/" className="brand-logo">SmartLuggage </a>*/}
-        {/*        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-        {/*            className="material-icons">menu</i></a>*/}
-        {/*        <ul className="right hide-on-med-and-down">*/}
-        {/*            <li><Link to="../"> Home</Link></li>*/}
-        {/*            /!*<li><Link to="../destination">Manage Destination</Link></li>*!/*/}
-        {/*            <li><Link to="../LoginAdminPage"> Display Users </Link></li>*/}
-        {/*            <li><Link to="../help"> Help </Link></li>*/}
-        {/*            /!*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*!/*/}
-        {/*            <li><a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</nav>*/}
-
-        {/*<ul className="sidenav" id="mobile-demo">*/}
-        {/*    <li><Link to="../"> Home</Link></li>*/}
-        {/*    /!*<li><Link to="../destination">Manage Destination</Link></li>*!/*/}
-        {/*    <li><Link to="../LoginAdminPage"> Display Users </Link></li>*/}
-        {/*    <li><Link to="../help"> Help </Link></li>*/}
-        {/*    /!*<li>  <a href="http://localhost:8080/logout"> Logout</a></li>*!/*/}
-        {/*    <li><a href="https://frontendsmartluggage.herokuapp.com/logout"> Logout</a></li>*/}
-        {/*</ul>*/}
-
-
         <div className="container">
             <div className="row">
                 <div className="col s2"></div>
@@ -491,12 +271,9 @@ export function DestinationPage() {
         </div>
 
         <div className="row">
-
-
             {/*<UserContext.Provider value ={{value,setValue}}>*/}
             <ManageDestinationFunctionalComponent/>
             {/*</UserContext.Provider>*/}
-
         </div>
     </div>
     </body>);

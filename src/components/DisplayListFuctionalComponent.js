@@ -33,7 +33,7 @@ export const DisplayListFunctionalComponent = (props) => {
     const [displayTripDetail3, setDisplayTripDetail3] = useState(false);
     const [displayTripDetail4, setDisplayTripDetail4] = useState(false);
     const [loggedCustomerId, setLoggedCustomerId] = useState(1);
-    const [tripId, setTripId] = useState([]);
+    const [tripId, setTripId] = useState("");
 
     // const {value,setValue} = useContext(UserContext);
     // constructor(props) {
@@ -332,9 +332,19 @@ export const DisplayListFunctionalComponent = (props) => {
                     {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
                     {/*</div>*/}
                 </div>
+
+                {/*Input number of the trip to delete*/}
+                <div className="row">
+                    <div className="input-field col s10 m6 l6 offset-s1">
+                        <input placeholder="Input Trip ID" type="text"
+                               onChange={(event => setTripId(event.target.value))} className="validate"/>
+                        <label htmlFor="What Id want you delete">Id: {tripId}</label>
+                    </div>
+                </div>
+
                 <div>
                     {displayTripDetail4
-                        ? tripData.filter((TripData) => TripData.id === 4).map((TripData) => {
+                        ? tripData.filter((TripData) => TripData.id === tripId).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
