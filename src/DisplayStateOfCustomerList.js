@@ -29,12 +29,12 @@ export const DisplayStateOfCustomerList = () => {
     //New Deploy version
     useEffect(() => {
         //do something when loading
-        console.log("useEffect")
+        // console.log("useEffect")
         if (!customer) {
             fetch("https://smartluggagebackend.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 // This is format before deploy
                 // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
-                console.log("List of items in the customer", dataCustomer);
+                // console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });
         }
@@ -85,9 +85,9 @@ export const DisplayStateOfCustomerList = () => {
     //Old Deploy version
     useEffect(() => {
         //do something when loading
-        console.log("yoyw yow do something from useeffect")
+        // console.log("yoyw yow do something from useeffect")
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((dataTrip) => {
-            console.log("List of items in the trip", dataTrip);
+            // console.log("List of items in the trip", dataTrip);
             setTrip(dataTrip);
         });
     }, ["trip"]);
@@ -117,7 +117,7 @@ export const DisplayStateOfCustomerList = () => {
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayLuggage);
+        // console.log("State trip List", displayLuggage);
         setDisplayLuggage(!displayLuggage);
     }
 
@@ -126,7 +126,7 @@ export const DisplayStateOfCustomerList = () => {
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage2() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayLuggage2);
+        // console.log("State trip List", displayLuggage2);
         setDisplayLuggage2(!displayLuggage2);
     }
 
@@ -134,7 +134,7 @@ export const DisplayStateOfCustomerList = () => {
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage3() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayLuggage3);
+        // console.log("State trip List", displayLuggage3);
         setDisplayLuggage3(!displayLuggage3);
     }
 
@@ -142,7 +142,7 @@ export const DisplayStateOfCustomerList = () => {
     //this method display or not the Trip Detail
     function changeStatusPackedLuggage4() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayLuggage4);
+        // console.log("State trip List", displayLuggage4);
         setDisplayLuggage4(!displayLuggage4);
     }
 

@@ -1,8 +1,6 @@
 
 
 import React, {useEffect, useState} from 'react';
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
 import {Link} from "react-router-dom";
 

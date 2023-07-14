@@ -6,17 +6,8 @@ import './FormCreateList.css';
 import 'materialize-css';
 import M from 'materialize-css';
 import DisplayCustomerTrip from "./DisplayCustomerTrip";
-import displayCustomerTrip from "./DisplayCustomerTrip";
-import FormCreateList from "./FormCreateList";
-import ParentComponent from "./ParentComponent";
-import LoginCustomerForm from "./LoginCustomerForm";
-import {useEffect} from "react";
-import DisplayStateOfCustomerList from "../DisplayStateOfCustomerList";
-import {Link} from "react-router-dom";
-import ToDoListComponentsTrip from "./ToDoListComponentsTrip";
-import Trip from "./Trip";
+
 // import {UserContext} from "../UserContext";
-import LoginNew2 from "./LoginNew2";
 /*
 SmartLuggage Application
 Marek Augustyn

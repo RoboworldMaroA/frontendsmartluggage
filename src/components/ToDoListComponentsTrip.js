@@ -46,7 +46,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     //grab data from database on the beginning of the loading page and update everytime is change something on the list.
     useEffect(() => {
-        console.log("item was updated ireland value is:", toDoListTrip.ireland, updateIrelandStatus());
+        // console.log("item was updated ireland value is:", toDoListTrip.ireland, updateIrelandStatus());
     }, [toDoListTrip]);
 
 
@@ -56,13 +56,13 @@ export const ToDoListComponentsTrip = (props) => {
         const irlStatus = irelandStatus;
         if (trip === "1") {
             setIrelandStatus(true);
-            console.log("irlStatus is:(in if trip =1) ", irlStatus);
+            // console.log("irlStatus is:(in if trip =1) ", irlStatus);
         }
 
         if (trip === "0") {
             setIrelandStatus(false);
             //setIrelandState("1");
-            console.log("irlStatus is:(in if trip =0) ", irlStatus);//test only
+            // console.log("irlStatus is:(in if trip =0) ", irlStatus);//test only
         }
     }
 
@@ -104,7 +104,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(itemsEquipments);
+            // console.log(itemsEquipments);
             window.localStorage.setItem('EQUIPMENTS_DATA', JSON.stringify(itemsEquipments));
 
         }, [itemsEquipments]
@@ -247,7 +247,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(items);
+            // console.log(items);
             window.localStorage.setItem('ACCESSORIES_DATA', JSON.stringify(items));
 
         }, [items]
@@ -374,7 +374,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(itemsClothes);
+            // console.log(itemsClothes);
             window.localStorage.setItem('CLOTHES_DATA', JSON.stringify(itemsClothes));
         }, [itemsClothes]
     )
@@ -509,7 +509,7 @@ export const ToDoListComponentsTrip = (props) => {
 
     //save data to local storage
     useEffect(() => {
-            console.log(itemsCosmetics);
+            // console.log(itemsCosmetics);
             window.localStorage.setItem('COSMETICS_DATA', JSON.stringify(itemsCosmetics));
         }, [itemsCosmetics]
         // },[passportQty]

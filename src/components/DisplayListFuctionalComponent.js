@@ -4,19 +4,9 @@ import ToDoList from "./ToDoList"
 //props are data inside the divs
 import './FormCreateList.css';
 import 'materialize-css';
-import M from 'materialize-css';
-import DocumentsList from "./DocumentsList";
-import BeachList from "./BeachList";
 import DisplayCustomerTrip from "./DisplayCustomerTrip";
-import displayCustomerTrip from "./DisplayCustomerTrip";
-import FormCreateList from "./FormCreateList";
-import ParentComponent from "./ParentComponent";
-import LoginCustomerForm from "./LoginCustomerForm";
 import {useEffect} from "react";
 import DisplayStateOfCustomerList from "../DisplayStateOfCustomerList";
-import {Link} from "react-router-dom";
-import ToDoListComponentsTrip from "./ToDoListComponentsTrip";
-import Trip from "./Trip";
 // import {UserContext} from "../UserContext";
 import './DisplayListComponent.css';
 /*
@@ -98,7 +88,7 @@ export const DisplayListFunctionalComponent = (props) => {
 
     useEffect(() => {
         //do something when loading
-        console.log("signal to do something using useEffect")
+        // console.log("signal to do something using useEffect")
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             // console.log("List of items in the trip", TripData);
@@ -126,7 +116,7 @@ export const DisplayListFunctionalComponent = (props) => {
     //this method display or not the Trip Detail
     function changeStatus() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayTripDetail);
+        // console.log("State trip List", displayTripDetail);
         setDisplayTripDetail(!displayTripDetail);
 
 
@@ -135,7 +125,7 @@ export const DisplayListFunctionalComponent = (props) => {
     //this method display or not the Trip Detail
     function changeStatus2() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayTripDetail2);
+        // console.log("State trip List", displayTripDetail2);
         setDisplayTripDetail2(!displayTripDetail2);
 
     }
@@ -143,7 +133,7 @@ export const DisplayListFunctionalComponent = (props) => {
     //this method display or not the Trip Detail
     function changeStatus3() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayTripDetail3);
+        // console.log("State trip List", displayTripDetail3);
         setDisplayTripDetail3(!displayTripDetail3);
 
     }
@@ -151,7 +141,7 @@ export const DisplayListFunctionalComponent = (props) => {
     //this method display or not the Trip Detail
     function changeStatus4() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
-        console.log("State trip List", displayTripDetail4);
+        // console.log("State trip List", displayTripDetail4);
         setDisplayTripDetail4(!displayTripDetail4);
 
     }

@@ -19,7 +19,7 @@ const HomeButtons = ({}) => {
 
     useEffect(() => {
         //do something when loading
-        console.log("signal to do something using useEffect")
+        // console.log("signal to do something using useEffect")
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             // console.log("List of items in the trip", TripData);
@@ -74,7 +74,6 @@ const HomeButtons = ({}) => {
 
                 {/*LOGIN BUTTON ON HOME PAGE*/}
             <div className="col s12 m6">
-                {/*<div id="loginOrRegister">*/}
                     <Link to="Login">
                         <div className="card">
                             <div className="card-image">
@@ -82,17 +81,11 @@ const HomeButtons = ({}) => {
                                 <span className="card-title">Login</span>
                             </div>
                         </div>
-                        {/*<button id="buttonSizeLogin" className="btn waves-effect waves-light #5d4037 brown darken-1">*/}
-                        {/*    <div id="loginIconAndName"><i id="iconLogin"*/}
-                        {/*                                  className="medium material-icons">login</i> Login*/}
-                        {/*    </div>*/}
-                        {/*</button>*/}
                     </Link>
                 </div>
 
 
             <div className="col s12 m6">
-                {/*<div id="pay">*/}
                     <Link to="pay">
                         <div className="card">
                             <div className="card-image">
@@ -100,18 +93,12 @@ const HomeButtons = ({}) => {
                                 <span className="card-title">Pay</span>
                             </div>
                         </div>
-                        {/*<button id="buttonSizePay" className="btn waves-effect waves-light #5d4037 brown darken-1">*/}
-                        {/*    <div id="payIconAndName"><i id="iconPay" className="medium material-icons">credit_card</i>*/}
-                        {/*        Pay*/}
-                        {/*    </div>*/}
-                        {/*</button>*/}
                     </Link>
                 </div>
 
 
             <div className="col s12 m6">
                 {/*ADMIN BUTTON*/}
-                {/*<div id="adminButton">*/}
                     <Link to="LoginAdminPage">
                         <div className="card">
                             <div className="card-image">
@@ -119,11 +106,6 @@ const HomeButtons = ({}) => {
                                 <span className="card-title">Admin</span>
                             </div>
                         </div>
-                        {/*<button id="buttonSizeAdmin" className="btn waves-effect waves-light #5d4037 brown darken-1">*/}
-                        {/*    <div id="adminIconAndName"><i id="iconAdmin"*/}
-                        {/*                                  className="medium material-icons">login</i> Admin*/}
-                        {/*    </div>*/}
-                        {/*</button>*/}
                     </Link>
                 </div>
 
@@ -140,7 +122,6 @@ const HomeButtons = ({}) => {
                 <br/>
                 <br/>
                 <br/>
-            {/*</div>*/}
 
         </div>
     )//end return
