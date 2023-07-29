@@ -151,65 +151,12 @@ export const DisplayListFunctionalComponent = (props) => {
         // First DIV
         <div id="allElementInDisplayListFunctionalComponent">
 
-            {/*<div>*/}
-
-
-            {/*    tripData.map((TripData)=> {*/}
-            {/*        return(<div >*/}
-            {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
-            {/*        </div>*/}
-
-            {/*        );*/}
-            {/*};*/}
-            {/*</div>*/}
-
-
-            {/*    {this.state.tripData.map((TripData)=> {*/}
-            {/*        return(<div >*/}
-            {/*                <h1>key={TripData.id} camera {TripData.camera.toString()}</h1>*/}
-            {/*        </div>*/}
-
-            {/*        )*/}
-
-            {/*    })}*/}
-            {/*</div>*/}
-
-
-            {/*Filter function to diplay only trip data from one cutomer*/}
-            {/*<div className="row">*/}
-            {/*    {tripData.filter((TripData)=>TripData.id===1)*/}
-            {/*        .map((TripData)=> TripData.ireland)}*/}
-
-            {/*</div>*/}
-
-            {/*<div className="row">*/}
-            {/*    {trip && trip.filter((TripData) => TripData.id===2).*/}
-            {/*    map((TripData) => {return (*/}
-            {/*        <div key={TripData.id} >*/}
-
-            {/*            <h1> From Trip   {TripData.departureDay} {TripData.ireland.toString()}  </h1>*/}
-            {/*        </div>*/}
-            {/*    )})*/}
-
-            {/*    }*/}
-
-            {/*</div>*/}
-
-
-            {/*<div className="row">*/}
-            {/*    {this.state.contacts.filter((data)=>data.id===1)*/}
-            {/*        .map((data)=> data.name)}*/}
-
-            {/*</div>*/}
-
-            {/*<p> Status of the list from database </p>*/}
             <div id="positionDisplayStateOfCustomerList">
                 <DisplayStateOfCustomerList/>
             </div>
 
             {/*IN THIS LINE IS VISIBLE VALUE FROM THE ANOTHER COMPONENT THAT YOU CAN SHARE*/}
             {/*<div className="row"> <h2>Element from useContext {value}</h2></div>*/}
-
             {/*<div> Trip ID {tripId.length}</div>*/}
 
             <div id="fourButtonsToDisplayListDetail" className="row">
@@ -305,60 +252,33 @@ export const DisplayListFunctionalComponent = (props) => {
                 </div>
 
 
-                {/*################# 4 BUTTON#######################*/}
+                {/*################# 4 BUTTON - Pick Any Lists #######################*/}
                 <div className="col s12 m6 l3">
 
                     <button className="waves-effect waves-light btn #795548 brown "
-                            onClick={() => changeStatus4()}> Details Trip 4
+                            onClick={() => changeStatus4()}> Display Trip Detail {tripId}
                     </button>
-                    {/*<div>*/}
-                    {/*    {displayTripDetail*/}
-                    {/*        ? tripData.map((TripData) => {*/}
-                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                    {/*        }):"... press to see more detail about a trips"}*/}
-                    {/*    /!*end*!/*/}
-                    {/*</div>*/}
-                    {/*<div className="row">*/}
-                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                    {/*</div>*/}
-                </div>
 
-                {/*Input number of the trip to delete*/}
+                {/*When you press button 4 then will be displaying detail of the list ID*/}
                 <div className="row">
                     <div className="input-field col s10 m6 l6 offset-s1">
                         <input placeholder="Input Trip ID" type="text"
                                onChange={(event => setTripId(event.target.value))} className="validate"/>
-                        <label htmlFor="What Id want you delete">Id: {tripId}</label>
+                        {/*<label htmlFor="What Id want you display">User inserted Trip ID: {tripId}</label>*/}
                     </div>
                 </div>
 
                 <div>
                     {displayTripDetail4
-                        ? tripData.filter((TripData) => TripData.id === tripId).map((TripData) => {
+                        ? tripData.filter((TripData) => TripData.id === parseInt(tripId)).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
                                 </>
                             );
                         }) : ""}
-                    {/*end*/}
                 </div>
-
-
-                {/*<div className="row">*/}
-                {/*    {displayTripDetail*/}
-                {/*        ? tripData.filter((TripData) => TripData.id===3).map((TripData) => {*/}
-                {/*            return (*/}
-                {/*                <>*/}
-                {/*                    <DisplayCustomerTrip key={TripData.id} item={TripData}/>*/}
-
-
-                {/*                </>*/}
-
-                {/*            );*/}
-                {/*        }):"... press to see more detail about a trips"}*/}
-                {/*    /!*end*!/*/}
-                {/*</div>*/}
+                </div>
 
             </div>
 

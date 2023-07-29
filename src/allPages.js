@@ -10,7 +10,6 @@ import DisplayListFunctionalComponent from "./components/DisplayListFuctionalCom
 import Help from "./components/Help";
 import ManageDestinationFunctionalComponent from "./components/ManageDestinationFuctionalComponent";
 import backgroundHome from "./photo/backgroundHomePage3small.jpg";
-import HomeButtons from "./components/HomeButtons";
 import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayList";
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
 import NewHomeButtons from "./components/NewHomeButtons";

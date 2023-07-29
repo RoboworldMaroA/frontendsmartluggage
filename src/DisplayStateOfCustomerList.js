@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import DisplayCustomerTrip from "./components/DisplayCustomerTrip";
 /* useState is used to set a value  */
 import './components/DisplayListComponent.css';
+import DisplayListFuctionalComponent from "./components/DisplayListFuctionalComponent";
 //It is new display contacts and delete on the bottom with  option to it delete
 /*
 SmartLuggage Application
@@ -13,18 +14,18 @@ Final Project Software Developer
 */
 
 
-export const DisplayStateOfCustomerList = () => {
+export const DisplayStateOfCustomerList = (props) => {
 
     //data from useEffect Customer data
     const [customer, setCustomer] = useState(null);
     const [trip, setTrip] = useState(null);
     // const [trip2, setTrip2] = useState(null);
-    const [displayTrip, setDisplayTrip] = useState(0);
+    // const [displayTrip, setDisplayTrip] = useState(0);
     // const[id,setId]=useState(props.tripData);
-    const [displayTripDetail, setDisplayTripDetail] = useState(true);
+    // const [displayTripDetail, setDisplayTripDetail] = useState(true);
 
     const [showTripButton, setShowTripButton] = useState([{isSelected: false}]);
-
+    const [tripId, setTripId] = useState("");
 
     //New Deploy version
     useEffect(() => {
@@ -85,7 +86,7 @@ export const DisplayStateOfCustomerList = () => {
     //Old Deploy version
     useEffect(() => {
         //do something when loading
-        // console.log("yoyw yow do something from useeffect")
+        // console.log("test do something from use effect")
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((dataTrip) => {
             // console.log("List of items in the trip", dataTrip);
             setTrip(dataTrip);
@@ -138,12 +139,12 @@ export const DisplayStateOfCustomerList = () => {
         setDisplayLuggage3(!displayLuggage3);
     }
 
-    const [displayLuggage4, setDisplayLuggage4] = useState(null);
+    const [displayLuggageInputtedByUser, setDisplayLuggageInputtedByUser] = useState(null);
     //this method display or not the Trip Detail
-    function changeStatusPackedLuggage4() {
+    function changeStatusPackedLuggageAnyLuggage() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayLuggage4);
-        setDisplayLuggage4(!displayLuggage4);
+        setDisplayLuggageInputtedByUser(!displayLuggageInputtedByUser);
     }
 
 
@@ -392,67 +393,35 @@ export const DisplayStateOfCustomerList = () => {
                 {/*</div>*/}
 
 
-                {/*BUtton 4*/}
+                {/* Display user trip by inputting any number */}
 
                 <div className="col s12 m6 l3">
-                    {/*<div className="col s8 m2">*/}
-                    <div onClick={() => changeStatusPackedLuggage4()} className="card blue-grey darken-1">
+                    <div onClick={() => changeStatusPackedLuggageAnyLuggage()} className="card blue-grey darken-1">
                         <div className="card-content white-text">
                                 <span className="card-title">
-                                    {/*<p>Display List</p>*/}
                                     {/*Luggage:  {trip[1].id}*/}
-                                    Luggage: 4
-
-
-                                    <p id="mm">
-                        {/*Hi {props.dataCustomer.name}*/}
-                                        {/*                {trip[1].ireland === "1" ? "Ireland" : ""}*/}
-                                        {/*                {trip[1].spain === true ? "Spain" : " "}*/}
-                                        {/*                {trip[1].poland === true ? "Poland" : " "}*/}
-                                        {/*{toDoListTrip.name}<br/>*/}
-                                        {/*{toDoListTrip.destination}<br/>*/}
-                                        {/*{toDoListTrip.description}<br/>*/}
-                                        {/*: {trip[1].departureDay} to {trip[1].returnDay}*/}
-                                    </p>
-
+                                    Display  Luggage {tripId} .
                                 </span>
 
+                            {/*When you press button Any Luggage then will be displaying list data from the Id user inputted*/}
+                                <input placeholder="Input Trip ID to display" type="text"
+                                       onChange={(event => setTripId(event.target.value))} className="validate"/>
                         </div>
-
-                        {/*<div className="card-action">*/}
-                        {/*    /!*<p> If you want delete user Trip input Trip id and then press delete button </p>*!/*/}
-                        {/*    /!*<a href="#">This is a link</a>*!/*/}
-                        {/*    /!*<a href="#">This is a link</a>*!/*/}
-                        {/*    /!*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatusPackedLuggage()} >  Display Luggage 1 </button>*!/*/}
-
-                        {/*</div>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
 
-
-                {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatusPackedLuggage4()} >  Display Luggage 4 </button>*/}
-
-
                 <div>
-                    {displayLuggage4
-                        ? trip.filter((Trip) => Trip.id === 4).map((Trip, index) => {
-
-
+                    {displayLuggageInputtedByUser
+                        ? trip.filter((Trip) => Trip.id === parseInt(tripId)).map((Trip, index) => {
                             return (<>
-
                                     {showTripButton.isSelected ?
-
                                         <button className="show-trip"
                                                 onClick={() => handlePickList(index)}>{Trip.id}
                                         </button> :
 
-
                                         <div>
                                             <ToDoListComponentsTrip key={Trip.id} dataTrip2={Trip}/>
                                         </div>}
-
-
                                 </>
                             );
                         }) : ""}
