@@ -382,8 +382,6 @@ export const DisplayStateOfCustomerList = (props) => {
                                         <div>
                                             <ToDoListComponentsTrip key={Trip.id} dataTrip2={Trip}/>
                                         </div>}
-
-
                                 </>
                             );
                         }) : ""}
@@ -393,8 +391,8 @@ export const DisplayStateOfCustomerList = (props) => {
                 {/*</div>*/}
 
 
+                {/*################################################*/}
                 {/* Display user trip by inputting any number */}
-
                 <div className="col s12 m6 l3">
                     <div onClick={() => changeStatusPackedLuggageAnyLuggage()} className="card blue-grey darken-1">
                         <div className="card-content white-text">
@@ -425,10 +423,8 @@ export const DisplayStateOfCustomerList = (props) => {
                                 </>
                             );
                         }) : ""}
-                    {/*end*/}
                 </div>
 
-                {/*</div>*/}
 
 
             </div>

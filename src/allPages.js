@@ -12,7 +12,7 @@ import ManageDestinationFunctionalComponent from "./components/ManageDestination
 import backgroundHome from "./photo/backgroundHomePage3small.jpg";
 import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayList";
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
-import NewHomeButtons from "./components/NewHomeButtons";
+import HomeButtons from "./components/HomeButtons";
 
 /*
 SmartLuggage Application
@@ -33,13 +33,21 @@ export function Home() {
              style={{
                  backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no',
                  backgroundSize: "cover", opacity: 0.98,
+
              }}
+             // style={{
+             //     backgroundColor: `#9bc4ca`, backgroundRepeat: 'repeat-no',
+             //     backgroundSize: "cover", opacity: 0.98,
+             //
+             // }}
+
+
         >
 
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
-            <NewHomeButtons/>
+            <HomeButtons/>
         </div>
 
     );

@@ -252,7 +252,7 @@ export const DisplayListFunctionalComponent = (props) => {
                 </div>
 
 
-                {/*################# 4 BUTTON - Pick Any Lists #######################*/}
+                {/*################# BUTTON - Pick Any Lists #######################*/}
                 <div className="col s12 m6 l3">
 
                     <button className="waves-effect waves-light btn #795548 brown "
