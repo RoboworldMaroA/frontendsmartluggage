@@ -18,7 +18,7 @@ Final Project Software Developer
 export const DisplayListFunctionalComponent = (props) => {
 
     const [tripData, setTripData] = useState([]);
-    const [displayTripDetail, setDisplayTripDetail] = useState(false);
+    let [displayTripDetail, setDisplayTripDetail] = useState(false);
     const [displayTripDetail2, setDisplayTripDetail2] = useState(false);
     const [displayTripDetail3, setDisplayTripDetail3] = useState(false);
     const [displayTripDetail4, setDisplayTripDetail4] = useState(false);

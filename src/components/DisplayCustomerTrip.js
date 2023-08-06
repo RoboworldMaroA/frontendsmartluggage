@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 // import {UserContext} from "../UserContext";
 /* useState is used to set a value  */
 import './DisplayCustomerTripCSS.css';
+import displayTripDetail from "./DisplayListFuctionalComponent";
 import registerCustomer from "./RegisterCustomer";
 /*
 SmartLuggage Application
@@ -58,6 +59,8 @@ export const DisplayCustomerTrip = ({item}) => {
                                 <div className="card-content white-text">
                                 <span id="spanInDisplayCustomerTrip" className="card-title small">
                                     {/*<h2> Message : {value}  </h2>*/}
+
+                                    <p> User with trip no {item.id} called " {item.tripName} " is going to {item.destination}.</p>
                                     <p>Details Trip ID : {item.id}</p>
                                     <p>Trip name : {item.tripName}</p>
                                      <p>Destination : {item.destination}</p>
@@ -68,11 +71,11 @@ export const DisplayCustomerTrip = ({item}) => {
                                     <p>Description: {item.description}</p>
                                     {/*<p>Destination: {item.destinationId}</p>*/}
                                     <p>List: {item.listId}</p>
-                                    <p>Activity : {item.activity} </p>
+                                    <p>Activities :  </p>
                                     {/*<p>Sex: {item.sex==="male"?"female":""}{item.sex!=="male"?"male":""}</p>*/}
-                                    <p>Ski : {item.ski ? "Yes" : "No"} </p>
-                                    <p>Trekking : {item.trekking ? "Yes" : "No"} </p>
-                                    <p>Beach : {item.beachListStatus ? "Yes" : "No"} </p>
+                                    <p>{item.ski ? "SKI" : " "} </p>
+                                    <p>{item.trekking ? "Trekking" : " "} </p>
+                                    <p>{item.beachListStatus ? "Beach" : " "} </p>
                                     <p>Admin Privileges: {item.adminPrivileges ? "Yes" : "No"} </p>
                                     <p>Pay Status: {item.payStatus ? "Yes" : "No"}</p>
                                     <p>Bag option:</p>

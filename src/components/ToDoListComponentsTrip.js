@@ -19,25 +19,97 @@ import CamcorderEquipmentsList from "./CamcorderEquipmentsList";
 import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
+import DisplayListFunctionalComponent from "./DisplayListFuctionalComponent";
+import DisplayStateOfCustomerList from "../DisplayStateOfCustomerList";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+05 August 2023
+Smart Luggage App, Component responsible for display the User List according to user preferences
 */
 //i moved data from a component Display state component, and
 // I can add here what I want to do when I click a checkboxes
 export const ToDoListComponentsTrip = (props) => {
-    // const [toDoList, setToDoList] = useState(props.data2);
     const [toDoListTrip, setToDoListTrip] = useState(props.dataTrip2);
     const [ireland, setIreland] = useState(props.dataTrip2.ireland);
-    const [spain, setSpain] = useState(props.dataTrip2.spain);
-    const [poland, setPoland] = useState(props.dataTrip2.poland);
-    const [camera, setCamera] = useState(props.dataTrip2.poland);
 
-    // const [userData, setUserData] = useState(props.dataCustomer);
 
-    const [tripDays, setTripDays] = useState(7);
+    //WEATHER WIDGET
+    //###########################################################################################
+    //Keep data for fetched data from weather API
+    const [weather, setWeather] = useState(null);
+    //Keep icon data
+    const [icon, setIcon] = useState("")
+    // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/10d@2x.png")
+    // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/"+icon+"@2x.png")
+
+    //This function is checking if we got the data from the API, response is checked and will return status code
+    //200 ok
+    //401 authentication problem
+    //404 not response from server
+
+    const [query, setQuery]  = useState(toDoListTrip.destination)
+    const apiKey = "c2e36602e3663d39200830396e06670a"
+    const weather2 = async () => {
+        const result2 = await
+            fetch("https://api.openweathermap.org/data/2.5/weather?q="+query+apiKey,
+             ).
+            then(resp=>
+            {
+                console.log("display response after post")  ;
+                console.log(resp)  ;
+                console.log("Display Status Code:  "+resp.status)  ;
+                if(!resp.ok){
+                    console.log("Something wrong");
+                }
+                else{
+                    console.log("I have got data from weather API All good")
+                }
+            }
+            );
+    }//end fetch login function
+
+
+    //this async function return JSON object Data from API with details of the weather
+    const weather3 = async () => {
+        const result2 = await
+            fetch("https://api.openweathermap.org/data/2.5/weather?q="+query+"&APPID="+apiKey+"&units=metric",
+            ).
+                then(
+                    (resp2 => {
+                        resp2.json().then(d=>{
+                            console.log(" JSON format API response")
+                            console.log(d)
+                            console.log(d.main.temp + " Celsius Degree")
+                            console.log(d.cod + " I think status response")
+                            console.log(d.weather[0].description + " Description")
+                            console.log(d.weather[0].icon + " Icon")
+                            //Sore data in the variable
+                            setWeather(d)
+                            setIcon(d.weather[0].icon)
+
+                            }
+                        )
+                    })
+                );
+    }//end fetch login function
+
+
+
+    //run function verifyWeather if the
+
+
+
+    const verifyWeather = (e) => {
+        // event.preventDefault();
+        // window.alert("Checking a weather");
+        return weather3();
+    }
+
+
+
+    //###########################################################################################
+
 
 
     const updateIsDoneTrip = () => {
@@ -448,7 +520,7 @@ export const ToDoListComponentsTrip = (props) => {
     };
 
 
-    // function to remove item
+    // function that remove item from clothes
     const handleRemoveItemClothes = (index) => {
         // alert("button decrease was clicked ")
         const newItems = [...itemsClothes];
@@ -608,18 +680,17 @@ export const ToDoListComponentsTrip = (props) => {
 
     return (
         <div>
-            <div className="row">
-                <div id="titleListToDoListID" className="col s12 m12">
+            <div className="row" >
+                <div onChange={toDoListTrip.destination === 0 ? null : verifyWeather()} id="titleListToDoListID" className="col s12 m12">
                     <p id="listOfItemsInToDoListComponent">
-                        {/*Hi {props.dataCustomer.name}*/}
-                        {/*{toDoListTrip.ireland === "1" ? "Ireland" : ""}*/}
-                        {/*{toDoListTrip.spain === true ? "Spain" : " "}*/}
-                        {/*{toDoListTrip.poland === true ? "Poland" : " "}*/}
-                        {toDoListTrip.destination === 0 ? toDoListTrip.description : toDoListTrip.destination}
-                        {/*{toDoListTrip.name}<br/>*/}
-                        {/*{toDoListTrip.destination}<br/>*/}
-                        {/*{toDoListTrip.description}<br/>*/}
-                        : {toDoListTrip.departureDay} to {toDoListTrip.returnDay}</p>
+                        {toDoListTrip.destination === 0 ? null : toDoListTrip.destination}: {toDoListTrip.departureDay} to {toDoListTrip.returnDay}
+                            {/*Check if weather is empty, if is empty then do not display anything if not then display data from API*/}
+                            <div id="weatherWidgetToDoListComponentTrip">
+                                    <p>{weather===null?null:weather.weather[0].description}</p>
+                                    <p>{weather===null?null:weather.main.temp}</p>
+                                    <p><img src={weather===null?null:"https://openweathermap.org/img/wn/"+icon+"@2x.png"}/></p>
+                            </div>
+                    </p>
                 </div>
             </div>
 
