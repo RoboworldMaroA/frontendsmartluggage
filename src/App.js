@@ -24,7 +24,7 @@ import NavbarHome from "./components/NavbarHome";
 // import {UserContext} from "./UserContext";
 /*
 SmartLuggage Application
-Update 30 September 2022
+Marek Augustyn
 */
 
 

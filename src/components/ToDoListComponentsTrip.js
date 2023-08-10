@@ -19,8 +19,7 @@ import CamcorderEquipmentsList from "./CamcorderEquipmentsList";
 import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
-import DisplayListFunctionalComponent from "./DisplayListFuctionalComponent";
-import DisplayStateOfCustomerList from "../DisplayStateOfCustomerList";
+
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -78,15 +77,22 @@ export const ToDoListComponentsTrip = (props) => {
                 then(
                     (resp2 => {
                         resp2.json().then(d=>{
-                            console.log(" JSON format API response")
-                            console.log(d)
-                            console.log(d.main.temp + " Celsius Degree")
-                            console.log(d.cod + " I think status response")
-                            console.log(d.weather[0].description + " Description")
-                            console.log(d.weather[0].icon + " Icon")
-                            //Sore data in the variable
-                            setWeather(d)
-                            setIcon(d.weather[0].icon)
+                            // console.log(" JSON format API response")
+                            // console.log(d)
+                            // console.log(d.main.temp + " Celsius Degree")
+                            // console.log(d.cod + " I think status response")
+                            // console.log(d.weather[0].description + " Description")
+                            // console.log(d.weather[0].icon + " Icon")
+                            //Store icon data in the variable
+
+                            if(!resp2.ok){
+                                console.log("something went wrong");
+                            }
+                            else{
+                                setIcon(d.weather[0].icon);
+                                setWeather(d);
+                            }
+
 
                             }
                         )
@@ -100,7 +106,7 @@ export const ToDoListComponentsTrip = (props) => {
 
 
 
-    const verifyWeather = (e) => {
+    const verifyWeather = () => {
         // event.preventDefault();
         // window.alert("Checking a weather");
         return weather3();
@@ -139,8 +145,8 @@ export const ToDoListComponentsTrip = (props) => {
     }
 
     useEffect(() => {
-        console.log("Camera was updated state is:", toDoListTrip.camera
-        );
+        // console.log("Camera was updated state is:", toDoListTrip.camera
+       // );
     }, [toDoListTrip]);
 
 
@@ -687,7 +693,7 @@ export const ToDoListComponentsTrip = (props) => {
                             {/*Check if weather is empty, if is empty then do not display anything if not then display data from API*/}
                             <div id="weatherWidgetToDoListComponentTrip">
                                     <p>{weather===null?null:weather.weather[0].description}</p>
-                                    <p>{weather===null?null:weather.main.temp}</p>
+                                    <p>Temperature: {weather===null?null:weather.main.temp} Degree</p>
                                     <p><img src={weather===null?null:"https://openweathermap.org/img/wn/"+icon+"@2x.png"}/></p>
                             </div>
                     </p>

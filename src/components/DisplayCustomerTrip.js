@@ -7,8 +7,7 @@ import registerCustomer from "./RegisterCustomer";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+2023
 */
 //It is new display contacts and delete on the bottom with  option to it delete
 export const DisplayCustomerTrip = ({item}) => {
@@ -34,8 +33,6 @@ export const DisplayCustomerTrip = ({item}) => {
 
 
     useEffect(() => {
-        //do something when loading
-        // console.log("yoyw yow do something from useeffect")
         if (!customer) {
             // fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
             //     fetch("displayUsers").then((response) => response.json()).then((dataCustomer) => {

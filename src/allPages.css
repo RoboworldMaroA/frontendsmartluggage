@@ -214,8 +214,6 @@
     padding-top: 11%;
     margin-right: 25%;
     opacity: 0.80;
-
-
 }
 
 
@@ -227,10 +225,16 @@
 /*New Homebuttons style*/
 
 #allButtonsNewHomeButtons{
-    padding-top: 5%;
+    padding-top: -1%;
     margin-right: 0%;
     opacity: 0.90;
 
 }
 
-/*     NewHomeButtons      */
+/*     Date in component CurrentTime      */
+#Date{
+    /*position: absolute;*/
+    top: 10%;
+    margin-left: 28%;
+    /*opacity: 0.80;*/
+}

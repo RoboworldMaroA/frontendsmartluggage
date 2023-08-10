@@ -19,11 +19,6 @@ export const DisplayStateOfCustomerList = (props) => {
     //data from useEffect Customer data
     const [customer, setCustomer] = useState(null);
     const [trip, setTrip] = useState(null);
-    // const [trip2, setTrip2] = useState(null);
-    // const [displayTrip, setDisplayTrip] = useState(0);
-    // const[id,setId]=useState(props.tripData);
-    // const [displayTripDetail, setDisplayTripDetail] = useState(true);
-
     const [showTripButton, setShowTripButton] = useState([{isSelected: false}]);
     const [tripId, setTripId] = useState("");
 

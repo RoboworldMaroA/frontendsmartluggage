@@ -13,6 +13,7 @@ import backgroundHome from "./photo/backgroundHomePage3small.jpg";
 import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayList";
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
 import HomeButtons from "./components/HomeButtons";
+import CurrentTime from "./components/CurrentTime";
 
 /*
 SmartLuggage Application
@@ -41,12 +42,12 @@ export function Home() {
              //
              // }}
 
-
         >
 
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
+            <CurrentTime/>
             <HomeButtons/>
         </div>
 
