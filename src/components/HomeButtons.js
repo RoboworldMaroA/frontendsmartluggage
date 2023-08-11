@@ -94,6 +94,16 @@ const HomeButtons = ({}) => {
                     </Link>
                 </div>
 
+                {/*Vission System*/}
+                <div id="adminButton">
+                    <Link to="packByUsingCamera">
+                        <button id="buttonSizeAdmin" className="btn waves-effect waves-light #5d4037 brown darken-1">
+                            <div id="adminIconAndName"><i id="iconAdmin"
+                                                          className="medium material-icons">camera</i> Vision System
+                            </div>
+                        </button>
+                    </Link>
+                </div>
 
                 <br/>
                 <br/>

@@ -14,6 +14,7 @@ import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayLis
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
 import HomeButtons from "./components/HomeButtons";
 import CurrentTime from "./components/CurrentTime";
+import CameraObjectDetection from "./components/CameraObjectDetection";
 
 /*
 SmartLuggage Application
@@ -297,3 +298,29 @@ export function PageNotExist() {
 
 
 
+//this function allows to recognize object using camera
+export function CustomerAddItemUsingCamera() {
+
+    return (
+        <div id="homePage" className="container-fluid"
+            // style={{
+            //     backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no',
+            //     backgroundSize: "cover", opacity: 0.98,
+            //
+            // }}
+             style={{
+                 backgroundColor: `#9bc4ca`, backgroundRepeat: 'repeat-no',
+                 backgroundSize: "cover", opacity: 0.98,
+
+             }}
+
+        >
+
+            {/*<div className="row">*/}
+            {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
+            {/*</div>*/}
+            <CameraObjectDetection/>
+        </div>
+
+    );
+}
