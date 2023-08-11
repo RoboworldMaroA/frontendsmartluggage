@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
+
 import './toDoListCSS.css';
-import {Link} from "react-router-dom";
+
 
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
-const TrekkingListAccessories = ({}) => {
+const TrekkingListAccessories = () => {
 
     //
     // const [checked2, setChecked2] = useState(false);
@@ -23,11 +21,7 @@ const TrekkingListAccessories = ({}) => {
     // const [maskWeight, setMaskWeight] = useState(0.02);
     // const [underwearQty, setUnderwearQty] = useState(5);
     // const [passportQty, setPassportQty] = useState(1);
-    const [errorNewItem, setErrorNewItem] = useState("At least one character ");
-
-    // const [items, setItems] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-
+// const [items, setItems] = useState([]);
     const [items, setItems] = useState([
         {itemName: 'Backpack', quantity: 1, isSelected: false, weight: 0.1},
         {itemName: 'Sleeping Bag', quantity: 1, isSelected: false, weight: 0.12},
@@ -43,13 +37,8 @@ const TrekkingListAccessories = ({}) => {
     useEffect(() => {
 
             const trekkingClothesData = window.localStorage.getItem('TREKKING_ACCESSORIES_DATA');
-            // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItems(JSON.parse(trekkingClothesData));
 
-            // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
-            // if ( data !== null ) setItems(JSON.parse(data));
-            // setSelected(JSON.parse(data2));
-            //     console.log('data2',data2);
         }, []
     )
 
@@ -60,7 +49,6 @@ const TrekkingListAccessories = ({}) => {
             window.localStorage.setItem('TREKKING_ACCESSORIES_DATA', JSON.stringify(items));
 
         }, [items]
-        // },[passportQty]
 
     )
 
@@ -96,7 +84,7 @@ const TrekkingListAccessories = ({}) => {
     }
 
 
-    const [totalItemCount, setTotalItemCount] = useState(6);
+    const [, setTotalItemCount] = useState(6);
 
     const calculateTotal = () => {
         const totalItemCount = items.reduce((total, item) => {
@@ -124,7 +112,7 @@ const TrekkingListAccessories = ({}) => {
     }
 
 
-    const [totalItemWeight, setTotalItemWeight] = useState(1);
+    const [, setTotalItemWeight] = useState(1);
 
     const calculateTotalWeight = () => {
         const totalItemWeight = items.reduce((total, item) => {
@@ -133,18 +121,6 @@ const TrekkingListAccessories = ({}) => {
 
         setTotalItemWeight(totalItemWeight);
     };
-
-
-    const validateInputNewItem = (event) => {
-        const newItem = event.target.value;
-        if (newItem) {
-            setErrorNewItem("");
-        }
-        setInputValue(newItem);
-        setErrorNewItem(" ");
-    }
-
-
     const validateChecked = (index) => {
         const newItems = [...items];
         newItems[index].isSelected = !newItems[index].isSelected;
