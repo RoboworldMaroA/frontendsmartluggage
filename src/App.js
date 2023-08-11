@@ -22,6 +22,9 @@ import {
 import CreateList from "./components/CreateList";
 import Login from "./components/Login";
 import NavbarHome from "./components/NavbarHome";
+
+import * as cocossd from "@tensorflow-models/coco-ssd";
+
 // import {UserContext} from "./UserContext";
 /*
 SmartLuggage Application
