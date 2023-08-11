@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tensorflow-models/coco-ssd": "^2.1.0",
-    "@tensorflow/tfjs": "^2.4.0",
     "@mdi/js": "^6.6.96",
     "@mdi/react": "^1.6.0",
     "@testing-library/jest-dom": "^5.16.2",
@@ -21,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true SSL_CRT_FILE=./.cert/cert.pem SSL_KEY_FILE=./.cert/key.pem react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

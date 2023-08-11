@@ -8,14 +8,15 @@ Marek Augustyn
 6.08.2023
 */
 
-const HomeButtons = ({}) => {
+const HomeButtons = () => {
 
-    const [tripData, setTripData] = useState([]);
+    const [, setTripData] = useState([]);
 
     useEffect(() => {
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
             setTripData(TripData);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, ["hI trip"]);
 
 
@@ -94,7 +95,7 @@ const HomeButtons = ({}) => {
                     </Link>
                 </div>
 
-                {/*Vission System*/}
+                {/*Vision System*/}
                 <div id="adminButton">
                     <Link to="packByUsingCamera">
                         <button id="buttonSizeAdmin" className="btn waves-effect waves-light #5d4037 brown darken-1">
