@@ -89,8 +89,8 @@ const CameraObjectDetection = (props) => {
             </div>
 
 
-            <div className="App">
-                <header className="App-header">
+            <div className="CameraObjectDetection">
+                <header className="CameraObjectDetection-header">
                     <Webcam
                         ref={webcamRef}
                         muted={true}
