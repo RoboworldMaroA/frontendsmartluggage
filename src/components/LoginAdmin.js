@@ -64,37 +64,6 @@ export default class LoginAdmin extends Component{
                     {this.state.contacts.map((item) =>(<DeleteCustomerNew key={item.id} item={item} /> ))}
 
                 </div>
-
-
-                {/*<div className="row">*/}
-                {/*<DisplayCustomerTrip />*/}
-
-                {/*</div>*/}
-
-                {/*<div className="row">*/}
-
-                {/*    <Trip />*/}
-
-                {/*</div>*/}
-
-
-
-
-
-                {/*<div className="row">*/}
-                {/*    {this.state.contacts.map((item) =>(<SingleContact key={item.id} item={item} /> ))}*/}
-
-                {/*</div>*/}
-
-      {/*          //display what is inside the to do list
-                <div className="row">
-                    <ToDoList />
-
-                </div>*/}
-
-
-
-
             </div>
         )
 

@@ -3,8 +3,7 @@ import RegisterCustomer from "./RegisterCustomer";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 /* Class Contact uses for display and read a data from database, data is imported from other classes */
 //props are data inside the divs

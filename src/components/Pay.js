@@ -5,8 +5,7 @@ import './Pay.css';
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 
 export default class Pay extends Component{
@@ -43,34 +42,6 @@ export default class Pay extends Component{
                         </button>
                     </a>
                 </div>
-
-                {/*<div className="row">*/}
-                {/*    <LoginCustomer />*/}
-
-                {/*</div>*/}
-
-                {/*<div className="row">*/}
-
-                {/*    {this.state.contacts.map((item) =>(<DeleteCustomerNew key={item.id} item={item} /> ))}*/}
-
-                {/*</div>*/}
-
-
-
-
-                {/*<div className="row">*/}
-                {/*    {this.state.contacts.map((item) =>(<SingleContact key={item.id} item={item} /> ))}*/}
-
-                {/*</div>*/}
-
-      {/*          //display what is inside the to do list
-                <div className="row">
-                    <ToDoList />
-
-                </div>*/}
-
-
-
 
             </div>
         )

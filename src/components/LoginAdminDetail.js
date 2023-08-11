@@ -10,14 +10,14 @@ Final Project Software Developer
 */
     const AddDetailAdmin = ({setAdminInfo: setInfo}) => {
 
-        const [name, setName] = useState('');
-        const [surname, setSurname] = useState('');
+        const [name] = useState('');
+        const [surname] = useState('');
         const [email, setEmail] = useState('');
-        const [phoneNumber, setPhoneNumber] = useState('');
-        const [dob, setDob] = useState('');
+        const [phoneNumber] = useState('');
+        const [dob] = useState('');
         const [sex, setSex] = useState('');
         const [customerPassword, setCustomerPassword] = useState('');
-        const [customerPasswordAgain, setCustomerPasswordAgain] = useState('');
+        const [customerPasswordAgain] = useState('');
 
         //change fetch to customer database not a student
         const validateAdmin = async () => {

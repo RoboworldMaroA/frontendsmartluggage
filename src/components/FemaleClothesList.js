@@ -5,17 +5,16 @@ import './toDoListCSS.css';
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 
 const FemaleClothesList=({})=>{
 
-    const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
-    const [underwearQty, setUnderwearQty] = useState(5);
-    const [passportQty, setPassportQty] = useState(1);
-    const [errorNewItem, setErrorNewItem] = useState("At least one character ");
+    // const [checked2, setChecked2] = useState(false);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [underwearQty, setUnderwearQty] = useState(5);
+    // const [passportQty, setPassportQty] = useState(1);
+    const [, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -116,7 +115,7 @@ const FemaleClothesList=({})=>{
     }
 
 
-    const [totalItemCount, setTotalItemCount] = useState(6);
+    const [, setTotalItemCount] = useState(6);
 
     const calculateTotal = () => {
         const totalItemCount = items.reduce((total, item) => {

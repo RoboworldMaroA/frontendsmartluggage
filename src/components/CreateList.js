@@ -9,8 +9,7 @@ import M from 'materialize-css';
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 export default class CreateList extends Component{
     constructor(props){

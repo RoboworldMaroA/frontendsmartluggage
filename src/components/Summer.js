@@ -13,10 +13,10 @@ Final Project Software Developer
 */
 const Autumn=({})=>{
 
-    const [hoodiesQuantity, setHoodiesQuantity] = useState(1);
-    const [sweterQuantity, setSweterQuantity] = useState(1);
+    const [hoodiesQuantity] = useState(1);
+    const [sweterQuantity] = useState(1);
 
-    const [jacketQuantity, setJacketQuantity] = useState(1);
+    // const [jacketQuantity, setJacketQuantity] = useState(1);
 
 
     const [checked2, setChecked2] = useState(false);
@@ -75,16 +75,6 @@ const Autumn=({})=>{
                     <span> Shoes {sweterQuantity}</span>
                     </label>
                 </p>
-
-
-                {/*save list button subnit shoul execute function used to saving list on the computer*/}
-                {/*<div className="row">*/}
-                {/*    <Link to="../SaveList">*/}
-                {/*        <button className="waves-effect waves-light btn #795548 brown " type="submit" name="action">*/}
-                {/*            Save List(Saving not ready yet)*/}
-                {/*        </button>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
 
 
 

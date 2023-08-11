@@ -11,7 +11,7 @@ const EssentialList = ({}) => {
 
 
     const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
 
     function toggle() {
         setChecked2(checked2 => !checked2)

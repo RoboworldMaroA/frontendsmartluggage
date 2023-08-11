@@ -1,11 +1,4 @@
 import React, {Component} from "react";
-import SingleContact from './SingleContact';
-import DeleteContact from "./DeleteContact";
-import DeleteContactNew from "./DeleteContactNew";
-import ToDoList from "./ToDoList"
-import RegisterCustomer from "./RegisterCustomer";
-import DeleteCustomerNew from "./DeleteCustomerNew";
-import {Link} from "react-router-dom";
 import './Pay.css';
 /* Class Contact uses for display and read a data from database, data is imported from other classes */
 //props are data inside the divs

@@ -22,7 +22,7 @@ export const DisplayListFunctionalComponent = (props) => {
     const [displayTripDetail2, setDisplayTripDetail2] = useState(false);
     const [displayTripDetail3, setDisplayTripDetail3] = useState(false);
     const [displayTripDetail4, setDisplayTripDetail4] = useState(false);
-    const [loggedCustomerId, setLoggedCustomerId] = useState(1);
+    const [loggedCustomerId] = useState(1);
     const [tripId, setTripId] = useState("");
 
     // const {value,setValue} = useContext(UserContext);

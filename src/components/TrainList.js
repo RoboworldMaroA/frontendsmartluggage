@@ -14,9 +14,9 @@ const TrainList = ({}) => {
 
     const [checked2, setChecked2] = useState(false);
 
-    function toggle() {
-        setChecked2(checked2 => !checked2)
-    }
+    // function toggle() {
+    //     setChecked2(checked2 => !checked2)
+    // }
 
 
     return (
@@ -72,15 +72,6 @@ const TrainList = ({}) => {
                     </label>
                 </p>
 
-
-                {/*save list button subnit shoul execute function used to saving list on the computer*/}
-                {/*<div className="row">*/}
-                {/*    <Link to="../SaveList">*/}
-                {/*        <button className="waves-effect waves-light btn #795548 brown " type="submit" name="action">*/}
-                {/*            Save List(Saving not ready yet)*/}
-                {/*        </button>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
 
 
             </form>

@@ -1,19 +1,16 @@
 import React, {useState} from "react";
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
-import {Link} from "react-router-dom";
+
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 
 const LargeLuggageList = ({}) => {
 
 
-    const [dimensionsLargeLuggage, setDimensionsLargeLuggage] = useState("81cms (height), 119cms (width) and 119cms (depth)");
+    const [dimensionsLargeLuggage] = useState("81cms (height), 119cms (width) and 119cms (depth)");
 
     const [checked2, setChecked2] = useState(false);
 

@@ -4,8 +4,6 @@ import React from "react";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
 */
 
 /* create object Single Contact*/
@@ -23,9 +21,6 @@ const SingleContact = ({item}) => (
                 </div>
                 <div className="card-action">
                     <p>Student ID: {item.id}</p>
-                    {/*<a href="#">This is a link</a>*/}
-                    {/*<a href="#">This is a link</a>*/}
-                    {/*<button onSubmit={()=>deleteStudent(item.id)} >Delete Student</button>*/}
 
                     </div>
 

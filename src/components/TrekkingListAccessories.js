@@ -9,19 +9,6 @@ Marek Augustyn
 
 */
 const TrekkingListAccessories = () => {
-
-    //
-    // const [checked2, setChecked2] = useState(false);
-    //
-    // function toggle(){
-    //     setChecked2(checked2=> !checked2)
-    // }
-
-    // const [checked2, setChecked2] = useState(false);
-    // const [maskWeight, setMaskWeight] = useState(0.02);
-    // const [underwearQty, setUnderwearQty] = useState(5);
-    // const [passportQty, setPassportQty] = useState(1);
-// const [items, setItems] = useState([]);
     const [items, setItems] = useState([
         {itemName: 'Backpack', quantity: 1, isSelected: false, weight: 0.1},
         {itemName: 'Sleeping Bag', quantity: 1, isSelected: false, weight: 0.12},

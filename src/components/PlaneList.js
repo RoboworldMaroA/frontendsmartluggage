@@ -3,10 +3,9 @@ import './toDoListCSS.css';
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
-const PlaneList = ({}) => {
+const PlaneList = () => {
 
 
     const [checked2, setChecked2] = useState(false);
@@ -25,17 +24,9 @@ const PlaneList = ({}) => {
 
 
                 <div className="row">
-                    {/*    <div className="two-column-summary">*/}
-                    {/*<div id="iconPlane">*/}
 
-
-                    {/*    <i className="material-icons prefix">flight</i>*/}
-                    {/*</div>*/}
                     <div id="titleElements">
                         <p>PLANE</p></div>
-                    {/*</div>*/}
-
-                    {/*</div>*/}
 
                     <p>
                         <label>
@@ -73,16 +64,6 @@ const PlaneList = ({}) => {
                             <span>It is best to buy water or drinks at the airport after check-in.</span>
                         </label>
                     </p>
-
-
-                    {/*save list button subnit shoul execute function used to saving list on the computer*/}
-                    {/*<div className="row">*/}
-                    {/*    <Link to="../SaveList">*/}
-                    {/*        <button className="waves-effect waves-light btn #795548 brown " type="submit" name="action">*/}
-                    {/*            Save List(Saving not ready yet)*/}
-                    {/*        </button>*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
 
                 </div>
 

@@ -14,15 +14,10 @@ Final Project Software Developer
 import './EssentialCSS.css';
 
 
-const ElectronicEquipment = ({}) => {
+const ElectronicEquipment = () => {
 
-    const [checked2, setChecked2] = useState(false);
+    const [, setChecked2] = useState(false);
     const [underwearQty, setUnderwearQty] = useState(5);
-
-    function toggle() {
-        setChecked2(checked2 => !checked2)
-    }
-
     function changeQuantity() {
         setUnderwearQty(9);
     }

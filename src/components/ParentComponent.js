@@ -4,8 +4,7 @@ import ChildComponent from "./ChildComponent";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 class ParentComponent extends Component {
     constructor(props) {

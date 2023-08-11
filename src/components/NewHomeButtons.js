@@ -1,14 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
 import {Link} from "react-router-dom";
 import '../allPages.css'
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 New Home Buttons
 Form of the tiles, six tails on Home Page
 */
@@ -19,13 +16,10 @@ const HomeButtons = ({}) => {
 
     useEffect(() => {
         //do something when loading
-        // console.log("signal to do something using useEffect")
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
-            // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
-            // console.log("List of items in the trip", TripData);
             setTripData(TripData);
-            // calculateLastTripId();
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, ["hI trip"]);
 
 

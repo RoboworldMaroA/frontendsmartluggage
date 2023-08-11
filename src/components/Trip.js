@@ -1,12 +1,9 @@
 import React, {Component} from "react";
-import LoginAdminDetail from "./LoginAdminDetail";
-import DeleteCustomerNew from "./DeleteCustomerNew";
 import DisplayCustomerTrip from "./DisplayCustomerTrip";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 export default class Trip extends Component {
     constructor(props) {
@@ -21,14 +18,6 @@ export default class Trip extends Component {
     componentDidMount() {
         fetch('https://smartluggagebackend.herokuapp.com/api/v1/trip').then(response => response.json()).then(data => this.setState({contacts: data}));
     }
-
-
-    //Development Version
-    // componentDidMount(){
-    //     fetch('api/v1/trip').then(response => response.json()).
-    //     then(data => this.setState({contacts: data}));
-    // }
-
 
     render() {
         return (

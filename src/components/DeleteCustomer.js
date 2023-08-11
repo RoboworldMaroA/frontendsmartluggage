@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
-import deleteCustomerNew from "./DeleteCustomerNew";
+
 /* useState is used to set a value  */
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
 */
 //it deletes element when you say what id want to delete
 const DeleteCustomer = ({item}) => {

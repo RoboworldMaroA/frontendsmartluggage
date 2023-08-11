@@ -11,7 +11,7 @@ Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
-const SkiList=({})=>{
+const SkiList=()=>{
 
 
 
@@ -97,18 +97,6 @@ const SkiList=({})=>{
                 <span>Backpack</span>
             </label>
         </p>
-
-
-
-
-        {/*save list button subnit shoul execute function used to saving list on the computer*/}
-        {/*<div className="row">*/}
-        {/*    <Link to="../SaveList">*/}
-        {/*        <button className="waves-effect waves-light btn #795548 brown " type="submit" name="action">*/}
-        {/*            Save List(Saving not ready yet)*/}
-        {/*        </button>*/}
-        {/*    </Link>*/}
-        {/*</div>*/}
 
 
 

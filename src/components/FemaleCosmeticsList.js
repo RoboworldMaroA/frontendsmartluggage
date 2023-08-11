@@ -12,14 +12,14 @@ Final Project Software Developer
 */
 const FemaleCosmeticsList=({})=>{
 
-    const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
-    const [underwearQty, setUnderwearQty] = useState(5);
-    const [passportQty, setPassportQty] = useState(1);
-    const [errorNewItem, setErrorNewItem] = useState("At least one character ");
+    // const [checked2, setChecked2] = useState(false);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [underwearQty, setUnderwearQty] = useState(5);
+    // const [passportQty, setPassportQty] = useState(1);
+    const [, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);
-    const [inputValue, setInputValue] = useState('');
+    const [, setInputValue] = useState('');
 
     const [items, setItems] = useState([
         {itemName: 'Foundation', quantity: 1, isSelected: false, weight: 0.21},
@@ -50,10 +50,6 @@ const FemaleCosmeticsList=({})=>{
             // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItems(JSON.parse(femaleCosmeticsData));
 
-            // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
-            // if ( data !== null ) setItems(JSON.parse(data));
-            // setSelected(JSON.parse(data2));
-            //     console.log('data2',data2);
         }, []
     )
 
@@ -140,14 +136,14 @@ const FemaleCosmeticsList=({})=>{
     };
 
 
-    const validateInputNewItem = (event) => {
-        const newItem = event.target.value;
-        if (newItem) {
-            setErrorNewItem("");
-        }
-        setInputValue(newItem);
-        setErrorNewItem(" ");
-    }
+    // const validateInputNewItem = (event) => {
+    //     const newItem = event.target.value;
+    //     if (newItem) {
+    //         setErrorNewItem("");
+    //     }
+    //     setInputValue(newItem);
+    //     setErrorNewItem(" ");
+    // }
 
 
     const validateChecked = (index) => {

@@ -118,9 +118,9 @@ export const ToDoListComponentsTrip = (props) => {
 
 
 
-    const updateIsDoneTrip = () => {
-        setToDoListTrip({...toDoListTrip, camera: !toDoListTrip.camera});
-    }
+    // const updateIsDoneTrip = () => {
+    //     setToDoListTrip({...toDoListTrip, camera: !toDoListTrip.camera});
+    // }
 
     //grab data from database on the beginning of the loading page and update everytime is change something on the list.
     useEffect(() => {

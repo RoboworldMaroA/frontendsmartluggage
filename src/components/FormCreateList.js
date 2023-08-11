@@ -6,7 +6,7 @@ import 'materialize-css';
 /* useState is used to set a value  */
 //this  function add customer detail during a registration
 import './FormCreateList.css';
-import {mdiAccount, mdiBagCarryOn} from "@mdi/js/commonjs/mdi";
+import {mdiBagCarryOn} from "@mdi/js/commonjs/mdi";
 // Unhidden this import and autocomplete for Google search
 import PlacesAutocomplete from 'react-places-autocomplete';
 /*
@@ -18,38 +18,38 @@ Final Project Software Developer
 
 const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListInfo}) => {
 
-    const [adminPrivileges, setAdminPrivileges] = useState(false);
-    const [autumn, setAutumn] = useState(false);
+    const [adminPrivileges] = useState(false);
+    const [autumn] = useState(false);
     const [beachListStatus, setBeachListStatus] = useState(false);
     const [bus, setBus] = useState(false);
     const [camcorder, setCamcorder] = useState(false);
     const [camera, setCamera] = useState(false);
     const [car, setCar] = useState(false);
     const [departureDay, setDepartureDay] = useState('2022-02-12');
-    const [description, setDescription] = useState('');
+    const [description] = useState('');
     const [ireland, setIreland] = useState(" ");
     const [listId, setListId] = useState('');
     const [largeLuggage, setLargeLuggage] = useState(false);
     const [mediumLuggage, setMediumLuggage] = useState(false);
     const [smallLuggage, setSmallLuggage] = useState(false);
     const [drone, setDrone] = useState(false);//it is drone
-    const [payStatus, setPayStatus] = useState(false);
+    const [payStatus] = useState(false);
     const [returnDay, setReturnDay] = useState('2022-03-01');
     const [tripName, setTripName] = useState('');
-    const [tripPassword, setTripPassword] = useState('');
-    const [weatherId, setWeatherId] = useState('');
+    const [tripPassword] = useState('');
+    const [weatherId] = useState('');
     const [ski, setSki] = useState(false);
     const [trekking, setTrekking] = useState(false);
-    const [documentListStatus, setDocumentListStatus] = useState(true);
-    const [essentialListStatus, setEssentialListStatus] = useState(true);
+    const [documentListStatus] = useState(true);
+    const [essentialListStatus] = useState(true);
     const [plane, setPlane] = useState(false);
     const [poland, setPoland] = useState(false);
     const [spain, setSpain] = useState(false);
-    const [summer, setSummer] = useState(false);
-    const [winter, setWinter] = useState(false);
-    const [spring, setSpring] = useState(false);
+    // const [summer, setSummer] = useState(false);
+    const [winter] = useState(false);
+    // const [spring, setSpring] = useState(false);
     const [train, setTrain] = useState(false);
-    const [id, setId] = useState('');
+    const [id] = useState('');
     const [destination, setDestination] = useState('Spain');
     // const [displayListState , setDisplayListState] = useState(true);
     // const [displayListState , setDisplayListState] = useState(true);
@@ -57,18 +57,10 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
     const [sex, setSex] = useState('');
     const [laptop, setLaptop] = useState(false);
     const [tablet, setTablet] = useState(false);
-    const [numbersOfDaysOnTrip, setNumbersOfDaysOnTrip] = useState(null);
+    // const [numbersOfDaysOnTrip, setNumbersOfDaysOnTrip] = useState(null);
 
-    //Calculation days on the trip
-    // const differenceInDays = () =>{
-    // //     const days= Math.floor(
-    // //     (departureDay.getTime()-returnDay.getTime()) / (1000 * 60 * 60 * 24)
-    // //
-    // //
-    // // )
-    // return setNumbersOfDaysOnTrip(daysValue);}
 
-    const [address, setAddress] = useState("");
+    // const [address, setAddress] = useState("");
 
     //fetch for trip
     const validateCreateList = async (event) => {

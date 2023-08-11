@@ -3,27 +3,6 @@ import {Link} from "react-router-dom";
 
 
 class NavbarHome extends Component {
-    //
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         elems: [],
-    //     };
-    // }
-    // // navbar functionality from Materialize css website
-    // componentDidMount() {
-    //
-    //     document.addEventListener('DOMContentLoaded',
-    //         function () {
-    //             const M = window.M;
-    //
-    //             const elems = document.querySelectorAll('.sidenav');
-    //             const instances = M.Sidenav.init(elems, onclick);
-    //         });
-    // }
-
-
-
 
     render() {
         return (

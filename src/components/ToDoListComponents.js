@@ -6,8 +6,7 @@ import BeachList from "./BeachList";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 const ToDoListComponents = (props) => {
     const [toDoList, setToDoList] = useState(props.data2);
@@ -28,8 +27,6 @@ const ToDoListComponents = (props) => {
     return (
         <div>
 
-
-            {/*<p> User ID {toDoList.id} Name: {toDoList.name} LISTS OF ITEAMS</p>*/}
             <div>
                 <input type="checkbox" checked={toDoList.documentsList}
                        onClick={updateIsDone}/>
@@ -41,13 +38,6 @@ const ToDoListComponents = (props) => {
                        onClick={updateIsDone}/>
                 <span> Display Beach List for user  user {toDoList.id} {toDoList.name} </span>
             </div>
-
-            {/*<div>*/}
-            {/*    <input type="checkbox" checked={toDoListTrip.camera}*/}
-            {/*           onClick={updateIsDoneTrip}/>*/}
-            {/*    <span> Display documents for user  user {toDoListTrip.id} {toDoListTrip.name} </span>*/}
-            {/*</div>*/}
-
 
             <p> Display LIST for USER: ID {toDoList.id} NAME: {toDoList.name}</p>
             <div className="row">

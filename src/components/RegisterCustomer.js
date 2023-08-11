@@ -4,12 +4,10 @@ import React, {useContext, useState} from 'react';
 //css to make a style on this class
 import './RegisterCustomer.css';
 import {useNavigate} from "react-router-dom";
-// import {UserContext} from "../UserContext";
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+
 */
 const AddDetail = ({setCustomerInfo: setInfo}) => {
 

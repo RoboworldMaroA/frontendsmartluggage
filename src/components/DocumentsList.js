@@ -9,11 +9,11 @@ Final Project Software Developer
 */
 const DocumentsList = ({}) => {
 
-    const [checked2, setChecked2] = useState(false);
+    const [, setChecked2] = useState(false);
 
-    function toggle() {
-        setChecked2(checked2 => !checked2)
-    }
+    // function toggle() {
+    //     setChecked2(checked2 => !checked2)
+    // }
 
 
     return (

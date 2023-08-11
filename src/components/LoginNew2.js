@@ -8,38 +8,37 @@ import './LoginNew2.css';
 ### KEEP ###
 SmartLuggage Application
 Marek Augustyn
-07 June 2023
-Final Project Software Developer
+
 This is working login with verification on the backend
 */
 
 export const LoginNew2 = ({setUserData: setUser}) => {
     const navigate = useNavigate();
 
-    const [userPassword, setUserPassword] = useState("");
-    const [isError, setIsError] = useState('');
-    const [passwordErrorEmpty, setPasswordErrorEmpty] = useState("");
-    const [passwordError, setPasswordError] = useState(true);
+    // const [userPassword, setUserPassword] = useState("");
+    const [isError] = useState('');
+    const [passwordErrorEmpty] = useState("");
+    const [passwordError] = useState(true);
 
 
-    const [isErrorEmail, setIsErrorEmail] = useState('');
-    const [emailErrorEmpty, setEmailErrorEmpty] = useState("");
-    const [emailError, setEmailError] = useState(true);
+    const [isErrorEmail] = useState('');
+    const [emailErrorEmpty] = useState("");
+    const [emailError] = useState(true);
 
     // const {value, setValue} = useContext(UserContext);
 
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
-    const [active, setActive] = useState(true);
-    const [roles, setRoles] = useState("ROLE_ADMIN");
+    const [active] = useState(true);
+    const [roles] = useState("ROLE_ADMIN");
 
-    const [userAddress, setUserAddress] = useState("");
-    const [userDob, setUserDob] = useState("");
-    const [userEmail, setUserEmail] = useState("");
-    const [userPhoneNumber, setUserPhoneNumber] = useState("");
-    const [userSurname, setUserSurname] = useState("");
-    const [userVerified, setUserVerified] =useState("No");
+    const [userAddress] = useState("");
+    const [userDob] = useState("");
+    const [userEmail] = useState("");
+    const [userPhoneNumber] = useState("");
+    const [userSurname] = useState("");
+    // const [userVerified, setUserVerified] =useState("No");
 
     // fetch user data from backend
     const loginUser = async () => {

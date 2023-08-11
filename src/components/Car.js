@@ -11,14 +11,15 @@ Final Project Software Developer
 */
 const Car = ({}) => {
 
-    const [checked2, setChecked2] = useState(false);
-    const [maskWeight, setMaskWeight] = useState(0.02);
-    const [underwearQty, setUnderwearQty] = useState(5);
-    const [passportQty, setPassportQty] = useState(1);
+    // const [checked2, setChecked2] = useState(false);
+    // const [maskWeight, setMaskWeight] = useState(0.02);
+    // const [underwearQty, setUnderwearQty] = useState(5);
+    // const [passportQty, setPassportQty] = useState(1);
+    // eslint-disable-next-line no-unused-vars
     const [errorNewItem, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);
-    const [inputValue, setInputValue] = useState('');
+    const [, setInputValue] = useState('');
 
     const [items, setItems] = useState([
         {itemName: 'GPS Device', quantity: 0, isSelected: false, weight: 0.1},
