@@ -4,15 +4,16 @@
 
 import React, { useRef, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
-// 1. TODO - Import required model here
+// Import required model
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 // import "./App.css";
-// 2. TODO - Import drawing utility here
+// Import drawing utility
 // e.g. import { drawRect } from "./utilities";
 import {drawRect} from "./utilities";
-
+//import css
+import "./CameraObjectDetectionCSS.css"
 
 const CameraObjectDetection = (props) => {
 
@@ -21,7 +22,7 @@ const CameraObjectDetection = (props) => {
 
     // Main function
     const runCoco = async () => {
-        // 3. TODO - Load network
+        //Load Network
         // e.g. const net = await cocossd.load();
         const net = await cocoSsd.load();
 
@@ -51,7 +52,7 @@ const CameraObjectDetection = (props) => {
             canvasRef.current.width = videoWidth;
             canvasRef.current.height = videoHeight;
 
-            // 4. TODO - Make Detections
+            // 4. Make Detections
             // e.g. const obj = await net.detect(video);
             const obj = await net.detect(video);
 
@@ -59,7 +60,7 @@ const CameraObjectDetection = (props) => {
             // Draw mesh
             const ctx = canvasRef.current.getContext("2d");
 
-            // 5. TODO - Update drawing utility
+            // 5. Update drawing utility
             // drawSomething(obj, ctx)
             drawRect(obj, ctx);
         }
@@ -86,22 +87,9 @@ const CameraObjectDetection = (props) => {
                         </button>
                 </div>
 
-            {/*</div>*/}
-
-                    <Webcam
+                    <Webcam id="webcam"
                         ref={webcamRef}
                         muted={true}
-                        style={{
-                            position: "absolute",
-                            marginLeft: "auto",
-                            marginRight: "auto",
-                            left: 0,
-                            right: 0,
-                            textAlign: "center",
-                            zindex: 9,
-                            width: 280,
-                            height: 240,
-                        }}
                     />
 
                     <canvas
@@ -110,6 +98,7 @@ const CameraObjectDetection = (props) => {
                             position: "absolute",
                             marginLeft: "auto",
                             marginRight: "auto",
+                            marginTop:"35px",
                             left: 0,
                             right: 0,
                             textAlign: "center",

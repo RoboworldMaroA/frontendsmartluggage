@@ -12,8 +12,9 @@ export const drawRect = (detections, ctx) => {
 
         //set styling
         const color ='red'
+        ctx.overlineThickness = 10;
         ctx.strokeStyle = color
-        ctx.font = '22px Arial'
+        ctx.font = '36px Arial'
         ctx.fillStyle = color
 
         //draw rectangles and text
