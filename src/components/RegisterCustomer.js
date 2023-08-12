@@ -39,7 +39,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
     const [userAddress, setUserAddress] = useState('');
     const [password, setPassword] = useState('');
     const [customerPasswordAgain, setCustomerPasswordAgain] = useState('');
-    const [emailIsVerified, setEmailIsVerified] = useState(false);
+    // const [emailIsVerified, setEmailIsVerified] = useState(false);
     const [isError, setIsError] = useState('');
     const [isErrorFetchMethod, setIsErrorFetchMethod] = useState(null);
     const [passwordError, setPasswordError] = useState(null);
@@ -47,8 +47,8 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
 
     // const {value, setValue} = useContext(UserContext);
 
-    const [roles, setRoles] = useState("ROLE_USER");
-    const [active, setActive] = useState(true);
+    const [roles] = useState("ROLE_USER");
+    const [active] = useState(true);
 
 
     //fetch customer data, for Testing Purposes

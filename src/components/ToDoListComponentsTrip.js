@@ -47,26 +47,26 @@ export const ToDoListComponentsTrip = (props) => {
     //401 authentication problem
     //404 not response from server
 
-    const [query, setQuery]  = useState(toDoListTrip.destination)
+    const [query]  = useState(toDoListTrip.destination)
     const apiKey = "c2e36602e3663d39200830396e06670a"
-    const weather2 = async () => {
-        const result2 = await
-            fetch("https://api.openweathermap.org/data/2.5/weather?q="+query+apiKey,
-             ).
-            then(resp=>
-            {
-                console.log("display response after post")  ;
-                console.log(resp)  ;
-                console.log("Display Status Code:  "+resp.status)  ;
-                if(!resp.ok){
-                    console.log("Something wrong");
-                }
-                else{
-                    console.log("I have got data from weather API All good")
-                }
-            }
-            );
-    }//end fetch login function
+    // const weather2 = async () => {
+    //     const result2 = await
+    //         fetch("https://api.openweathermap.org/data/2.5/weather?q="+query+apiKey,
+    //          ).
+    //         then(resp=>
+    //         {
+    //             console.log("display response after post")  ;
+    //             console.log(resp)  ;
+    //             console.log("Display Status Code:  "+resp.status)  ;
+    //             if(!resp.ok){
+    //                 console.log("Something wrong");
+    //             }
+    //             else{
+    //                 console.log("I have got data from weather API All good")
+    //             }
+    //         }
+    //         );
+    // }//end fetch login function
 
 
     //this async function return JSON object Data from API with details of the weather
@@ -129,20 +129,20 @@ export const ToDoListComponentsTrip = (props) => {
 
 
     const [irelandStatus, setIrelandStatus] = useState(false);
-    const updateIrelandStatus = (event) => {
-        const trip = ireland;
-        const irlStatus = irelandStatus;
-        if (trip === "1") {
-            setIrelandStatus(true);
-            // console.log("irlStatus is:(in if trip =1) ", irlStatus);
-        }
-
-        if (trip === "0") {
-            setIrelandStatus(false);
-            //setIrelandState("1");
-            // console.log("irlStatus is:(in if trip =0) ", irlStatus);//test only
-        }
-    }
+    // const updateIrelandStatus = (event) => {
+    //     const trip = ireland;
+    //     const irlStatus = irelandStatus;
+    //     if (trip === "1") {
+    //         setIrelandStatus(true);
+    //         // console.log("irlStatus is:(in if trip =1) ", irlStatus);
+    //     }
+    //
+    //     if (trip === "0") {
+    //         setIrelandStatus(false);
+    //         //setIrelandState("1");
+    //         // console.log("irlStatus is:(in if trip =0) ", irlStatus);//test only
+    //     }
+    // }
 
     useEffect(() => {
         // console.log("Camera was updated state is:", toDoListTrip.camera
@@ -692,7 +692,7 @@ export const ToDoListComponentsTrip = (props) => {
                         {toDoListTrip.destination === 0 ? null : toDoListTrip.destination}: {toDoListTrip.departureDay} to {toDoListTrip.returnDay}
                             {/*Check if weather is empty, if is empty then do not display anything if not then display data from API*/}
                             <div id="weatherWidgetToDoListComponentTrip">
-                                    <p>{weather===null?null:weather.weather[0].description}</p>
+                                    <p><img alt={weather===null?null:weather.weather[0].description}/> </p>
                                     <p>Temperature: {weather===null?null:weather.main.temp} Degree</p>
                                     <p><img src={weather===null?null:"https://openweathermap.org/img/wn/"+icon+"@2x.png"}/></p>
                             </div>

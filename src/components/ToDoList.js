@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 SmartLuggage Application
 Marek Augustyn
 */
-const ToDoList = ({}) => {
+const ToDoList = () => {
 
 
     const [checked2, setChecked2] = useState(false);
