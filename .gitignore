@@ -11,6 +11,9 @@
 # production
 /build
 /package.json
+/packageDeploy.json
+/packageDeployment.json
+/packageDevelopment.json
 
 # misc
 .DS_Store
