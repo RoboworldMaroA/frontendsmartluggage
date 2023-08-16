@@ -95,6 +95,7 @@ export const DisplayListFunctionalComponent = (props) => {
             setTripData(TripData);
             // calculateLastTripId();
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, ["hI trip"]);
 
 

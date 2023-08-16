@@ -26,7 +26,7 @@ Marek Augustyn
 05 August 2023
 Smart Luggage App, Component responsible for display the User List according to user preferences
 */
-//i moved data from a component Display state component, and
+//Moved data from a component Display state component, and
 // I can add here what I want to do when I click a checkboxes
 export const ToDoListComponentsTrip = (props) => {
     const [toDoListTrip, setToDoListTrip] = useState(props.dataTrip2);
@@ -692,7 +692,7 @@ export const ToDoListComponentsTrip = (props) => {
                         {toDoListTrip.destination === 0 ? null : toDoListTrip.destination}: {toDoListTrip.departureDay} to {toDoListTrip.returnDay}
                             {/*Check if weather is empty, if is empty then do not display anything if not then display data from API*/}
                             <div id="weatherWidgetToDoListComponentTrip">
-                                    <p><img alt={weather===null?null:weather.weather[0].description}/> </p>
+                                    <p> {weather===null?null:weather.weather[0].description} </p>
                                     <p>Temperature: {weather===null?null:weather.main.temp} Degree</p>
                                     <p><img src={weather===null?null:"https://openweathermap.org/img/wn/"+icon+"@2x.png"}/></p>
                             </div>
