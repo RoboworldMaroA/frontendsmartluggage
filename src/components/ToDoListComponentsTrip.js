@@ -39,6 +39,8 @@ export const ToDoListComponentsTrip = (props) => {
     const [weather, setWeather] = useState(null);
     //Keep icon data
     const [icon, setIcon] = useState("")
+
+
     // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/10d@2x.png")
     // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/"+icon+"@2x.png")
 
@@ -69,48 +71,57 @@ export const ToDoListComponentsTrip = (props) => {
     // }//end fetch login function
 
 
-    //this async function return JSON object Data from API with details of the weather
-    const weather3 = async () => {
-        const result2 = await
-            fetch("https://api.openweathermap.org/data/2.5/weather?q="+query+"&APPID="+apiKey+"&units=metric",
-            ).
-                then(
-                    (resp2 => {
-                        resp2.json().then(d=>{
-                            // console.log(" JSON format API response")
-                            // console.log(d)
-                            // console.log(d.main.temp + " Celsius Degree")
-                            // console.log(d.cod + " I think status response")
-                            // console.log(d.weather[0].description + " Description")
-                            // console.log(d.weather[0].icon + " Icon")
-                            //Store icon data in the variable
 
-                            if(!resp2.ok){
-                                console.log("something went wrong");
-                            }
-                            else{
-                                setIcon(d.weather[0].icon);
-                                setWeather(d);
-                            }
+
+        //this async function return JSON object Data from API with details of the weather
+        const weather3 = async () => {
+            const result2 = await
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=" + query + "&APPID=" + apiKey + "&units=metric",
+                ).then(
+                    (resp2 => {
+                        resp2.json().then(d => {
+                                // console.log(" JSON format API response")
+                                // console.log(d)
+                                // console.log(d.main.temp + " Celsius Degree")
+                                // console.log(d.cod + " I think status response")
+                                // console.log(d.weather[0].description + " Description")
+                                // console.log(d.weather[0].icon + " Icon")
+                                //Store icon data in the variable
+                                let countNumberOfCall = 0;
+                                if (!resp2.ok) {
+                                    console.log("Something went wrong.");
+                                } else {
+                                    setIcon(d.weather[0].icon);
+                                    setWeather(d);
+                                    countNumberOfCall++;
+                                    // console.log(countNumberOfCall);
+                                    // if (countNumberOfCall > 3) {
+                                    //     setTimeout(d.callee, 6000)
+                                    // }
+                                }
 
 
                             }
                         )
                     })
                 );
-    }//end fetch login function
+
+        }//end fetch login function
 
 
 
-    //run function verifyWeather if the
 
+    //Check the weather and later every 20 seconds
 
-
-    const verifyWeather = () => {
-        // event.preventDefault();
-        // window.alert("Checking a weather");
-        return weather3();
-    }
+    useEffect(() => {
+        weather3();
+        const intervalCall = setInterval(()=>{
+            weather3();}
+            ,20000);
+        return () => {
+            clearInterval(intervalCall);
+        }
+    }, []); // 👈️ empty dependencies array
 
 
 
@@ -687,7 +698,7 @@ export const ToDoListComponentsTrip = (props) => {
     return (
         <div>
             <div className="row" >
-                <div onChange={toDoListTrip.destination === 0 ? null : verifyWeather()} id="titleListToDoListID" className="col s12 m12">
+                <div onChange={toDoListTrip.destination === 0 ? null : "Destination"} id="titleListToDoListID" className="col s12 m12">
                     <p id="listOfItemsInToDoListComponent">
                         {toDoListTrip.destination === 0 ? null : toDoListTrip.destination}: {toDoListTrip.departureDay} to {toDoListTrip.returnDay}
                             {/*Check if weather is empty, if is empty then do not display anything if not then display data from API*/}
