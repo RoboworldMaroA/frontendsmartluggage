@@ -109,8 +109,8 @@ const CameraObjectDetection = (props) => {
                             right: 0,
                             textAlign: "center",
                             zindex: 8,
-                            width: 280,
-                            height: 240,
+                            width: 290,
+                            height: 255,
                         }}
                     />
 
