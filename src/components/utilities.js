@@ -23,6 +23,10 @@ export const drawRect = (detections, ctx) => {
         ctx.rect(x, y, width, height)
         ctx.stroke()
 
+        if(text === "cell phone"){
+            alert("Do you want to add a " +text + " to the bag?")
+        }
+
 
     })
 

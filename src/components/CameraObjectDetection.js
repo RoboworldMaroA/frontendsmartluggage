@@ -63,6 +63,8 @@ const CameraObjectDetection = (props) => {
             // 5. Update drawing utility
             // drawSomething(obj, ctx)
             drawRect(obj, ctx);
+
+
         }
     };
 
