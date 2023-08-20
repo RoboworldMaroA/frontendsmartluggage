@@ -43,12 +43,12 @@ export default class CreateList extends Component{
 
     render() {
         return (
-            <div>
+            <>
                 <div className="row">
                     <FormCreateList/>
                 </div>
 
-            </div>
+            </>
 
         )
     }

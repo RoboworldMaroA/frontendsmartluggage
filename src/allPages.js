@@ -42,7 +42,6 @@ export function Home() {
              //     backgroundSize: "cover", opacity: 0.98,
              //
              // }}
-
         >
 
             {/*<div className="row">*/}
@@ -139,20 +138,21 @@ export function CustomerPickListsToDisplay() {
 
 export function CreateCustomerList() {
 
-    return (<div id="createCustomerListPackYourLuggage" className="container-fluid">
-        <div className="container">
-            <div className="row">
-                <div className="col s2"></div>
-                <div className="col s8">
-                    <p id="PageTitle"> PACK YOUR LUGGAGE</p>
+    return (
+        <div id="createCustomerListPackYourLuggage" className="container-fluid">
+            <div className="container">
+                <div className="row">
+                    <div className="col s2"></div>
+                    <div className="col s8">
+                        <p id="PageTitle"> PACK YOUR LUGGAGE</p>
+                    </div>
+                    <div className="col s2"></div>
                 </div>
-                <div className="col s2"></div>
             </div>
-        </div>
-        <div className="row">
-            <CreateList/>
-        </div>
-    </div>);
+            <div className="row">
+                <CreateList/>
+            </div>
+        </div>);
 }
 
 

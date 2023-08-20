@@ -40,7 +40,6 @@ export const ToDoListComponentsTrip = (props) => {
     //Keep icon data
     const [icon, setIcon] = useState("")
 
-
     // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/10d@2x.png")
     // const [imageWeatherUrl,setImageWeatherUrl] =useState("https://openweathermap.org/img/wn/"+icon+"@2x.png")
 

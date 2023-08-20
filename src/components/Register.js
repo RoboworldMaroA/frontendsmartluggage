@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import RegisterCustomer from "./RegisterCustomer";
+
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -20,6 +21,8 @@ export default class Register extends Component {
         // fetch('displayUsers').then(response => response.json()).
         fetch('https://smartluggagebackend.herokuapp.com/displayUsers').then(response => response.json()).then(data => this.setState({contacts: data}));
     }
+
+
 
     render() {
         return (

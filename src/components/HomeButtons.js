@@ -10,7 +10,7 @@ Marek Augustyn
 
 const HomeButtons = () => {
 
-    const [, setTripData] = useState([]);
+    const [tripData, setTripData] = useState([]);
 
     useEffect(() => {
         fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {

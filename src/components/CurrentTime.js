@@ -2,7 +2,13 @@
 import React, {useEffect, useState} from 'react';
 import '../allPages.css'
 
+
+
+
 const CurrentTime = () => {
+
+
+
 
     let today = new Date();
     const todayDate = today.toLocaleDateString();
@@ -39,11 +45,12 @@ const CurrentTime = () => {
     }
 
 return (
+ <div>
 
+       {/*<h1 class="Date2"> jjjjj</h1>*/}
+        <p  id={"Date"}> Today is {day} {todayDate}. It time to pack your luggage ;-) </p>
 
-        <p id={ "Date"}> Today is {day} {todayDate}. It time to pack your luggage ;-) </p>
-
-
+ </div>
 
 
 )

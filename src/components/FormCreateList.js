@@ -18,15 +18,24 @@ Final Project Software Developer
 
 const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListInfo}) => {
 
-    const [adminPrivileges] = useState(false);
-    const [autumn] = useState(false);
+
+    // let today = new Date().toLocaleDateString('en-GB');
+
+    // let year = today.toLocaleDateString({year:'numeric'});
+    // let month = today.toLocaleDateString('default',{month:'numeric'});
+    // let day = today.toLocaleDateString('default',{day:'numeric'});
+    // let newFormatDay = [year,month,day].join('-');
+    // console.log("new format date  "+newFormatDay.toString())
+
+    const [adminPrivileges,setAdminPrivileges] = useState(false);
+    const [autumn,setAutumn] = useState(false);
     const [beachListStatus, setBeachListStatus] = useState(false);
     const [bus, setBus] = useState(false);
     const [camcorder, setCamcorder] = useState(false);
     const [camera, setCamera] = useState(false);
     const [car, setCar] = useState(false);
-    const [departureDay, setDepartureDay] = useState('2022-02-12');
-    const [description] = useState('');
+    const [departureDay, setDepartureDay] = useState('2023-08-18');
+    const [description,setDescription] = useState('');
     const [ireland, setIreland] = useState(" ");
     const [listId, setListId] = useState('');
     const [largeLuggage, setLargeLuggage] = useState(false);
@@ -34,22 +43,22 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
     const [smallLuggage, setSmallLuggage] = useState(false);
     const [drone, setDrone] = useState(false);//it is drone
     const [payStatus] = useState(false);
-    const [returnDay, setReturnDay] = useState('2022-03-01');
+    const [returnDay, setReturnDay] = useState('2023-08-18');
     const [tripName, setTripName] = useState('');
     const [tripPassword] = useState('');
     const [weatherId] = useState('');
     const [ski, setSki] = useState(false);
     const [trekking, setTrekking] = useState(false);
-    const [documentListStatus] = useState(true);
-    const [essentialListStatus] = useState(true);
+    const [documentListStatus, setDocumentListStatus] = useState(true);
+    const [essentialListStatus, setEssentialListStatus] = useState(true);
     const [plane, setPlane] = useState(false);
     const [poland, setPoland] = useState(false);
     const [spain, setSpain] = useState(false);
     // const [summer, setSummer] = useState(false);
-    const [winter] = useState(false);
+    const [winter, setWinter] = useState(false);
     // const [spring, setSpring] = useState(false);
     const [train, setTrain] = useState(false);
-    const [id] = useState('');
+    const [id, setId] = useState('');
     const [destination, setDestination] = useState('Spain');
     // const [displayListState , setDisplayListState] = useState(true);
     // const [displayListState , setDisplayListState] = useState(true);
@@ -528,40 +537,6 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
                         </p>
                     </div>
                 </div>
-
-
-                {/*<div className="row">*/}
-                {/*    <div className="input-field col s10">*/}
-                {/*        <i className="material-icons prefix">target</i>*/}
-                {/*        <label><p id="destinationInFormCreateList">DESTINATION:</p></label>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
-                {/*<div className="row">*/}
-                {/*    <div className="input-field col s10">*/}
-                {/*        <p>*/}
-                {/*            <label>*/}
-                {/*                <input type="checkbox" className="filled-in" value={ireland.toString()}*/}
-                {/*                       onClick={toggleIreland}/>*/}
-                {/*                <span>Ireland</span>*/}
-                {/*                /!*<div>{ireland}</div>*!/*/}
-                {/*            </label><br/>*/}
-                {/*            <label>*/}
-                {/*                <input type="checkbox" className="filled-in" value={spain.toString()}*/}
-                {/*                       onClick={toggleSpain}/>*/}
-                {/*                <span>Spain</span>*/}
-                {/*                /!*<div>{spain.toString()}</div>*!/*/}
-                {/*            </label><br/>*/}
-                {/*            <label>*/}
-                {/*                <input type="checkbox" className="filled-in" value={poland.toString()}*/}
-                {/*                       onClick={togglePoland}/>*/}
-                {/*                <span>Poland</span>*/}
-                {/*                /!*<div>{poland.toString()}</div>*!/*/}
-                {/*            </label>*/}
-                {/*        </p>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
 
                 <div className="row">
                     <div className="input-field col s10">

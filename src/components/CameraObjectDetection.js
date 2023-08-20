@@ -69,6 +69,10 @@ const CameraObjectDetection = (props) => {
     useEffect(()=>{runCoco().then(r => {})},[runCoco]);
 
 
+    function turnOffCamera()  {
+        console.log("button clicked");
+
+    };
 
 
     return (
@@ -78,7 +82,7 @@ const CameraObjectDetection = (props) => {
 
             <div className="col s10 ">
                 {/*Button Camera*/}
-                <div id="cameraObjectDetectionButton">
+                <div onClick={() => turnOffCamera()} id="cameraObjectDetectionButton">
                         <button id="buttonSizeCamera"
                                 className="btn waves-effect waves-light #5d4037 brown darken-1">
                             <div id="cameraIconAndName">

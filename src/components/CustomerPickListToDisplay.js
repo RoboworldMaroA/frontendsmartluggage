@@ -7,7 +7,7 @@ Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
-const CustomerPickListToDisplay = ({}) => {
+const CustomerPickListToDisplay = () => {
 
     return (
         //Description of the list
