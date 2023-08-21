@@ -12,8 +12,7 @@ import './DisplayListComponent.css';
 /*
 SmartLuggage Application
 Marek Augustyn
-12 May 2022
-Final Project Software Developer
+Display list of items created  base on the user preferences
 */
 export const DisplayListFunctionalComponent = (props) => {
 

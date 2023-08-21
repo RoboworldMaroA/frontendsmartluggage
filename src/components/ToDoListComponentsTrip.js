@@ -19,12 +19,13 @@ import CamcorderEquipmentsList from "./CamcorderEquipmentsList";
 import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
+import {Link} from "react-router-dom";
 
 /*
 SmartLuggage Application
 Marek Augustyn
 05 August 2023
-Smart Luggage App, Component responsible for display the User List according to user preferences
+Smart Luggage App, Component responsible for display the User List according to the user preferences
 */
 //Moved data from a component Display state component, and
 // I can add here what I want to do when I click a checkboxes
@@ -841,6 +842,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonEquipments()}>add</i>
+                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
+                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
                                         <div>{errorNewItemEquipments}</div>
                                         <div className='total'>Total Items: {totalItemCountEquipments}</div>
                                         <div className='total'>Total Weight: {totalItemWeightEquipments} kg.</div>
@@ -976,6 +979,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonAccessories()}>add</i>
+                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
+                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
                                         <div>{errorNewItem}</div>
                                         <div className='total'>Total Items: {totalItemCount}</div>
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
@@ -1097,6 +1102,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonClothes()}>add</i>
+                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
+                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
                                         <div>{errorNewItemClothes}</div>
                                         <div className='total'>Total Items: {totalItemCountClothes}</div>
                                         <div className='total'>Total Weight: {totalItemWeightClothes} kg.</div>
@@ -1210,6 +1217,8 @@ export const ToDoListComponentsTrip = (props) => {
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonCosmetics()}>add</i>
+                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
+                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
                                         <div>{errorNewItemCosmetics}</div>
                                         <div className='total'>Total Items: {totalItemCountCosmetics}</div>
                                         <div className='total'>Total Weight: {totalItemWeightCosmetics} kg.</div>
