@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import ToDoListComponentsTrip from "./components/ToDoListComponentsTrip";
-import {Link} from "react-router-dom";
-import DisplayCustomerTrip from "./components/DisplayCustomerTrip";
+
 /* useState is used to set a value  */
 import './components/DisplayListComponent.css';
-import DisplayListFuctionalComponent from "./components/DisplayListFuctionalComponent";
-//It is new display contacts and delete on the bottom with  option to it delete
+
+//It is new display contacts and , there is also implemented delete button on the bottom
+//Do we  need to fetch data from the customer or from the user ?
+// At the moment I fetch data from the customer in this component, but I think this is wrong,
+// I should fetch data from the user because I added to the database when I was registering
 /*
 SmartLuggage Application
 Marek Augustyn

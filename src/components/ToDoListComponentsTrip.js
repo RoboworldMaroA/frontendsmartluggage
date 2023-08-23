@@ -20,7 +20,9 @@ import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
 import {Link} from "react-router-dom";
+import CameraObjectDetection from "./CameraObjectDetection";
 
+import {camera} from "./Utilities";
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -200,6 +202,13 @@ export const ToDoListComponentsTrip = (props) => {
         // },[passportQty]
 
     )
+
+
+    // function byCamera() {
+    //     const value = camera();
+    //     handleAddItemButtonEquipments();
+    // }
+
 
     // function to add a new item
     const handleAddItemButtonEquipments = () => {
@@ -778,6 +787,8 @@ export const ToDoListComponentsTrip = (props) => {
                                         </div>
 
 
+
+
                                         {/*Clothes additional items*/}
                                         {/*<div className='item-list'>*/}
                                             {itemsEquipments.map((itemEquipments, index) => (
@@ -984,6 +995,12 @@ export const ToDoListComponentsTrip = (props) => {
                                         <div>{errorNewItem}</div>
                                         <div className='total'>Total Items: {totalItemCount}</div>
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
+
+                                        {/*<div>*/}
+                                        {/*    <CameraObjectDetection/>*/}
+
+
+                                        {/*</div>*/}
                                     </div>
                                 </form>
                             {/*</div>*/}

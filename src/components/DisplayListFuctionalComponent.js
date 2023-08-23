@@ -155,10 +155,6 @@ export const DisplayListFunctionalComponent = (props) => {
                 <DisplayStateOfCustomerList/>
             </div>
 
-            {/*IN THIS LINE IS VISIBLE VALUE FROM THE ANOTHER COMPONENT THAT YOU CAN SHARE*/}
-            {/*<div className="row"> <h2>Element from useContext {value}</h2></div>*/}
-            {/*<div> Trip ID {tripId.length}</div>*/}
-
             <div id="fourButtonsToDisplayListDetail" className="row">
 
 
@@ -167,16 +163,6 @@ export const DisplayListFunctionalComponent = (props) => {
                     <button className="waves-effect waves-light btn #795548 brown "
                             onClick={() => changeStatus()}> Details Trip 1
                     </button>
-                    {/*<div>*/}
-                    {/*    {displayTripDetail*/}
-                    {/*        ? tripData.map((TripData) => {*/}
-                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                    {/*        }):"... press to see more detail about a trips"}*/}
-                    {/*    /!*end*!/*/}
-                    {/*</div>*/}
-                    {/*<div className="row">*/}
-                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                    {/*</div>*/}
 
                 </div>
                 <div>
@@ -197,16 +183,6 @@ export const DisplayListFunctionalComponent = (props) => {
                     <button className="waves-effect waves-light btn #795548 brown "
                             onClick={() => changeStatus2()}> Details Trip 2
                     </button>
-                    {/*<div>*/}
-                    {/*    {displayTripDetail*/}
-                    {/*        ? tripData.map((TripData) => {*/}
-                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                    {/*        }):"... press to see more detail about a trips"}*/}
-                    {/*    /!*end*!/*/}
-                    {/*</div>*/}
-                    {/*<div className="row">*/}
-                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                    {/*</div>*/}
                 </div>
 
                 <div>
@@ -227,16 +203,6 @@ export const DisplayListFunctionalComponent = (props) => {
                     <button className="waves-effect waves-light btn #795548 brown "
                             onClick={() => changeStatus3()}> Details Trip 3
                     </button>
-                    {/*<div>*/}
-                    {/*    {displayTripDetail*/}
-                    {/*        ? tripData.map((TripData) => {*/}
-                    {/*                return (<DisplayCustomerTrip key={TripData.id} item={TripData}/>);*/}
-                    {/*        }):"... press to see more detail about a trips"}*/}
-                    {/*    /!*end*!/*/}
-                    {/*</div>*/}
-                    {/*<div className="row">*/}
-                    {/*<button className="waves-effect waves-light btn #795548 brown "  onClick={()=> changeStatus()} >  Display Trip Detail </button>*/}
-                    {/*</div>*/}
                 </div>
 
                 <div>
@@ -264,7 +230,7 @@ export const DisplayListFunctionalComponent = (props) => {
                     <div className="input-field col s10 m6 l6 offset-s1">
                         <input placeholder="Input Trip ID" type="text"
                                onChange={(event => setTripId(event.target.value))} className="validate"/>
-                        {/*<label htmlFor="What Id want you display">User inserted Trip ID: {tripId}</label>*/}
+                        {/*<label htmlFor="What ID want you display">User inserted Trip ID: {tripId}</label>*/}
                     </div>
                 </div>
 

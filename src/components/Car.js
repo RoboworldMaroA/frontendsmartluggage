@@ -1,20 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {type} from "@testing-library/user-event/dist/type";
-import {checkNode} from "@testing-library/jest-dom/dist/utils";
 import './toDoListCSS.css';
-import {Link} from "react-router-dom"
+
 /*
 SmartLuggage Application
 Marek Augustyn
 12 May 2022
 Final Project Software Developer
 */
+// eslint-disable-next-line no-empty-pattern
 const Car = ({}) => {
 
-    // const [checked2, setChecked2] = useState(false);
-    // const [maskWeight, setMaskWeight] = useState(0.02);
-    // const [underwearQty, setUnderwearQty] = useState(5);
-    // const [passportQty, setPassportQty] = useState(1);
     // eslint-disable-next-line no-unused-vars
     const [errorNewItem, setErrorNewItem] = useState("At least one character ");
 
@@ -34,24 +29,18 @@ const Car = ({}) => {
     useEffect(() => {
 
             const carData = window.localStorage.getItem('CAR_DATA');
-            // if ( data !== null ) setPassportQty(JSON.parse(data));
             setItems(JSON.parse(carData));
 
-            // const data2 = window.localStorage.getItem('ITEM_CHECKED_ESSENTIAL');
-            // if ( data !== null ) setItems(JSON.parse(data));
-            // setSelected(JSON.parse(data2));
-            //     console.log('data2',data2);
         }, []
     )
 
 
     //save data to local storage
     useEffect(() => {
-            // console.log(items);
             window.localStorage.setItem('CAR_DATA', JSON.stringify(items));
 
         }, [items]
-        // },[passportQty]
+
 
     )
 
@@ -63,8 +52,6 @@ const Car = ({}) => {
         setItems(newItems);
         calculateTotal();
         calculateTotalWeight();
-
-        // event.preventDefault();
 
     }
 

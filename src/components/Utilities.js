@@ -2,7 +2,19 @@
 //Utilities component is used for vision system
 //this component is hidden on heroku because it takes too many resources ,
 // I deployed to DigitalOcean cloud with pro option 2GB RAM
+import {useState} from "react";
+
+
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+// const [cameraObject, setCameraObject] =  useState("");
+
+// export function camera(text){
+//
+//     let valueFromCamera="text";
+// }
 export const drawRect = (detections, ctx) => {
+
 
 
     detections.forEach(predictions => {
@@ -24,7 +36,13 @@ export const drawRect = (detections, ctx) => {
         ctx.stroke()
 
         if(text === "cell phone"){
-            alert("Do you want to add a " +text + " to the bag?")
+            alert("Do you want to add a " +text + " to the bag?");
+            //Implement ADD THIS text Value to the component ToDoListComponentTrip
+            //useStateNot working error
+            // setCameraObject(text);
+            // camera(text);
+
+
         }
 
 

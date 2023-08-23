@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import './allPages.css';
 import CreateList from "./components/CreateList";
 import Register from "./components/Register";
 import LoginAdmin from "./components/LoginAdmin";
 import Pay from "./components/Pay";
 import LoginNew2 from "./components/LoginNew2";
-// import {UserContext} from "./UserContext";
 import DisplayListFunctionalComponent from "./components/DisplayListFuctionalComponent";
 import Help from "./components/Help";
 import ManageDestinationFunctionalComponent from "./components/ManageDestinationFuctionalComponent";
@@ -44,9 +43,7 @@ export function Home() {
              // }}
         >
 
-            {/*<div className="row">*/}
-            {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
-            {/*</div>*/}
+
             <CurrentTime/>
             <HomeButtons/>
         </div>
@@ -56,13 +53,12 @@ export function Home() {
 
 
 export function LoginPage() {
-    const [value, setValue] = useState("");
     return (<body>
     <div id="loginPage" className="container-fluid">
         <div id="loginContainer">
-            {/*<UserContext.Provider value ={{value,setValue}}>*/}
+
             <LoginNew2/>
-            {/*</UserContext.Provider>*/}
+
         </div>
         <br/>
     </div>
@@ -73,7 +69,6 @@ export function LoginPage() {
 
 
 export function RegisterPage() {
-    const [value, setValue] = useState("Hello from context");
     return (<div id="registerPage" className="container-fluid"
     >
 
@@ -90,9 +85,7 @@ export function RegisterPage() {
 
         <div className="row">
 
-            {/*<UserContext.Provider value ={{value,setValue}}>*/}
             <Register/>
-            {/*</UserContext.Provider>*/}
 
         </div>
     </div>);
@@ -158,8 +151,6 @@ export function CreateCustomerList() {
 
 export function DisplayTravelerList() {
 
-    const [value, setValue] = useState("Hello from context");
-
     return (<div id={"DisplayListFirstPage"}>
         <div className="container-fluid">
 
@@ -174,12 +165,7 @@ export function DisplayTravelerList() {
             </div>
             <div className="row">
 
-
-                {/*<UserContext.Provider value ={{value,setValue}}>*/}
                 <DisplayListFunctionalComponent/>
-                {/*<DisplayList />*/}
-
-                {/*</UserContext.Provider>*/}
 
             </div>
         </div>
@@ -265,34 +251,32 @@ export function HelpPage() {
 
 export function DestinationPage() {
 
-
-    const [value, setValue] = useState(1);
-    return (<body>
-    <div className="container-fluid">
-        <div className="container">
-            <div className="row">
-                <div className="col s2"></div>
-                <div className="col s8">
-                    <p id="PageTitle"> MANAGE DESTINATION </p>
+    return (
+        <body>
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col s2"></div>
+                        <div className="col s8">
+                            <p id="PageTitle"> MANAGE DESTINATION </p>
+                        </div>
+                        <div className="col s2"></div>
+                    </div>
                 </div>
-                <div className="col s2"></div>
-            </div>
-        </div>
 
-        <div className="row">
-            {/*<UserContext.Provider value ={{value,setValue}}>*/}
-            <ManageDestinationFunctionalComponent/>
-            {/*</UserContext.Provider>*/}
-        </div>
-    </div>
-    </body>);
+                <div className="row">
+                    <ManageDestinationFunctionalComponent/>
+                </div>
+            </div>
+         </body>);
 
 }
 
 export function PageNotExist() {
-    return (<div>
-        <h1> This page not exist!!! </h1>
-    </div>);
+    return (
+        <div>
+            <h1> This page not exist!!! </h1>
+        </div>);
 
 }
 

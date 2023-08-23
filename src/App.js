@@ -1,8 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import './App.css';
 //import necessary to change pages, I will use more than one page so instead display everything what is in app.js
 //i can switch between pages, and they are connected to the "allPages.js".
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import {
     Home,
     CreateCustomerList,
@@ -19,13 +19,9 @@ import {
     CustomerAddItemUsingCamera
 
 } from "./allPages";
-import CreateList from "./components/CreateList";
-import Login from "./components/Login";
 import NavbarHome from "./components/NavbarHome";
 
-import * as cocossd from "@tensorflow-models/coco-ssd";
 
-// import {UserContext} from "./UserContext";
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -50,11 +46,10 @@ function App() {
                 <Route path='/CreateCustomerList' element={CreateCustomerList()}/>
                 {/*DisplayList*/}
                 <Route path='/displayList' element={DisplayTravelerList()}/>
-                {/*</UserContext.Provider>*/}
                 {/* Administrator Page, Display All Contacts, And Manage Database*/}
                 <Route path='/LoginAdminPage' element={LoginAdminPage()}/>
                 <Route path='/pay' element={PayPage()}/>
-                {/*<Route path ='/loginAdmin' element={<LoginAdmin/>}/>*/}
+
                 <Route path='/*' element={PageNotExist()}/>
                 <Route path='/help' element={HelpPage()}/>
                 <Route path='/destination' element={DestinationPage()}/>

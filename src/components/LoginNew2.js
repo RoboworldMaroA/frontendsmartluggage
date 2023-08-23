@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
-// import {UserContext} from "../UserContext";
 import './LoginNew2.css';
 
 
@@ -96,7 +95,6 @@ export const LoginNew2 = ({setUserData: setUser}) => {
             <div className="row">
                 <div className="col s12 m8 l4">
                 <div id="cardModOpacity" className="card">
-                    {/*<form id="formInLoginCustomer" onSubmit={verifyAllFields}>*/}
                     <form id="formInLoginCustomer" onSubmit={verifyAllFields}>
                         <div className="row">
                             <div id="loginInput" className="input-field col s8">

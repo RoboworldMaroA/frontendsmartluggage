@@ -1,8 +1,7 @@
 
-
 import React, {useEffect, useState} from 'react';
 import './toDoListCSS.css';
-import {Link} from "react-router-dom";
+
 
 /*
 SmartLuggage Application
@@ -12,10 +11,7 @@ Final Project Software Developer
 */
 const FemaleCosmeticsList=({})=>{
 
-    // const [checked2, setChecked2] = useState(false);
-    // const [maskWeight, setMaskWeight] = useState(0.02);
-    // const [underwearQty, setUnderwearQty] = useState(5);
-    // const [passportQty, setPassportQty] = useState(1);
+
     const [, setErrorNewItem] = useState("At least one character ");
 
     // const [items, setItems] = useState([]);

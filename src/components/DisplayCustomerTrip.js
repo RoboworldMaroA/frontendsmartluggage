@@ -1,9 +1,6 @@
-import React, {useState, useEffect, useContext} from 'react';
-// import {UserContext} from "../UserContext";
-/* useState is used to set a value  */
+import React, {useState, useEffect} from 'react';
 import './DisplayCustomerTripCSS.css';
-import displayTripDetail from "./DisplayListFuctionalComponent";
-import registerCustomer from "./RegisterCustomer";
+
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -13,19 +10,13 @@ Marek Augustyn
 export const DisplayCustomerTrip = ({item}) => {
 
     const [id, setId] = useState('');
-    // const [customerId, setCustomerId] = useState('');
     //data from useEffect Customer data
     const [customer, setCustomer] = useState(null);
     //const {value,setValue} = useContext(UserContext);
 
     const deleteCustomerTrip = async () => {
         const resultTrip = await fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip/" + id, {
-        // const resultTrip = await fetch("api/v1/trip/" + id, {
             method: "DELETE",
-            //body: JSON.stringify({id}),
-            //headers: {
-            //     "Content-Type": "application/json",
-            // }
         })
         const body = await resultTrip.json();
         item(body);
@@ -34,8 +25,6 @@ export const DisplayCustomerTrip = ({item}) => {
 
     useEffect(() => {
         if (!customer) {
-            // fetch("https://backendsmartluggage.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
-            //     fetch("displayUsers").then((response) => response.json()).then((dataCustomer) => {
             fetch("https://smartluggagebackend.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
                 // console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
@@ -61,15 +50,11 @@ export const DisplayCustomerTrip = ({item}) => {
                                     <p>Details Trip ID : {item.id}</p>
                                     <p>Trip name : {item.tripName}</p>
                                      <p>Destination : {item.destination}</p>
-                                    {/*<p>Destination : {item.destination}</p>*/}
-                                    {/*<p>Customer Id:  {item.customerId}  </p>*/}
                                     <p>Departure Day: {item.departureDay} </p>
                                     <p>Return Day: {item.returnDay} </p>
                                     <p>Description: {item.description}</p>
-                                    {/*<p>Destination: {item.destinationId}</p>*/}
                                     <p>List: {item.listId}</p>
                                     <p>Activities :  </p>
-                                    {/*<p>Sex: {item.sex==="male"?"female":""}{item.sex!=="male"?"male":""}</p>*/}
                                     <p>{item.ski ? "SKI" : " "} </p>
                                     <p>{item.trekking ? "Trekking" : " "} </p>
                                     <p>{item.beachListStatus ? "Beach" : " "} </p>
@@ -93,13 +78,6 @@ export const DisplayCustomerTrip = ({item}) => {
                                 </span>
                                 </div>
 
-                                <div className="card-action">
-                                    {/*<p> If you want delete user Trip input Trip id and then press delete button </p>*/}
-                                    {/*<a href="#">This is a link</a>*/}
-                                    {/*<a href="#">This is a link</a>*/}
-                                    {/*<button onSubmit={()=>deleteCustomer(item.id)} >Delete Student</button>*/}
-
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +87,6 @@ export const DisplayCustomerTrip = ({item}) => {
                         <div className="input-field col s10 m6 l6 offset-s1">
                             <input placeholder="Input Trip ID" type="text"
                                    onChange={(event => setId(event.target.value))} className="validate"/>
-                            {/*<label htmlFor="What Id want you delete">Id</label>*/}
                         </div>
                     </div>
 
@@ -120,17 +97,6 @@ export const DisplayCustomerTrip = ({item}) => {
                     </div>
                 </form>
             </div>
-            {/*<div>*/}
-            {/*    /!*<p>It is a Customer detail  ID:</p>*!/*/}
-            {/*It is checking if customer is bulll then*/}
-            {/*    /!*                    display string loading page if there is data then map*!/*!/*/}
-            {/*        {customer*/}
-            {/*            ? customer.map((data) => {*/}
-            {/*                return <input type="checkbox" checked={data.documentList} />;*/}
-            {/*            })*/}
-            {/*            : "..... loading page"}*/}
-            {/*    );*/}
-            {/*</div>*/}
 
         </div>
     );

@@ -11,7 +11,7 @@ import Webcam from "react-webcam";
 // import "./App.css";
 // Import drawing utility
 // e.g. import { drawRect } from "./utilities";
-import {drawRect} from "./utilities";
+import {drawRect} from "./Utilities";
 //import css
 import "./CameraObjectDetectionCSS.css"
 
