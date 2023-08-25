@@ -26,7 +26,11 @@
     margin-left: 0%;
 }
 
-
+#blockAccessories{
+    object-position: center;
+    /*padding-left: 100px;*/
+    margin-left: 0%;
+}
 
 #essential{
     object-position: center;

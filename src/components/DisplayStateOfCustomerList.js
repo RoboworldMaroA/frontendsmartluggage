@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import ToDoListComponentsTrip from "./components/ToDoListComponentsTrip";
+import ToDoListComponentsTrip from "./ToDoListComponentsTrip";
 
 /* useState is used to set a value  */
-import './components/DisplayListComponent.css';
+import './DisplayListComponent.css';
 
 //It is new display contacts and , there is also implemented delete button on the bottom
 //Do we  need to fetch data from the customer or from the user ?
@@ -36,7 +36,7 @@ export const DisplayStateOfCustomerList = (props) => {
                 setCustomer(dataCustomer);
             });
         }
-    }, ['customer']);
+    }, [customer]);
 
 
     //Old Deploy Version

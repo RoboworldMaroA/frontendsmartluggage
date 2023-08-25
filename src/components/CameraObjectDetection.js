@@ -2,7 +2,7 @@
  * Import dependencies
  */
 
-import React, { useRef, useEffect } from "react";
+import React, {useRef, useEffect, useState} from "react";
 import * as tf from "@tensorflow/tfjs";
 // Import required model
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
@@ -15,7 +15,7 @@ import {drawRect} from "./Utilities";
 //import css
 import "./CameraObjectDetectionCSS.css"
 
-const CameraObjectDetection = (props) => {
+const CameraObjectDetection = ({inputNewItemUsingCamera}) => {
 
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
@@ -64,6 +64,22 @@ const CameraObjectDetection = (props) => {
             // drawSomething(obj, ctx)
             drawRect(obj, ctx);
 
+            // catch the recognised objects and send data to the Parent (ToDoListComponentsTrip
+            obj.forEach(
+                predictions2 => {
+                    const text2 = predictions2['class'];
+                     if(text2 === "cell phone"||text2 === "orange"||text2 === "cup") {
+                        alert("Do you want to add a " + text2 + " to the bag? In Camera Object Detection");
+                         inputNewItemUsingCamera(text2);
+
+                  }
+                }
+            )
+
+
+
+
+
 
         }
     };
@@ -71,8 +87,12 @@ const CameraObjectDetection = (props) => {
     useEffect(()=>{runCoco().then(r => {})},[runCoco]);
 
 
-    function turnOffCamera()  {
-        console.log("button clicked");
+
+
+
+    function addItemFromCamera(event)  {
+        alert("button was clicked");
+        event.preventDefault();
 
     };
 
@@ -84,14 +104,14 @@ const CameraObjectDetection = (props) => {
 
             <div className="col s10 ">
                 {/*Button Camera*/}
-                <div onClick={() => turnOffCamera()} id="cameraObjectDetectionButton">
-                        <button id="buttonSizeCamera"
-                                className="btn waves-effect waves-light #5d4037 brown darken-1">
-                            <div id="cameraIconAndName">
-                                <i id="iconCamera" className="medium material-icons">camera</i> Turn ON/OFF camera
-                            </div>
-                        </button>
-                </div>
+                {/*<div onClick={addItemFromCamera} id="cameraObjectDetectionButton">*/}
+                {/*        <button id="buttonSizeCamera"*/}
+                {/*                className="btn waves-effect waves-light #5d4037 brown darken-1">*/}
+                {/*            <div id="cameraIconAndName">*/}
+                {/*                <i id="iconCamera" className="medium material-icons">camera</i> Add Item*/}
+                {/*            </div>*/}
+                {/*        </button>*/}
+                {/*</div>*/}
 
                     <Webcam id="webcam"
                         ref={webcamRef}

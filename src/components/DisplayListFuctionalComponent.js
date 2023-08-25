@@ -6,7 +6,7 @@ import './FormCreateList.css';
 import 'materialize-css';
 import DisplayCustomerTrip from "./DisplayCustomerTrip";
 import {useEffect} from "react";
-import DisplayStateOfCustomerList from "../DisplayStateOfCustomerList";
+import DisplayStateOfCustomerList from "./DisplayStateOfCustomerList";
 // import {UserContext} from "../UserContext";
 import './DisplayListComponent.css';
 /*

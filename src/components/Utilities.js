@@ -3,6 +3,7 @@
 //this component is hidden on heroku because it takes too many resources ,
 // I deployed to DigitalOcean cloud with pro option 2GB RAM
 import {useState} from "react";
+import ToDoListComponentsTrip from "./ToDoListComponentsTrip";
 
 
 
@@ -34,17 +35,6 @@ export const drawRect = (detections, ctx) => {
         ctx.fillText(text, x, y)
         ctx.rect(x, y, width, height)
         ctx.stroke()
-
-        if(text === "cell phone"){
-            alert("Do you want to add a " +text + " to the bag?");
-            //Implement ADD THIS text Value to the component ToDoListComponentTrip
-            //useStateNot working error
-            // setCameraObject(text);
-            // camera(text);
-
-
-        }
-
 
     })
 

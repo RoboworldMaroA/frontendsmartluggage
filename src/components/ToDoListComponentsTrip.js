@@ -19,10 +19,9 @@ import CamcorderEquipmentsList from "./CamcorderEquipmentsList";
 import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
-import {Link} from "react-router-dom";
 import CameraObjectDetection from "./CameraObjectDetection";
 
-import {camera} from "./Utilities";
+
 /*
 SmartLuggage Application
 Marek Augustyn
@@ -308,11 +307,60 @@ export const ToDoListComponentsTrip = (props) => {
         newItems[index].isSelected = !newItems[index].isSelected;
         setItemsEquipments(newItems);
     }
-
+    // ************************************************************
     // ************ END ELECTRONIC EQUIPMENTS LIST  ***************
+    // ************************************************************
 
 
-    // ************ Accessories ***************
+    // ************************************************************
+    // ************ ACCESSORIES ***********************************
+    // ************************************************************
+
+
+
+    //****    ADD ITEMS USING CAMERA   ****************************
+
+    // turn On or Off Camera return boolean true or false
+    const [isCameraOn, setIsCameraOn] = useState(false);
+    const turnOnOffCamera = (cameraButtonPressed) =>{
+        if(!isCameraOn){
+            setIsCameraOn(true);
+        }
+        if(isCameraOn){
+            setIsCameraOn(false);
+        }
+
+
+
+    }
+
+
+    //Callback function used in CameraObjectDetection component responsible for collect data from camera.
+    //When object is recognize then the object name will be in the input form and you can add to the list by pressing +
+    const inputNewItemUsingCamera = (inputValue) => {
+        // const newItem = inputValue;
+
+        const newItem = {
+            itemName: inputValue,
+            quantity: 1,
+            isSelected: false,
+            weight: 0.3,
+        };
+
+        if (newItem) {
+            setErrorNewItem("");
+        }
+
+        setInputValue(newItem.itemName);
+        setErrorNewItem(" ");
+        calculateTotal();
+        calculateTotalWeight();
+
+
+    }
+
+
+
     // const [camera, setCamera] = useState(props);
     const [errorNewItem, setErrorNewItem] = useState(" ");
     // const [items, setItems] = useState([]);
@@ -723,22 +771,13 @@ export const ToDoListComponentsTrip = (props) => {
             {/*<p> Display LIST for USER: ID {toDoList.id} NAME: {toDoList.name}</p>*/}
             <div className="row">
                 {toDoListTrip.essentialListStatus ?
+
                     <EssentialList2/>
+
                     : null
                 }
             </div>
 
-
-            {/*<div className="row">*/}
-            {/*    {toDoListTrip.essentialListStatus ?*/}
-            {/*    <>*/}
-            {/*        <ElectronicEquipment2 />*/}
-
-
-            {/*    </>*/}
-            {/*        : null*/}
-            {/*    }*/}
-            {/*</div>*/}
 
 
             {/*#########################################################################*/}
@@ -747,13 +786,12 @@ export const ToDoListComponentsTrip = (props) => {
 
                 <div id="blockEssential" className="row">
                     <div className="col l10 offset-l1 m10 offset-m1 s12">
-                    {/*<div className="col m10 s12">*/}
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundElectronicEquipments3small.jpg")}/>
                                 <span className="card-title">ELECTRONIC EQUIPMENT</span>
                             </div>
-                            {/*<div className="card-content">*/}
+
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -790,7 +828,6 @@ export const ToDoListComponentsTrip = (props) => {
 
 
                                         {/*Clothes additional items*/}
-                                        {/*<div className='item-list'>*/}
                                             {itemsEquipments.map((itemEquipments, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemEquipments.isSelected ? (
@@ -846,21 +883,19 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValueEquipments}
                                                onChange={(event) => validateInputNewItemEquipments(event)}
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonEquipments()}>add</i>
-                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
-                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
+                                    <i className="material-icons prefix"
+                                           onClick={(event) => turnOnOffCamera()}>  camera  </i>
                                         <div>{errorNewItemEquipments}</div>
                                         <div className='total'>Total Items: {totalItemCountEquipments}</div>
                                         <div className='total'>Total Weight: {totalItemWeightEquipments} kg.</div>
                                     </div>
                                 </form>
-                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -871,7 +906,7 @@ export const ToDoListComponentsTrip = (props) => {
             {/*  #######################  ACCESSORIES LIST  ################################*/}
             <div className={"accessories"}>
 
-                <div id="blockEssential" className="row">
+                <div id="blockAccessories" className="row">
                     {/*<div className="col l10 m10 s12">*/}
                     <div className="col l10 offset-l1 m10 offset-m1 s12">
                         <div className="card">
@@ -879,7 +914,6 @@ export const ToDoListComponentsTrip = (props) => {
                                 <img src={require("../photo/backgroundAccessories3small.jpg")}/>
                                 <span className="card-title">ACCESSORIES</span>
                             </div>
-                            {/*<div className="card-content">*/}
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -927,7 +961,6 @@ export const ToDoListComponentsTrip = (props) => {
                                         </div>
 
                                         {/*Accesoriess adiidtional items*/}
-                                        {/*<div className='item-list'>*/}
                                             {items.map((item, index) => (
                                                 <div className={"checkBox"}>
                                                     {item.isSelected ? (
@@ -983,27 +1016,23 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValue}
                                                onChange={(event) => validateInputNewItem(event)}
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonAccessories()}>add</i>
-                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
-                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
+                                       <i className="material-icons prefix" onClick={(event) => turnOnOffCamera()}>camera</i>
                                         <div>{errorNewItem}</div>
                                         <div className='total'>Total Items: {totalItemCount}</div>
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
 
-                                        {/*<div>*/}
-                                        {/*    <CameraObjectDetection/>*/}
+                                        <div id="displayCamera">
+                                            {isCameraOn?<CameraObjectDetection inputNewItemUsingCamera= {inputNewItemUsingCamera} />:null}
 
-
-                                        {/*</div>*/}
+                                        </div>
                                     </div>
                                 </form>
-                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -1022,7 +1051,6 @@ export const ToDoListComponentsTrip = (props) => {
                                 <img src={require("../photo/backgroundClothes3small.jpg")}/>
                                 <span className="card-title">CLOTHES</span>
                             </div>
-                            {/*<div className="card-content">*/}
 
                                 <form id="documents" action="#">
                                     <div className='row'>
@@ -1056,7 +1084,6 @@ export const ToDoListComponentsTrip = (props) => {
                                         {/*</div>*/}
 
                                         {/*Clothes additional items*/}
-                                        {/*<div className='item-list'>*/}
                                             {itemsClothes.map((itemClothes, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemClothes.isSelected ? (
@@ -1112,15 +1139,13 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        {/*</div>*/}
 
                                         <input id="addItemButton" value={inputValueClothes}
                                                onChange={(event) => validateInputNewItemClothes(event)}
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonClothes()}>add</i>
-                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
-                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
+                                        <i className="material-icons prefix" onClick={(event) => turnOnOffCamera()}>camera</i>
                                         <div>{errorNewItemClothes}</div>
                                         <div className='total'>Total Items: {totalItemCountClothes}</div>
                                         <div className='total'>Total Weight: {totalItemWeightClothes} kg.</div>
@@ -1137,7 +1162,6 @@ export const ToDoListComponentsTrip = (props) => {
 
                                     </div>
                                 </form>
-                            {/*</div>*/}
                         </div>
                     </div>
 
@@ -1148,14 +1172,12 @@ export const ToDoListComponentsTrip = (props) => {
             {/*  #######################  COSMETICS and First Aid List  ################################*/}
             <div className={"cosmetics"}>
                 <div id="blockEssential" className="row">
-                    {/*<div className="col m10 s12">*/}
                     <div className="col l10 offset-l1 m10 offset-m1 s12">
                         <div className="card">
                             <div className="card-image">
                                 <img src={require("../photo/backgroundCosmetics1small.jpg")}/>
                                 <span className="card-title">COSMETICS AND FIRST AID</span>
                             </div>
-                            {/*<div className="card-content">*/}
                                 <form id="documents" action="#">
                                     <div className='row'>
                                         <div>
@@ -1172,7 +1194,6 @@ export const ToDoListComponentsTrip = (props) => {
                                         </div>
 
                                         {/*Clothes additional items*/}
-                                        {/*<div className='item-list'>*/}
                                             {itemsCosmetics.map((itemCosmetics, index) => (
                                                 <div className={"checkBox"}>
                                                     {itemCosmetics.isSelected ? (
@@ -1228,20 +1249,17 @@ export const ToDoListComponentsTrip = (props) => {
                                                     }
                                                 </div>
                                             ))}
-                                        {/*</div>*/}
                                         <input id="addItemButton" value={inputValueCosmetics}
                                                onChange={(event) => validateInputNewItemCosmetics(event)}
                                                className='add-item-input' placeholder='add your item'/>
                                         <i className="material-icons prefix"
                                            onClick={() => handleAddItemButtonCosmetics()}>add</i>
-                                        <Link to="../packByUsingCamera"><i className="material-icons prefix"
-                                                                           onClick={() => handleAddItemButtonAccessories()}>camera</i></Link>
+                                        <i className="material-icons prefix" onClick={(event) => turnOnOffCamera()}>camera</i>
                                         <div>{errorNewItemCosmetics}</div>
                                         <div className='total'>Total Items: {totalItemCountCosmetics}</div>
                                         <div className='total'>Total Weight: {totalItemWeightCosmetics} kg.</div>
                                     </div>
                                 </form>
-                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
