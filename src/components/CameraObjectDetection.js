@@ -64,12 +64,13 @@ const CameraObjectDetection = ({inputNewItemUsingCamera}) => {
             // drawSomething(obj, ctx)
             drawRect(obj, ctx);
 
-            // catch the recognised objects and send data to the Parent (ToDoListComponentsTrip
+            // catch the recognised objects and send data to the Parent (ToDoListComponentsTrip)
+            // It will add a just founded item to the input field and user can add an item to the list if he will press add button (+)
             obj.forEach(
                 predictions2 => {
                     const text2 = predictions2['class'];
                      if(text2 === "cell phone"||text2 === "orange"||text2 === "cup") {
-                        alert("Do you want to add a " + text2 + " to the bag? In Camera Object Detection");
+                        alert("Do you want to add a " + text2 + " to the bag?");
                          inputNewItemUsingCamera(text2);
 
                   }
@@ -91,7 +92,7 @@ const CameraObjectDetection = ({inputNewItemUsingCamera}) => {
 
 
     function addItemFromCamera(event)  {
-        alert("button was clicked");
+        alert("Button was clicked");
         event.preventDefault();
 
     };
@@ -102,7 +103,7 @@ const CameraObjectDetection = ({inputNewItemUsingCamera}) => {
         // Description of the list
         <div id="cameraObjectDetection" className="row">
 
-            <div className="col s10 ">
+            <div className="col s10 m8">
                 {/*Button Camera*/}
                 {/*<div onClick={addItemFromCamera} id="cameraObjectDetectionButton">*/}
                 {/*        <button id="buttonSizeCamera"*/}
@@ -124,7 +125,7 @@ const CameraObjectDetection = ({inputNewItemUsingCamera}) => {
                             position: "absolute",
                             marginLeft: "auto",
                             marginRight: "auto",
-                            marginTop:"35px",
+                            marginTop:"25px",
                             left: 0,
                             right: 0,
                             textAlign: "center",

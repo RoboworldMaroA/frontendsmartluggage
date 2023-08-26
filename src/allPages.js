@@ -293,8 +293,8 @@ export function CustomerAddItemUsingCamera() {
             //
             // }}
              style={{
-                 backgroundColor: `#9bc4ca`, backgroundRepeat: 'repeat-no',
-                 backgroundSize: "cover", opacity: 0.98,
+                 backgroundColor: `#9bc4ca`, backgroundRepeat: 'repeat-x',
+                 backgroundSize: "contain", opacity: 0.98,
 
              }}
 
