@@ -13,7 +13,7 @@ import CustomerCreateOrDisplayList from "./components/CustomerCreateOrDisplayLis
 import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
 import HomeButtons from "./components/HomeButtons";
 import CurrentTime from "./components/CurrentTime";
-import CameraObjectDetection from "./components/CameraObjectDetection";
+import CameraObjectDetection2 from "./components/CameraObjectDetection2";
 
 /*
 SmartLuggage Application
@@ -303,7 +303,7 @@ export function CustomerAddItemUsingCamera() {
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
-            <CameraObjectDetection/>
+            <CameraObjectDetection2/>
         </div>
 
     );
