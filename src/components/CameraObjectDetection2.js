@@ -37,76 +37,76 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
     //implementation recognize objects
 
-    // const webcamRef = useRef(null);
-    // const canvasRef = useRef(null);
-    //
-    // // Main function
-    // const runCoco = async () => {
-    //     //Load Network
-    //     // e.g. const net = await cocossd.load();
-    //     const net = await cocoSsd.load();
-    //
-    //     //  Loop and detect hands
-    //     setInterval(() => {
-    //         detect(net);
-    //     }, 10);
-    // };
-    //
-    // const detect = async (net) => {
-    //
-    //     // Check data is available
-    //     if (
-    //         typeof webcamRef.current !== "undefined" &&
-    //         webcamRef.current !== null &&
-    //         webcamRef.current.video.readyState === 4
-    //     ) {
-    //         // Get Video Properties
-    //         const video = webcamRef.current.video;
-    //         const videoWidth = webcamRef.current.video.videoWidth;
-    //         const videoHeight = webcamRef.current.video.videoHeight;
-    //
-    //         // Set video width
-    //         webcamRef.current.video.width = videoWidth;
-    //         webcamRef.current.video.height = videoHeight;
-    //
-    //         // Set canvas height and width
-    //         canvasRef.current.width = videoWidth;
-    //         canvasRef.current.height = videoHeight;
-    //
-    //         // 4. Make Detections
-    //         // e.g. const obj = await net.detect(video);
-    //         const obj = await net.detect(video);
-    //
-    //         // console.log(obj);
-    //         // Draw mesh
-    //         const ctx = canvasRef.current.getContext("2d");
-    //
-    //         // 5. Update drawing utility
-    //         // drawSomething(obj, ctx)
-    //         drawRect(obj, ctx);
-    //
-    //         // catch the recognised objects and send data to the Parent (ToDoListComponentsTrip)
-    //         // It will add a just founded item to the input field and user can add an item to the list if he will press add button (+)
-    //         obj.forEach(
-    //             predictions2 => {
-    //                 const text2 = predictions2['class'];
-    //                  if(text2 === "cell phone"||text2 === "orange"||text2 === "cup") {
-    //                     alert("Do you want to add a " + text2 + " to the bag?");
-    //                      inputNewItemUsingCamera(text2);
-    //
-    //               }
-    //             }
-    //         )
-    //
-    //
-    //
-    //
-    //
-    //
-    //     }
-    // };
+    const webcamRef = useRef(null);
+    const canvasRef = useRef(null);
 
-    // useEffect(()=>{runCoco().then(r => {})},[runCoco]);
+    // Main function
+    const runCoco = async () => {
+        //Load Network
+        // e.g. const net = await cocossd.load();
+        const net = await cocoSsd.load();
+
+        //  Loop and detect hands
+        setInterval(() => {
+            detect(net);
+        }, 10);
+    };
+
+    const detect = async (net) => {
+
+        // Check data is available
+        if (
+            typeof webcamRef.current !== "undefined" &&
+            webcamRef.current !== null &&
+            webcamRef.current.video.readyState === 4
+        ) {
+            // Get Video Properties
+            const video = webcamRef.current.video;
+            const videoWidth = webcamRef.current.video.videoWidth;
+            const videoHeight = webcamRef.current.video.videoHeight;
+
+            // Set video width
+            webcamRef.current.video.width = videoWidth;
+            webcamRef.current.video.height = videoHeight;
+
+            // Set canvas height and width
+            canvasRef.current.width = videoWidth;
+            canvasRef.current.height = videoHeight;
+
+            // 4. Make Detections
+            // e.g. const obj = await net.detect(video);
+            const obj = await net.detect(video);
+
+            // console.log(obj);
+            // Draw mesh
+            const ctx = canvasRef.current.getContext("2d");
+
+            // 5. Update drawing utility
+            // drawSomething(obj, ctx)
+            drawRect(obj, ctx);
+
+            // catch the recognised objects and send data to the Parent (ToDoListComponentsTrip)
+            // It will add a just founded item to the input field and user can add an item to the list if he will press add button (+)
+            obj.forEach(
+                predictions2 => {
+                    const text2 = predictions2['class'];
+                     if(text2 === "cell phone"||text2 === "orange"||text2 === "cup") {
+                        alert("Do you want to add a " + text2 + " to the bag?");
+                         inputNewItemUsingCamera(text2);
+
+                  }
+                }
+            )
+
+
+
+
+
+
+        }
+    };
+
+    useEffect(()=>{runCoco().then(r => {})},[runCoco]);
 
 
 
@@ -122,14 +122,34 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
 
     return (
-
+        <div className="col s10 m8">
         // Description of the list
         <div id="cameraObjectDetection" className="row">
             {/*pick device*/}
-            <Webcam audio={false} videoConstraints={{ deviceId }} />
-            <div>
+            <Webcam id="webcam" ref={webcamRef} audio={false} videoConstraints={{ deviceId }} />
+
+            <canvas
+                        ref={canvasRef}
+                        style={{
+                            position: "absolute",
+                            marginLeft: "auto",
+                            marginRight: "auto",
+                            marginTop:"25px",
+                            left: 0,
+                            right: 0,
+                            textAlign: "center",
+                            zindex: 8,
+                            width: 290,
+                            height: 255,
+                        }}>
+            />
+            </canvas>
+
+
+            <div    id="cameraObjectDetectionButton">
                 {devices.map((device, key) => (
                     <button
+                        id="buttonSizeCamera"
                         key={device.deviceId}
                         onClick={() => setDeviceId(device.deviceId)}
                     >
@@ -138,96 +158,11 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
                 ))}
             </div>
 
-
-
-
-            {/*<div className="col s10 m8">*/}
-                {/*Button Camera*/}
-                {/*<div onClick={addItemFromCamera} id="cameraObjectDetectionButton">*/}
-                {/*        <button id="buttonSizeCamera"*/}
-                {/*                className="btn waves-effect waves-light #5d4037 brown darken-1">*/}
-                {/*            <div id="cameraIconAndName">*/}
-                {/*                <i id="iconCamera" className="medium material-icons">camera</i> Add Item*/}
-                {/*            </div>*/}
-                {/*        </button>*/}
-                {/*</div>*/}
-
-            {/*        <Webcam id="webcam"*/}
-            {/*            ref={webcamRef}*/}
-            {/*            muted={true}*/}
-            {/*        />*/}
-
-            {/*        <canvas*/}
-            {/*            ref={canvasRef}*/}
-            {/*            style={{*/}
-            {/*                position: "absolute",*/}
-            {/*                marginLeft: "auto",*/}
-            {/*                marginRight: "auto",*/}
-            {/*                marginTop:"25px",*/}
-            {/*                left: 0,*/}
-            {/*                right: 0,*/}
-            {/*                textAlign: "center",*/}
-            {/*                zindex: 8,*/}
-            {/*                width: 290,*/}
-            {/*                height: 255,*/}
-            {/*            }}*/}
-            {/*        />*/}
-
-            {/*</div>*/}
+            </div>
         </div>
     )//end return
-
-
-
-
-
 
 }
 
 export default CameraObjectDetection2;
 
-
-
-//
-// THIS WAS Pushed to HEROKU
-// const CameraObjectDetection = () => {
-//
-//     return(
-//         <div>
-//             {/*<h1>Check new smartluggage app</h1>*/}
-//                  <div id="allButtons" className="row">
-//                         <div className="col s10 offset-s2">
-//                              {/*Row with buttons*/}
-//                              <div id="myLuggage">
-//                                      <button id="buttonSizeMyLuggage"
-//                                              className="btn waves-effect waves-light #5d4037 brown darken-1">
-//                                          <div id="myLuggageIconAndName"><i id="iconMyLuggage"
-//                                                                            className="medium material-icons">
-//                                               camera</i> <a href="https://smartluggage-ijzs3.ondigitalocean.app/packByUsingCamera"> camera</a>
-//                                          </div>
-//                                      </button>
-//                              </div>
-//
-//                          </div>
-//
-//                  </div>
-//
-//
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//             <br/>
-//
-//         </div>
-//
-//
-//     )
-//
-// }
-// export default CameraObjectDetection;
