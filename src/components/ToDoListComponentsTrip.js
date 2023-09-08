@@ -19,7 +19,7 @@ import CamcorderEquipmentsList from "./CamcorderEquipmentsList";
 import TabletEquipmentsList from "./TabletEquipmentsList";
 import LaptopEquipmentsList from "./LaptopEquipmentsList";
 import LaptopList from "./LaptopList";
-import CameraObjectDetection from "./CameraObjectDetection";
+import CameraObjectDetection2 from "./CameraObjectDetection2";
 
 
 /*
@@ -1028,7 +1028,7 @@ export const ToDoListComponentsTrip = (props) => {
                                         <div className='total'>Total Weight: {totalItemWeight} kg.</div>
 
                                         <div id="displayCamera">
-                                            {isCameraOn?<CameraObjectDetection inputNewItemUsingCamera= {inputNewItemUsingCamera} />:null}
+                                            {isCameraOn?<CameraObjectDetection2 inputNewItemUsingCamera= {inputNewItemUsingCamera} />:null}
 
                                         </div>
                                     </div>

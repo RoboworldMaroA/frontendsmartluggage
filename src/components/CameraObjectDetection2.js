@@ -123,7 +123,6 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
     return (
         <div className="col s10 m8">
-        // Description of the list
         <div id="cameraObjectDetection" className="row">
             {/*pick device*/}
             <Webcam id="webcam" ref={webcamRef} audio={false} videoConstraints={{ deviceId }} />
@@ -140,7 +139,7 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
                             textAlign: "center",
                             zindex: 8,
                             width: 290,
-                            height: 255,
+                            height: 250,
                         }}>
             />
             </canvas>
