@@ -123,7 +123,7 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
     return (
         <div className="col s10 m8">
-        <div id="cameraObjectDetection" className="row">
+            <div id="cameraObjectDetection" className="row">
             {/*pick device*/}
             <Webcam id="webcam" ref={webcamRef} audio={false} videoConstraints={{ deviceId }} />
 
@@ -144,19 +144,17 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
             />
             </canvas>
 
-
-            <div    id="cameraObjectDetectionButton">
-                {devices.map((device, key) => (
-                    <button
-                        id="buttonSizeCamera"
-                        key={device.deviceId}
-                        onClick={() => setDeviceId(device.deviceId)}
-                    >
-                        {device.label || `Device ${key + 1}`}
-                    </button>
-                ))}
-            </div>
-
+                <div    id="cameraObjectDetectionButton">
+                    {devices.map((device, key) => (
+                        <button
+                            id="buttonSizeCamera"
+                            key={device.deviceId}
+                            onClick={() => setDeviceId(device.deviceId)}
+                        >
+                            {device.label || `Device ${key + 1}`}
+                        </button>
+                    ))}
+                </div>
             </div>
         </div>
     )//end return
