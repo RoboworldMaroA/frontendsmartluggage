@@ -45,11 +45,12 @@ const CurrentTime = () => {
     }
 
 return (
- <div>
 
+     <div className="container">
+         <div className="row">
        {/*<h1 class="Date2"> jjjjj</h1>*/}
-        <p  id={"Date"}> Today is {day} {todayDate}. It time to pack your luggage ;-) </p>
-
+        <p  id="Date"> Today is {day} {todayDate}. It time to pack your luggage ;-) </p>
+         </div>
  </div>
 
 
