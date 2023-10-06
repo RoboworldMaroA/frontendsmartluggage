@@ -240,6 +240,7 @@
 #Date{
     /*position: absolute;*/
     top: 10%;
-    margin-left: 28%;
+    margin-left: 15%;
     /*opacity: 0.80;*/
+    display: none;
 }
