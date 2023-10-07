@@ -85,10 +85,27 @@ export const DisplayListFunctionalComponent = (props) => {
     //
     // }
 
+
+    //Fetch data from Heroku Old Backend before JWT
+    // useEffect(() => {
+    //     //do something when loading
+    //     // console.log("signal to do something using useEffect")
+    //     fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+    //         // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
+    //         // console.log("List of items in the trip", TripData);
+    //         setTripData(TripData);
+    //         // calculateLastTripId();
+    //     });
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, ["hI trip"]);
+
+
+
+    //Fetch data from Heroku New Backend with JWT
     useEffect(() => {
         //do something when loading
         // console.log("signal to do something using useEffect")
-        fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+        fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             // console.log("List of items in the trip", TripData);
             setTripData(TripData);

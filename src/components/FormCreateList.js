@@ -55,10 +55,44 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
 
 
     //fetch for trip
+    // const validateCreateList = async (event) => {
+    //     alert("Thank you for creating list")
+    //
+    //     const result = await fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip", {
+    //         method: "POST",
+    //         body: JSON.stringify({
+    //             adminPrivileges, autumn,
+    //             beachListStatus, bus,
+    //             camcorder, camera,car,
+    //             departureDay, description, destination, documentListStatus, drone,
+    //             essentialListStatus,
+    //             ireland,
+    //             laptop, largeLuggage, listId,
+    //             mediumLuggage,
+    //             payStatus, plane, poland,
+    //             returnDay,
+    //             sex, ski, smallLuggage,
+    //             tablet, train, trekking, tripName, tripPassword, weatherId, winter,
+    //             id
+    //         }),
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         }
+    //     })
+    //
+    //     const body = await result.json();
+    //
+    //     event.preventDefault();
+    //     setCreateListInfo(body);
+    // }
+
+
+
+    //22.092023 new fetch for trip with JWT
     const validateCreateList = async (event) => {
         alert("Thank you for creating list")
 
-        const result = await fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip", {
+        const result = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip", {
             method: "POST",
             body: JSON.stringify({
                 adminPrivileges, autumn,

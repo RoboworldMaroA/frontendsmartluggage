@@ -7,6 +7,7 @@ Marek Augustyn
 2023
 */
 //It is new display contacts and delete on the bottom with  option to it delete
+//item allows me to pass data from the ManageDestinationFunctionalComponent and display data on the screen
 export const DisplayCustomerTrip = ({item}) => {
 
     const [id, setId] = useState('');
@@ -14,8 +15,19 @@ export const DisplayCustomerTrip = ({item}) => {
     const [customer, setCustomer] = useState(null);
     //const {value,setValue} = useContext(UserContext);
 
+    //this fetch data from the old database
+    // const deleteCustomerTrip = async () => {
+    //     const resultTrip = await fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip/" + id, {
+    //         method: "DELETE",
+    //     })
+    //     const body = await resultTrip.json();
+    //     item(body);
+    // }
+
+
+    //Fetch data from the new database integratded with manage-customer web app with JWT
     const deleteCustomerTrip = async () => {
-        const resultTrip = await fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip/" + id, {
+        const resultTrip = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip" + id, {
             method: "DELETE",
         })
         const body = await resultTrip.json();

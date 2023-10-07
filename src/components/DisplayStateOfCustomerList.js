@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import ToDoListComponentsTrip from "./ToDoListComponentsTrip";
-
+import axios from 'axios';
 /* useState is used to set a value  */
 import './DisplayListComponent.css';
+import {promise} from "bcrypt/promises";
 
 //It is new display contacts and , there is also implemented delete button on the bottom
 //Do we  need to fetch data from the customer or from the user ?
@@ -80,15 +81,41 @@ export const DisplayStateOfCustomerList = (props) => {
     // }, ["hI"]);
 
 
-    //Old Deploy version
+    //Deploy version from old database
+    // useEffect(() => {
+    //     //do something when loading
+    //     // console.log("test do something from use effect")
+    //     fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((dataTrip) => {
+    //         // console.log("List of items in the trip", dataTrip);
+    //         setTrip(dataTrip);
+    //     });
+    // }, ["trip"]);
+
+
+   //new fetch data using manage-customer jwd web app
+   //  useEffect(() => {
+   //      //do something when loading
+   //      // console.log("test do something from use effect")
+   //      fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then((response) => response.json()).then((dataTrip) => {
+   //          // console.log("List of items in the trip", dataTrip);
+   //          setTrip(dataTrip);
+   //      });
+   //  }, ["trip"]);
+
+
+
+    let backEndUrl = "https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip";
+
+    //new fetch data using axios instead of fetch
     useEffect(() => {
         //do something when loading
         // console.log("test do something from use effect")
-        fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((dataTrip) => {
-            // console.log("List of items in the trip", dataTrip);
-            setTrip(dataTrip);
+        axios.get(backEndUrl).then((dataTrip) => {
+            console.log("List of items in the trip AXIOS", dataTrip);
+            setTrip(dataTrip.data);
         });
     }, ["trip"]);
+
 
 
     // useEffect(() => {

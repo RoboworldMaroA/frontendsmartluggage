@@ -22,9 +22,12 @@ export default class CreateList extends Component{
 
         componentDidMount(){
 
-            fetch('https://smartluggagebackend.herokuapp.com/api/v1/trip').then
-            (response => response.json()).then(data => this.setState({trips: data}));
+            // fetch('https://smartluggagebackend.herokuapp.com/api/v1/trip').then
+            // (response => response.json()).then(data => this.setState({trips: data}));
 
+            //new database JWT
+            fetch('https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip').then
+            (response => response.json()).then(data => this.setState({trips: data}));
 
             document.addEventListener('DOMContentLoaded', function() {
                 const elems = document.querySelectorAll('select');
