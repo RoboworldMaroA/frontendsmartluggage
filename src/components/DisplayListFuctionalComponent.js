@@ -21,6 +21,7 @@ export const DisplayListFunctionalComponent = (props) => {
 
 
     const [tripData, setTripData] = useState([]);
+    // const [response, setResponse] = useState([]);
     let [displayTripDetail, setDisplayTripDetail] = useState(false);
     const [displayTripDetail2, setDisplayTripDetail2] = useState(false);
     const [displayTripDetail3, setDisplayTripDetail3] = useState(false);
@@ -56,24 +57,28 @@ export const DisplayListFunctionalComponent = (props) => {
                 if (!response.ok) {
                     console.log("Waiting for data from the backend");
                     alert("Wait a second and refresh the page");
+                    // setTripData(TripData);
                     navigate("/displayList");
                 } else {
                     console.log("All good when tried display")
+                    response.json().then((TripData)=> {
+                        setTripData(TripData);
+                    });
                     // navigate("/createOrDisplayList");
                 }
             }
 
-        ).
-
-
-        then((TripData) => {
+        )
+            // .
+            // then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             // console.log("List of items in the trip", TripData);
-            setTripData(TripData);
+            // setTripData(TripData);
             // calculateLastTripId();
-        });
+        // });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, ["hI trip"]);
+    }
+    , ["hI trip"]);
 
 
     //this method change status displayTripDetail for Trip ID=1
