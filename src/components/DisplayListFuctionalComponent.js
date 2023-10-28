@@ -9,12 +9,16 @@ import {useEffect} from "react";
 import DisplayStateOfCustomerList from "./DisplayStateOfCustomerList";
 // import {UserContext} from "../UserContext";
 import './DisplayListComponent.css';
+import {useNavigate} from "react-router-dom";
 /*
 SmartLuggage Application
 Marek Augustyn
 Display list of items created  base on the user preferences
 */
 export const DisplayListFunctionalComponent = (props) => {
+
+    const navigate = useNavigate();
+
 
     const [tripData, setTripData] = useState([]);
     let [displayTripDetail, setDisplayTripDetail] = useState(false);
@@ -23,67 +27,6 @@ export const DisplayListFunctionalComponent = (props) => {
     const [displayTripDetail4, setDisplayTripDetail4] = useState(false);
     const [loggedCustomerId] = useState(1);
     const [tripId, setTripId] = useState("");
-
-    // const {value,setValue} = useContext(UserContext);
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         contacts: [],
-    //         tripData: [],
-    //         displayDocuments: true,
-    //         displayEssential: true,
-    //         displayBeach: true,
-    //         camera:' ',
-    //         parentName2:'Parent',
-    //         displayTripDetail:false,
-    //         items:[
-    //             {id:1, name:"Marek"},
-    //             {id:2, name:"Leszek"},
-    //             {id:3, name:"Augustyn"}
-    //         ],
-    //         loggedCustomerId:1,
-    //         loggedCustomerEmail:"maugusty@o2.pl",
-    //
-    //     }
-    //
-    //     // this.greetParent2=this.greetParent2.bind(this);
-    //     //this.documentList=this.documentList.bind(this);
-    //
-    // }
-
-    // I am testing to get value from FormCreateList
-    // greetParent2(childName2){
-    //     // alert('Hello'+this.state.parentName );
-    //     alert(`Hello ${this.state.parentName2} from ${childName2}`);
-    // }
-
-    // const fetchCustomerDataFromDatabase= async ()=> {
-    //     fetch('api/v1/customer/').then
-    //     (response => response.json()).then(data => this.setState({contacts: data}));
-    //
-    //
-    //     document.addEventListener('DOMContentLoaded', function () {
-    //         var elems = document.querySelectorAll('select');
-    //         var instances = M.FormSelect.init(elems, {});
-    //     });
-    //
-    //     document.addEventListener('DOMContentLoaded', function () {
-    //         var elems = document.querySelectorAll('.datepicker');
-    //         var instances = M.Datepicker.init(elems, {});
-    //     });
-    //
-    //
-    // }
-
-
-    //import data from the trip and get a data trip, compare with
-    //documentList
-
-    // const fetchCustomerDataFromDatabase= async ()=>
-    //     fetch('api/v1/trip/').then
-    //     (response => response.json()).then(TripData => this.setState({tripData: TripData}));
-    //
-    // }
 
 
     //Fetch data from Heroku Old Backend before JWT
@@ -105,7 +48,25 @@ export const DisplayListFunctionalComponent = (props) => {
     useEffect(() => {
         //do something when loading
         // console.log("signal to do something using useEffect")
-        fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+        fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then(
+            (response) => {
+                // console.log(response.json())
+                console.log("display response after post");
+                console.log(response);
+                if (!response.ok) {
+                    console.log("Waiting for data from the backend");
+                    alert("Wait a second and refresh the page");
+                    navigate("/displayList");
+                } else {
+                    console.log("All good when tried display")
+                    // navigate("/createOrDisplayList");
+                }
+            }
+
+        ).
+
+
+        then((TripData) => {
             // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             // console.log("List of items in the trip", TripData);
             setTripData(TripData);
@@ -115,31 +76,14 @@ export const DisplayListFunctionalComponent = (props) => {
     }, ["hI trip"]);
 
 
-    // const calculateLastTripId=()=>{
-    //     tripData.map(
-    //         (TripData)=> {
-    //             return(
-    //                 <div> {TripData.id} </div>
-    //             );
-    //         }
-    //     )
-    //
-    //
-    //     // console.log("I am looking for last Id", lastId);
-    //
-    // }
-
-
-    //this method display or not the Trip Detail
+    //this method change status displayTripDetail for Trip ID=1
     function changeStatus() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail);
         setDisplayTripDetail(!displayTripDetail);
-
-
     }
 
-    //this method display or not the Trip Detail
+    //this method change status displayTripDetail for Trip ID=2
     function changeStatus2() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail2);
@@ -147,7 +91,7 @@ export const DisplayListFunctionalComponent = (props) => {
 
     }
 
-    //this method display or not the Trip Detail
+    //this method change status displayTripDetail for Trip ID=3
     function changeStatus3() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail3);
@@ -155,7 +99,7 @@ export const DisplayListFunctionalComponent = (props) => {
 
     }
 
-    //this method display or not the Trip Detail
+    //this method change status displayTripDetail for Trip ID=4
     function changeStatus4() {
         //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail4);
@@ -195,7 +139,7 @@ export const DisplayListFunctionalComponent = (props) => {
                 </div>
 
 
-                {/*#################  2 BUTTON#######################*/}
+                {/*#################  2-ND BUTTON   #######################*/}
                 <div className="col s12 m6 l3">
                     <button className="waves-effect waves-light btn #795548 brown "
                             onClick={() => changeStatus2()}> Details Trip 2
@@ -215,7 +159,7 @@ export const DisplayListFunctionalComponent = (props) => {
                 </div>
 
 
-                {/*################# 3 BUTTON#######################*/}
+                {/*################# 3-th BUTTON #######################*/}
                 <div className="col s12 m6 l3">
                     <button className="waves-effect waves-light btn #795548 brown "
                             onClick={() => changeStatus3()}> Details Trip 3
@@ -253,13 +197,22 @@ export const DisplayListFunctionalComponent = (props) => {
 
                 <div>
                     {displayTripDetail4
-                        ? tripData.filter((TripData) => TripData.id === parseInt(tripId)).map((TripData) => {
+                        ?
+
+
+                      tripData.filter(
+
+                            (TripData) =>
+                                TripData.id === parseInt(tripId)).map((TripData) => {
                             return (
                                 <>
                                     <DisplayCustomerTrip key={TripData.id} item={TripData}/>
                                 </>
                             );
-                        }) : ""}
+                        })
+
+
+                        : "Trip Not Exist"}
                 </div>
                 </div>
 

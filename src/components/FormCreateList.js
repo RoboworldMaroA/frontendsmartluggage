@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {mdiQuadcopter} from '@mdi/js';
 import Icon from "@mdi/react";
 import 'materialize-css';
@@ -17,6 +17,9 @@ Final Project Software Developer
 */
 
 const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListInfo}) => {
+
+
+    const navigate = useNavigate();
 
     const [adminPrivileges,setAdminPrivileges] = useState(false);
     const [autumn,setAutumn] = useState(false);
@@ -91,8 +94,8 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
     //22.092023 new fetch for trip with JWT
     const validateCreateList = async (event) => {
         alert("Thank you for creating list")
-
-        const result = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip", {
+        event.preventDefault();
+        let result = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip", {
             method: "POST",
             body: JSON.stringify({
                 adminPrivileges, autumn,
@@ -112,64 +115,36 @@ const AddCreateListDetail = ({props: props}, {setCreateListInfo: setCreateListIn
             headers: {
                 "Content-Type": "application/json",
             }
-        })
+        }).then(
+        (resFromCreateTrip) => {
 
-        const body = await result.json();
+            console.log("response from creating trip")
+            console.log(resFromCreateTrip.json());
+            if(!resFromCreateTrip.ok){
+                console.log("Trip may not be created but check anyway");
+                alert("I will moved you to a display all trip section.");
+                navigate("/displayList");
+            }
+            else{
+                console.log("All good")
+                navigate("/displayList");
+            }
+
+
+
+
+        })
+        //
+        // const body = await result.json()
+        //
+        //     console.log("Display Body")
+        //     console.log(body);
+        // ;
 
         event.preventDefault();
-        setCreateListInfo(body);
-    }
+        // setCreateListInfo(body);
+    };
 
-
-    //checked element change state
-    // const [irelandState, setIrelandState] = useState(false);
-
-    // const toggleIreland = () => {
-    //
-    //     setIrelandState(irelandState => !irelandState);
-    //     if (!irelandState) {
-    //         setIreland("1");
-    //         // console.log(ireland);//test only
-    //     }
-    //     if (irelandState) {
-    //         setIreland("0");
-    //         // console.log(ireland);//test only
-    //     }
-    //
-    //
-    // }
-
-
-    //It is working checked element change state
-    // const [spainState, setSpainState] = useState(false);
-
-    // const toggleSpain = () => {
-    //     setSpainState(spainState => !spainState);
-    //     if (!spainState) {
-    //         setSpain(true);
-    //         // console.log(spain);//test only
-    //     }
-    //     if (spainState) {
-    //         setSpain(false);
-    //         // console.log(spain);//test only
-    //     }
-    // }
-
-
-    //It is working checked element change state
-    // const [polandState, setPolandState] = useState(false);
-
-    // const togglePoland = () => {
-    //     setPolandState(polandState => !polandState);
-    //     if (!polandState) {
-    //         setPoland(true);
-    //         // console.log(poland);//test only
-    //     }
-    //     if (polandState) {
-    //         setPoland(false);
-    //         // console.log(poland);//test only
-    //     }
-    // }
 
 
     // checked element change state
