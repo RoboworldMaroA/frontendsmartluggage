@@ -45,7 +45,6 @@ const BeachListAccessories=({})=>{
             window.localStorage.setItem('BEACH_ACCESSORIES_DATA', JSON.stringify(items));
 
         }, [items]
-        // },[passportQty]
 
     )
 

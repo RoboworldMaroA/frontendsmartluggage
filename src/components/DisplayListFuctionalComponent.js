@@ -29,6 +29,8 @@ export const DisplayListFunctionalComponent = (props) => {
     const [loggedCustomerId] = useState(1);
     const [tripId, setTripId] = useState("");
 
+    const STATUS = document.getElementById('status');
+    const [tripWasLoaded, setTripWasLoaded] = useState(false);
 
     //Fetch data from Heroku Old Backend before JWT
     // useEffect(() => {
@@ -43,7 +45,22 @@ export const DisplayListFunctionalComponent = (props) => {
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, ["hI trip"]);
 
+    /**
+     * Loads the MobileNet model and warms it up so ready for use.
+     **/
+    // async function loadMobileNetFeatureModel() {
+    //     const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
+    //     // mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
+    //     STATUS.innerText = 'MobileNet v3 loaded successfully!';
+    //
+    //     // Warm up the model by passing zeros through it once.
+    //     tf.tidy(function () {
+    //         let answer = mobilenet.predict(tf.zeros([1, MOBILE_NET_INPUT_HEIGHT, MOBILE_NET_INPUT_WIDTH, 3]));
+    //         console.log(answer.shape);
+    //     });
+    // }
 
+    // loadMobileNetFeatureModel();
 
     //Fetch data from Heroku New Backend with JWT
     useEffect(() => {
@@ -56,11 +73,15 @@ export const DisplayListFunctionalComponent = (props) => {
                 console.log(response);
                 if (!response.ok) {
                     console.log("Waiting for data from the backend");
-                    alert("Wait a second and refresh the page");
+                    // alert("Wait a second and refresh the page");
+                    STATUS.innerText = 'Something went wrong refresh website';
+                    setTripWasLoaded(false);
                     // setTripData(TripData);
                     navigate("/displayList");
                 } else {
                     console.log("All good when tried display")
+                    STATUS.innerText = 'Trip data is loaded.';
+                    setTripWasLoaded(true);
                     response.json().then((TripData)=> {
                         setTripData(TripData);
                     });
@@ -118,7 +139,10 @@ export const DisplayListFunctionalComponent = (props) => {
         <div id="allElementInDisplayListFunctionalComponent">
 
             <div id="positionDisplayStateOfCustomerList">
-                <DisplayStateOfCustomerList/>
+
+                {tripWasLoaded ? <DisplayStateOfCustomerList/>:    <p id="status"> Awaiting for load data from the backend. </p>
+
+                }
             </div>
 
             <div id="fourButtonsToDisplayListDetail" className="row">
@@ -127,7 +151,7 @@ export const DisplayListFunctionalComponent = (props) => {
                 {/*#################FIRST BUTTON#######################*/}
                 <div className="col s12 m6 l3">
                     <button className="waves-effect waves-light btn #795548 brown "
-                            onClick={() => changeStatus()}> Details Trip 1
+                            onClick={() => changeStatus()}> Details for trip 1
                     </button>
 
                 </div>

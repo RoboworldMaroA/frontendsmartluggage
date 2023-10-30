@@ -24,6 +24,12 @@
 
 }
 
+
+#status{
+    margin-left: 10%;
+    font-size: 2em;
+}
+
 #displayStateOfCustomerListMainDiv{
     /*background-color: beige;*/
 
