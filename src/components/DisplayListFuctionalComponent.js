@@ -74,13 +74,12 @@ export const DisplayListFunctionalComponent = (props) => {
                 if (!response.ok) {
                     console.log("Waiting for data from the backend");
                     // alert("Wait a second and refresh the page");
-                    STATUS.innerText = 'Something went wrong refresh website';
+                    STATUS.innerText = 'Something went wrong try refresh website';
                     setTripWasLoaded(false);
-                    // setTripData(TripData);
                     navigate("/displayList");
                 } else {
                     console.log("All good when tried display")
-                    STATUS.innerText = 'Trip data is loaded.';
+                    // STATUS.innerText = 'Trip data is loaded.';
                     setTripWasLoaded(true);
                     response.json().then((TripData)=> {
                         setTripData(TripData);
