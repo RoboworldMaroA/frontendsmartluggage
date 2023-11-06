@@ -81,6 +81,7 @@ export const DisplayListFunctionalComponent = (props) => {
                     console.log("All good when tried display")
                     // STATUS.innerText = 'Trip data is loaded.';
                     setTripWasLoaded(true);
+                    //save fetched data to the memory in the tripData array
                     response.json().then((TripData)=> {
                         setTripData(TripData);
                     });
@@ -98,19 +99,18 @@ export const DisplayListFunctionalComponent = (props) => {
         // });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-    , ["hI trip"]);
+    , [STATUS, navigate]);//check if this is npt a problem ??????
 
 
     //this method change status displayTripDetail for Trip ID=1
     function changeStatus() {
-        //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail);
         setDisplayTripDetail(!displayTripDetail);
     }
 
     //this method change status displayTripDetail for Trip ID=2
     function changeStatus2() {
-        //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
+
         // console.log("State trip List", displayTripDetail2);
         setDisplayTripDetail2(!displayTripDetail2);
 
@@ -118,7 +118,6 @@ export const DisplayListFunctionalComponent = (props) => {
 
     //this method change status displayTripDetail for Trip ID=3
     function changeStatus3() {
-        //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail3);
         setDisplayTripDetail3(!displayTripDetail3);
 
@@ -126,7 +125,6 @@ export const DisplayListFunctionalComponent = (props) => {
 
     //this method change status displayTripDetail for Trip ID=4
     function changeStatus4() {
-        //here will be logic what lit to display, depend on what customer choose in the form FormCrteteList
         // console.log("State trip List", displayTripDetail4);
         setDisplayTripDetail4(!displayTripDetail4);
 
