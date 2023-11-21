@@ -47,7 +47,7 @@ export const LoginJWT = ({setUserData: setUser}) => {
                 .then((resJWT) => {
                     console.log("This is response before if statement"+resJWT);
                     console.log(resJWT);
-                    console.log(resJWT.json());
+                    // console.log(resJWT.json());
                     if (!resJWT.ok) { // We should get a 200 (OK) status code if everything is fine/working
                         console.log("Probably wrong login or password");
                         alert("Wrong Login or Password");
