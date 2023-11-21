@@ -43,19 +43,19 @@ export const LoginJWT = ({setUserData: setUser}) => {
                 },
                 body: JSON.stringify({ email, password }),
             })
-                .then((res) => res.json())
-                .then((res) => {
-                    console.log("This is response before if statement"+res);
+                // .then((res) => res.json())
+                .then((resJWT) => {
+                    console.log("This is response before if statement"+resJWT);
 
-                    if (!res.ok) { // We should get a 200 (OK) status code if everything is fine/working
+                    if (!resJWT.ok) { // We should get a 200 (OK) status code if everything is fine/working
                         console.log("Probably wrong login or password");
                         alert("Wrong Login or Password");
                         // window.open("/login.html");
-                        // throw Error(`Response status ${res.status} (${res.statusText}): ${res.message.json()}`);
+                        throw Error(`Response status ${resJWT.status} (${resJWT.statusText}): ${resJWT.message}`);
                     }
                     else{
 
-                        res.json()
+                        resJWT.json()
                             .then(json => {
                             console.log(json)
                             let userToken = json.token;
@@ -63,7 +63,7 @@ export const LoginJWT = ({setUserData: setUser}) => {
                             localStorage.setItem('userTokenLoginForm', JSON.stringify(json.token));
                         });
 
-                        console.log("I have got status 200 login successful:  "+res.status);
+                        console.log("I have got status 200 login successful:  "+resJWT.status);
                         alert("Thank You, Now Click a secured link to see a data.");
                         // window.open("/");
                     }
