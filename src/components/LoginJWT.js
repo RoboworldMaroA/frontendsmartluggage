@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import './LoginNew2.css';
+import Logout from "./Logout";
 
 
 /*
@@ -37,7 +38,6 @@ export const LoginJWT = ({setUserData: setUser}) => {
         const result = await
             //Post request used for Login a user
             fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/auth/authenticate", {
-                // fetch("http://159.65.88.48:8080/api/v1/auth/authenticate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -66,8 +66,8 @@ export const LoginJWT = ({setUserData: setUser}) => {
                         });
 
                         console.log("I have got status 200 login successful:  "+resJWT.status);
+                        localStorage.setItem('userLoginStatus', "verified");
                         navigate("/createOrDisplayList");
-                        // window.open("/");
                     }
 
                 })
@@ -95,6 +95,24 @@ export const LoginJWT = ({setUserData: setUser}) => {
         const em = event.target.value;
         setEmail(em);
     }
+
+
+    //awaiting press logout button
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     document.getElementById("logout").addEventListener("click", logout);
+    // });
+    //
+    // //function used for logout, it cleans the JWT token
+    // function logout(event){
+    //     let token1 = localStorage.getItem("userTokenLoginForm");
+    //     if(token1 !== " "){
+    //         localStorage.setItem('userTokenLoginForm', " ");
+    //         alert("Logout successful.");
+    //     }
+    //     else{
+    //         alert("User is already logged out");
+    //     }
+    // }
 
     return (
         <div id="ItemsInLoginCustomer" >
@@ -135,9 +153,10 @@ export const LoginJWT = ({setUserData: setUser}) => {
                                     Login JWT
                                 </button>
                             </div>
-
-                            <br/>
                         </form>
+                           <Logout/>
+                            <br/>
+
                     </div>
                     <br/>
                     <br/>
