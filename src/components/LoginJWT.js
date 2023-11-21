@@ -9,6 +9,7 @@ SmartLuggage Application
 Marek Augustyn
 
 This is working login with verification on the backend
+It generates JWT token and check if the user is already registered
 */
 
 export const LoginJWT = ({setUserData: setUser}) => {
@@ -43,7 +44,7 @@ export const LoginJWT = ({setUserData: setUser}) => {
                 },
                 body: JSON.stringify({ email, password }),
             })
-                // .then((res) => res.json())
+                // .then((res) => res.json())//test only
                 .then((resJWT) => {
                     console.log("This is response before if statement"+resJWT);
                     console.log(resJWT);
@@ -51,7 +52,7 @@ export const LoginJWT = ({setUserData: setUser}) => {
                     if (!resJWT.ok) { // We should get a 200 (OK) status code if everything is fine/working
                         console.log("Probably wrong login or password");
                         alert("Wrong Login or Password");
-                        // window.open("/login.html");
+                        navigate("/Login");
                         throw Error(`Response status ${resJWT.status} (${resJWT.statusText}): ${resJWT.message}`);
                     }
                     else{
@@ -65,7 +66,7 @@ export const LoginJWT = ({setUserData: setUser}) => {
                         });
 
                         console.log("I have got status 200 login successful:  "+resJWT.status);
-                        alert("Thank You, Now Click a secured link to see a data.");
+                        navigate("/createOrDisplayList");
                         // window.open("/");
                     }
 
