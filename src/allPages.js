@@ -5,6 +5,8 @@ import Register from "./components/Register";
 import LoginAdmin from "./components/LoginAdmin";
 import Pay from "./components/Pay";
 import LoginNew2 from "./components/LoginNew2";
+import LoginJWT from "./components/LoginJWT";
+
 import DisplayListFunctionalComponent from "./components/DisplayListFuctionalComponent";
 import Help from "./components/Help";
 import ManageDestinationFunctionalComponent from "./components/ManageDestinationFuctionalComponent";
@@ -58,6 +60,8 @@ export function LoginPage() {
         <div id="loginContainer">
 
             <LoginNew2/>
+            <LoginJWT/>
+
 
         </div>
         <br/>
