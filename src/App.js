@@ -16,7 +16,8 @@ import {
     DestinationPage,
     CustomerCreateOrDisplay,
     CustomerPickListsToDisplay,
-    CustomerAddItemUsingCamera
+    CustomerAddItemUsingCamera,
+    LogoutJWT
 
 } from "./allPages";
 import NavbarHome from "./components/NavbarHome";
@@ -56,6 +57,7 @@ function App() {
                 <Route path='/createOrDisplayList' element={CustomerCreateOrDisplay()}/>
                 <Route path='/pickListToDisplay' element={CustomerPickListsToDisplay()}/>
                 <Route path='/packByUsingCamera' element={CustomerAddItemUsingCamera()}/>
+                <Route path='/Logout' element={LogoutJWT()}/>
             </Routes>
         </div>
 

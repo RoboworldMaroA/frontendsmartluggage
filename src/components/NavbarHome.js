@@ -22,7 +22,8 @@ class NavbarHome extends Component {
                             <li><Link to="../LoginAdminPage"> Manage Users</Link></li>
                             <li><Link to="../destination"> Manage Destinations</Link></li>
                             <li><Link to="../packByUsingCamera"> Vision System</Link></li>
-                            <li><a href="https://smartluggagebackend.herokuapp.com/logout"> Logout</a></li>
+                            <li> <Link to="../Logout">Logout JWT</Link> </li>
+                            {/*<li><a href="https://smartluggagebackend.herokuapp.com/logout"> Logout</a></li>*/}
                         </ul>
                     </div>
                 </nav>
@@ -36,7 +37,8 @@ class NavbarHome extends Component {
                     <li><Link to="../LoginAdminPage"> Manage Users</Link></li>
                     <li><Link to="../destination"> Manage Destinations</Link></li>
                     <li><Link to="../packByUsingCamera"> Vision System</Link></li>
-                    <li><a href="https://smartluggagebackend.herokuapp.com/logout"> Logout</a></li>
+                    <li> <Link to="../Logout">Logout JWT</Link> </li>
+                    {/*<li><a href="https://smartluggagebackend.herokuapp.com/logout"> Logout</a></li>*/}
                 </ul>
 
             </div>

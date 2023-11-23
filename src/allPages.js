@@ -16,6 +16,7 @@ import CustomerPickListToDisplay from "./components/CustomerPickListToDisplay";
 import HomeButtons from "./components/HomeButtons";
 import CurrentTime from "./components/CurrentTime";
 import CameraObjectDetection2 from "./components/CameraObjectDetection2";
+import Logout from "./components/Logout";
 
 /*
 SmartLuggage Application
@@ -67,6 +68,22 @@ export function LoginPage() {
         <br/>
     </div>
     </body>
+    );
+
+}
+
+
+export function LogoutJWT() {
+    return (<body>
+        <div id="loginPage" className="container-fluid">
+            <div id="loginContainer">
+
+                <Logout/>
+                
+            </div>
+            <br/>
+        </div>
+        </body>
     );
 
 }

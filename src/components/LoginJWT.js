@@ -97,23 +97,6 @@ export const LoginJWT = ({setUserData: setUser}) => {
     }
 
 
-    //awaiting press logout button
-    // document.addEventListener("DOMContentLoaded", () => {
-    //     document.getElementById("logout").addEventListener("click", logout);
-    // });
-    //
-    // //function used for logout, it cleans the JWT token
-    // function logout(event){
-    //     let token1 = localStorage.getItem("userTokenLoginForm");
-    //     if(token1 !== " "){
-    //         localStorage.setItem('userTokenLoginForm', " ");
-    //         alert("Logout successful.");
-    //     }
-    //     else{
-    //         alert("User is already logged out");
-    //     }
-    // }
-
     return (
         <div id="ItemsInLoginCustomer" >
             <div className="row">
@@ -154,7 +137,8 @@ export const LoginJWT = ({setUserData: setUser}) => {
                                 </button>
                             </div>
                         </form>
-                           <Logout/>
+                           {/*Test only*/}
+                           {/*<Logout/>*/}
                             <br/>
 
                     </div>
