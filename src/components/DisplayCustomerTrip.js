@@ -11,6 +11,7 @@ Marek Augustyn
 export const DisplayCustomerTrip = ({item}) => {
 
     const [id, setId] = useState('');
+    const [tripId, setTripId] = useState('');
     //data from useEffect Customer data
     const [customer, setCustomer] = useState(null);
     //const {value,setValue} = useContext(UserContext);
@@ -26,30 +27,77 @@ export const DisplayCustomerTrip = ({item}) => {
 
 
     //Fetch data from the new database integratded with manage-customer web app with JWT
-    const deleteCustomerTrip = async () => {
-        const resultTrip = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip" + id, {
-            method: "DELETE",
-        })
-        const body = await resultTrip.json();
-        item(body);
-    }
-
 
     useEffect(() => {
         if (!customer) {
-            fetch("https://smartluggagebackend.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
                 // console.log("List of items in the customer", dataCustomer);
                 setCustomer(dataCustomer);
             });
         }
     }, [customer]);
 
+    // const deleteCustomerTrip = async () => {
+    //     const resultTrip = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip/" + id, {
+    //         method: "DELETE",
+    //     })
+    //     const body = await resultTrip.json();
+    //     item(body);
+    // }
+
+
+    //for not authenticated link
+    // const deleteCustomerTrip2 = async (e) => {
+    //     // e.preventDefault();
+    //
+    //     const result3 = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip/" + id, {
+    //         method: "DELETE",
+    //     })
+    //         .then((res) => res.json())
+    //         .then((data) => console.log(data))
+    //         .catch((error) => console.log(error));
+    //
+    //
+    //     const body3 = await result3.json().catch(err => console.log(err.res));
+    //     item(body3);
+    // }
+
+
+    //auth link, user mus be logged first to see data
+    const deleteCustomerTrip2 = async (e) => {
+        // e.preventDefault();
+
+        const result3 = await fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/auth/trip/" + id, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+
+
+        const body3 = await result3.json().catch(err => console.log(err.res));
+        item(body3);
+    }
+
+
+    // useEffect(() => {
+    //     if (!customer) {
+    //         fetch("https://smartluggagebackend.herokuapp.com/displayUsers").then((response) => response.json()).then((dataCustomer) => {
+    //             // console.log("List of items in the customer", dataCustomer);
+    //             setCustomer(dataCustomer);
+    //         });
+    //     }
+    // }, [customer]);
+
+
+
+
 
     return (
         <div>
             {/*// this part display card with detail inside*/}
             <div id="formDisplayList" className="row">
-                <form className="col s12 m12 l12 offset-l1"  onSubmit={() => deleteCustomerTrip()}>
+                <form className="col s12 m12 l12 offset-l1"  onSubmit={() => deleteCustomerTrip2()}>
 
                     <div className="row">
                         <div className="col s10 offset-s1 m8 l6">
@@ -99,6 +147,7 @@ export const DisplayCustomerTrip = ({item}) => {
                         <div className="input-field col s10 m6 l6 offset-s1">
                             <input placeholder="Input Trip ID" type="text"
                                    onChange={(event => setId(event.target.value))} className="validate"/>
+                            <label htmlFor="What Id want you delete">Id: {id}</label>
                         </div>
                     </div>
 

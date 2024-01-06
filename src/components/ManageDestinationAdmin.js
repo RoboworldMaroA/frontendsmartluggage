@@ -11,18 +11,30 @@ SmartLuggage Application
 Marek Augustyn
 
 */
-export const ManageDestinationFunctionalComponent = () =>{
+export const ManageDestinationAdmin = () =>{
 
     const [tripData, setTripData] = useState(null);
     const [displayTripDetail, setDisplayTripDetail] = useState(false);
     // const [loggedCustomerId, setLoggedCustomerId] = useState(1);
 
+    //Get data from not authenticated link
+    // useEffect(() => {
+    //     //do something when loading
+    //     console.log("signal to do something using useEffect")
+    //     fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+    //     // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
+    //         console.log("List of items in the trip", TripData);
+    //         setTripData(TripData);
+    //     });
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, ["hI trip"]);
 
+    //Get data from authenticated link
     useEffect(() => {
         //do something when loading
         console.log("signal to do something using useEffect")
-        fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
-        // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
+        fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/auth/trip").then((response) => response.json()).then((TripData) => {
+            // fetch("api/v1/trip/").then((response) => response.json()).then((TripData) => {
             console.log("List of items in the trip", TripData);
             setTripData(TripData);
         });
@@ -63,4 +75,4 @@ export const ManageDestinationFunctionalComponent = () =>{
 
             </div>);
 }/* end class Contact*/
-export default ManageDestinationFunctionalComponent;
+export default ManageDestinationAdmin;

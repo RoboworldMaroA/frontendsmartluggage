@@ -16,17 +16,17 @@ export default class Register extends Component {
         };
     }
 
-    componentDidMount() {
-        fetch('https://smartluggagebackend.herokuapp.com/displayUsers')
-            .then(response => response.json()).then(data => this.setState({contacts: data}));
-    }
+    // componentDidMount() {
+    //     fetch('https://smartluggagebackend.herokuapp.com/displayUsers')
+    //         .then(response => response.json()).then(data => this.setState({contacts: data}));
+    // }
 
 
 
     render() {
         return (
             <div className="row">
-                <RegisterCustomer/>
+                {/*<RegisterCustomer/>*/}
             </div>
         )
 

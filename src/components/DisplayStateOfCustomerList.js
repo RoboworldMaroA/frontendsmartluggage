@@ -26,11 +26,25 @@ export const DisplayStateOfCustomerList = (props) => {
     const [tripId, setTripId] = useState("");
 
     //New Deploy version
+    // useEffect(() => {
+    //     //do something when loading
+    //     // console.log("useEffect")
+    //     if (!customer) {
+    //         fetch("https://smartluggagebackend.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             // This is format before deploy
+    //             // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+    //             // console.log("List of items in the customer", dataCustomer);
+    //             setCustomer(dataCustomer);
+    //         });
+    //     }
+    // }, [customer]);
+
+    //JWT Backend to fetch customer
     useEffect(() => {
         //do something when loading
         // console.log("useEffect")
         if (!customer) {
-            fetch("https://smartluggagebackend.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
+            fetch("https://smartluggagebackendjwt-c266cf5456e9.herokuapp.com/api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 // This is format before deploy
                 // fetch("api/v1/customer").then((response) => response.json()).then((dataCustomer) => {
                 // console.log("List of items in the customer", dataCustomer);

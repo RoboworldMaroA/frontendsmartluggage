@@ -31,46 +31,46 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
     const [active] = useState(true);
 
 
-    const verifyAllFields = (event) => {
-        if (!passwordError) {
-            window.alert("Thank You for registration. !")
-            navigateRegister("/Login");
-            return addCustomer();
-
-        }
-        if (passwordError) {
-            setPasswordErrorEmpty("CAN NOT BE EMPTY");
-            event.preventDefault();
-        }
-    }
+    // const verifyAllFields = (event) => {
+    //     if (!passwordError) {
+    //         window.alert("Thank You for registration. !")
+    //         navigateRegister("/Login");
+    //         return addCustomer();
+    //
+    //     }
+    //     if (passwordError) {
+    //         setPasswordErrorEmpty("CAN NOT BE EMPTY");
+    //         event.preventDefault();
+    //     }
+    // }
 
 
     //Fetch data from USER Development Version
-    const addCustomer = async () => {
-        const result = await fetch("https://smartluggagebackend.herokuapp.com/addUser", {
-            method: "POST",
-            body: JSON.stringify({
-                userName,
-                password,
-                userSurname,
-                userEmail,
-                userPhoneNumber,
-                roles,
-                active,
-                userDob,
-                userAddress
-
-            }),
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).catch((err) => {
-            setIsErrorFetchMethod(err.message)
-            console.log(err.response);
-        })
-        const body = await result.json().catch(err => console.log(err.response));
-        setInfo(body).catch(err => console.log(err.response));
-    }
+    // const addCustomer = async () => {
+    //     const result = await fetch("https://smartluggagebackend.herokuapp.com/addUser", {
+    //         method: "POST",
+    //         body: JSON.stringify({
+    //             userName,
+    //             password,
+    //             userSurname,
+    //             userEmail,
+    //             userPhoneNumber,
+    //             roles,
+    //             active,
+    //             userDob,
+    //             userAddress
+    //
+    //         }),
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         }
+    //     }).catch((err) => {
+    //         setIsErrorFetchMethod(err.message)
+    //         console.log(err.response);
+    //     })
+    //     const body = await result.json().catch(err => console.log(err.response));
+    //     setInfo(body).catch(err => console.log(err.response));
+    // }
 
 
     //USER validation
@@ -103,17 +103,17 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
         // USER
         <div id="itemsInRegisterCustomer" className="row">
 
-            <form className="col s12" onSubmit={(event) => verifyAllFields(event)}>
-                <div className="row">
-                    <div className="input-field col s10">
-                        {isErrorFetchMethod && <div>{isErrorFetchMethod}</div>}
-                        <div>{isErrorFetchMethod}</div>
-                        <i className="material-icons prefix">account_circle</i>
-                        <input placeholder="" value={userName} type="text"
-                               onChange={(event => setUserName(event.target.value))} className="validate"/>
-                        <label htmlFor="name">First Name</label>
-                    </div>
-                </div>
+            {/*<form className="col s12" onSubmit={(event) => verifyAllFields(event)}>*/}
+            {/*    <div className="row">*/}
+            {/*        <div className="input-field col s10">*/}
+            {/*            {isErrorFetchMethod && <div>{isErrorFetchMethod}</div>}*/}
+            {/*            <div>{isErrorFetchMethod}</div>*/}
+            {/*            <i className="material-icons prefix">account_circle</i>*/}
+            {/*            <input placeholder="" value={userName} type="text"*/}
+            {/*                   onChange={(event => setUserName(event.target.value))} className="validate"/>*/}
+            {/*            <label htmlFor="name">First Name</label>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
                 <div className="row">
                     <div className="input-field col s10">
@@ -194,7 +194,7 @@ const AddDetail = ({setCustomerInfo: setInfo}) => {
                         Register
                     </button>
                 </div>
-            </form>
+            {/*</form>*/}
         </div>
     );
 }

@@ -17,11 +17,16 @@ import HomeButtons from "./components/HomeButtons";
 import CurrentTime from "./components/CurrentTime";
 import CameraObjectDetection2 from "./components/CameraObjectDetection2";
 import Logout from "./components/Logout";
+import RegisterJWT from "./components/RegisterJWT";
+import ManageUsers from "./components/ManageUsers";
+import ManageUsersJWT from "./components/ManageUsersJWT";
+import ManageDestinationAdmin from "./components/ManageDestinationAdmin";
+import CameraObjectDetection3 from "./components/CameraObjectDetection3";
 
 /*
 SmartLuggage Application
 Marek Augustyn
-07 July 2023
+07 July 2024
 Final Project Software Developer Home Update
 
 In this class are function that are responsible for display web pages.
@@ -46,8 +51,7 @@ export function Home() {
              // }}
         >
 
-
-            <CurrentTime/>
+            {/*<CurrentTime/>*/}
             <HomeButtons/>
         </div>
 
@@ -60,9 +64,9 @@ export function LoginPage() {
     <div id="loginPage" className="container-fluid">
         <div id="loginContainer">
 
-            <LoginNew2/>
+            {/*Login to the database without JWT and no encryption*/}
+            {/*<LoginNew2/>*/}
             <LoginJWT/>
-
 
         </div>
         <br/>
@@ -79,7 +83,7 @@ export function LogoutJWT() {
             <div id="loginContainer">
 
                 <Logout/>
-                
+
             </div>
             <br/>
         </div>
@@ -106,7 +110,8 @@ export function RegisterPage() {
 
         <div className="row">
 
-            <Register/>
+            {/*<Register/>*/}
+            <RegisterJWT/>
 
         </div>
     </div>);
@@ -188,6 +193,7 @@ export function DisplayTravelerList() {
 
                 <DisplayListFunctionalComponent/>
 
+
             </div>
         </div>
 
@@ -237,7 +243,8 @@ export function LoginAdminPage() {
         </div>
 
         <div className="row">
-            <LoginAdmin/>
+            {/*<LoginAdmin/>*/}
+            <ManageUsersJWT/>
         </div>
     </div>
     </body>);
@@ -286,7 +293,8 @@ export function DestinationPage() {
                 </div>
 
                 <div className="row">
-                    <ManageDestinationFunctionalComponent/>
+                    {/*<ManageDestinationFunctionalComponent/>*/}
+                    <ManageDestinationAdmin/>
                 </div>
             </div>
          </body>);
@@ -308,23 +316,16 @@ export function CustomerAddItemUsingCamera() {
 
     return (
         <div id="homePage" className="container-fluid"
-            // style={{
-            //     backgroundImage: `url(${backgroundHome})`, backgroundRepeat: 'repeat-no',
-            //     backgroundSize: "cover", opacity: 0.98,
-            //
-            // }}
              style={{
                  backgroundColor: `#9bc4ca`, backgroundRepeat: 'repeat-x',
                  backgroundSize: "contain", opacity: 0.98,
-
              }}
-
         >
 
             {/*<div className="row">*/}
             {/*    <p id="importantLoginInfoHomePage"> IMPORTANT: LOGIN FIRST USING (MaroAdmin/pass) or Create Account</p>*/}
             {/*</div>*/}
-            <CameraObjectDetection2/>
+            <CameraObjectDetection3/>
         </div>
 
     );

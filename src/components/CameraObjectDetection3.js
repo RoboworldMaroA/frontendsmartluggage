@@ -15,7 +15,7 @@ import {drawRect} from "./Utilities";
 //import css
 import "./CameraObjectDetectionCSS.css"
 
-const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
+const CameraObjectDetection3 = ({inputNewItemUsingCamera}) => {
 
     //Pick Camera
     const [deviceId, setDeviceId] = React.useState({});
@@ -90,14 +90,31 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
             obj.forEach(
                 predictions2 => {
                     const text2 = predictions2['class'];
-                     if(text2 === "orange"||text2 === "cup") {
+                    if(text2 === 'person'){
+                        // console.log("person is skipped");
+                        // inputNewItemUsingCamera(text2);
+                    }
+
+                    if (['orange', 'cup', 'hat', 'umbrella', 'shoe', 'eye glasses', 'handbag', 'tie', 'suitcase', 'skis',
+                        'snowboard', 'sports ball','bottle', 'plate', 'laptop', 'mouse', 'remote','keyboard', 'book',
+                         'hair drier'].indexOf(text2) >= 0) {
                         // alert("Do you want to add a " + text2 + " to the bag?");
                          inputNewItemUsingCamera(text2);
 
                      }
-                     else{
-                         inputNewItemUsingCamera(text2);
-                     }
+                    if(text2 === "bicycle"||text2 === "bed") {
+                        alert("Cant pack a " + text2 + ". It is too big?");
+                        // inputNewItemUsingCamera(text2);
+
+                    }
+                    if (['bird', 'cat', 'dog'].indexOf(text2) >= 0) {
+                        alert("Animals can not be packed?");
+                    }
+
+                    if (['scissors', 'knife'].indexOf(text2) >= 0) {
+                        alert("Sharp object only to the main bag !!!");
+                    }
+
                 }
             )
 
@@ -109,10 +126,7 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
 
 
-
-
-
-
+    //For testing only
     function addItemFromCamera(event)  {
         alert("Button was clicked");
         event.preventDefault();
@@ -160,5 +174,5 @@ const CameraObjectDetection2 = ({inputNewItemUsingCamera}) => {
 
 }
 
-export default CameraObjectDetection2;
+export default CameraObjectDetection3;
 

@@ -10,14 +10,14 @@ Marek Augustyn
 
 const HomeButtons = () => {
 
-    const [tripData, setTripData] = useState([]);
-
-    useEffect(() => {
-        fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
-            setTripData(TripData);
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, ["hI trip"]);
+    // const [tripData, setTripData] = useState([]);
+    //
+    // useEffect(() => {
+    //     fetch("https://smartluggagebackend.herokuapp.com/api/v1/trip").then((response) => response.json()).then((TripData) => {
+    //         setTripData(TripData);
+    //     });
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, ["hI trip"]);
 
 
 
